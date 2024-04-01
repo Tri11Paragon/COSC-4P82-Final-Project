@@ -1,0 +1,21 @@
+Hits: 2364, Total Size: 2810, Percent Hit: 84.128114
+CC: 960
+CO: 183
+OO: 1404
+OC: 263
+Fitness: 0.998811
+Hits: 840
+
+
+y = (((((major + perimeter) / (minor - major)) + ((eccentricity / area) - exp(eccentricity))) / exp(((extent / eccentricity) / (convex * perimeter)))) + log(((area / (minor + minor)) - ((area + area) / log(minor)))))
+
+ (+ (/ (+ (/ (+ major perimeter)
+             (- minor major))
+          (- (/ eccentricity area)
+             (exp eccentricity)))
+       (exp (/ (/ extent eccentricity)
+               (* convex perimeter))))
+    (log (- (/ area
+               (+ minor minor))
+            (/ (+ area area)
+               (log minor)))))

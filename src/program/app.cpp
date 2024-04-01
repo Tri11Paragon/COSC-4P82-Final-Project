@@ -132,13 +132,9 @@ void handle_networking()
                         break;
                     case packet_id::PRUNE:
                     {
-                        BLT_DEBUG("We are to prune with fitness %f", packet.fitness);
-                        if (best_individual.load() < packet.fitness)
-                        {
-                            BLT_DEBUG("We are a child who is going to be killed!");
-                            close(our_socket);
-                            std::exit(0);
-                        }
+                        BLT_DEBUG("We are a child who is going to be killed!");
+                        close(our_socket);
+                        std::exit(0);
                     }
                         break;
                 }

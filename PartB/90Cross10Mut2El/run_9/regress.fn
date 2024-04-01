@@ -1,0 +1,15 @@
+Hits: 2450, Total Size: 2810, Percent Hit: 87.188612
+CC: 1040
+CO: 108
+OO: 1410
+OC: 252
+Fitness: 0.998866
+Hits: 881
+
+
+y = log((exp((minor / log(eccentricity))) / (minor - (extent / area))))
+
+ (log (/ (exp (/ minor
+                 (log eccentricity)))
+         (- minor
+            (/ extent area))))

@@ -1,0 +1,15 @@
+Hits: 2413, Total Size: 2810, Percent Hit: 85.871886
+CC: 1051
+CO: 63
+OO: 1362
+OC: 334
+Fitness: 0.998862
+Hits: 878
+
+
+y = (exp(major) / (exp((((perimeter - -0.39302) - major) + perimeter)) / (exp(extent) - (eccentricity * area))))
+
+ (/ (exp major)
+    (/ (exp (+ (- (- perimeter -0.39302) major) perimeter))
+       (- (exp extent)
+          (* eccentricity area))))

@@ -1,0 +1,83 @@
+
+[ lil-gp Genetic Programming System.
+[ Portions copyright (c) 1995 Michigan State University.  All rights reserved.
+[ kernel version 1.0; 11 July 1995.
+
+
+initialization:
+    parameter database.
+    ephemeral random constants.
+    generation spaces.
+updating function set(s):
+    set 0: removed.
+building function set(s):
+    set 0: * / + - sin cos exp log x R
+    tree 0 uses function set 0.
+    function set complete.
+    no random number seed specfied; using 23.
+creating initial population(s):
+    5627 trees were generated to fill the population of 5000 (5000 trees).
+    initial population(s) complete.
+
+
+starting evolution.
+no checkpointing will be done.
+=== generation 0.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 1.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 2.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 3.
+    evaluation complete.  (0s wall)
+    breeding complete.    (1s wall)
+=== generation 4.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 5.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 6.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 7.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 8.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 9.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 10.
+    evaluation complete.  (0s wall)
+user termination criterion met.
+
+SYSTEM STATISTICS
+
+------- memory -------
+           allocated:      18801148
+               freed:      18600628
+           not freed:      200520
+       max allocated:      2846271
+    malloc'ed blocks:      161015
+   realloc'ed blocks:      9
+      free'ed blocks:      160985
+
+------- time -------
+             overall:      1s wall
+          evaluation:      0s wall
+            breeding:      1s wall
+
+------- generation spaces -------
+      space   0 size:      200
+      space   1 size:      100
+
+------- ephemeral random constants -------
+                used:      16958
+               freed:      16958
+           allocated:      13500
+              blocks:      26

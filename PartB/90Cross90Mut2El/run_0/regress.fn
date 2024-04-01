@@ -1,0 +1,12 @@
+Hits: 2567, Total Size: 2810, Percent Hit: 91.352313
+CC: 999
+CO: 123
+OO: 1568
+OC: 120
+Fitness: 0.998902
+Hits: 910
+
+
+y = log((log(log(perimeter)) + -0.81321))
+
+ (log (+ (log (log perimeter)) -0.81321))

@@ -1,0 +1,14 @@
+Hits: 2431, Total Size: 2810, Percent Hit: 86.512456
+CC: 937
+CO: 189
+OO: 1494
+OC: 190
+Fitness: 0.998834
+Hits: 857
+
+
+y = log(log(log(log(((((extent / major) / (extent - convex)) - exp(log(major))) + major)))))
+
+ (log (log (log (log (+ (- (/ (/ extent major)
+                              (- extent convex))
+                           (exp (log major))) major)))))

@@ -1,0 +1,40 @@
+
+[ lil-gp Genetic Programming System.
+[ Portions copyright (c) 1995 Michigan State University.  All rights reserved.
+[ kernel version 1.0; 11 July 1995.
+
+
+initialization:
+    parameter database.
+    ephemeral random constants.
+    generation spaces.
+updating function set(s):
+    set 0: removed.
+building function set(s):
+    set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
+    tree 0 uses function set 0.
+    function set complete.
+    no random number seed specfied; using 162.
+creating initial population(s):
+    7293 trees were generated to fill the population of 5000 (5000 trees).
+    initial population(s) complete.
+
+
+starting evolution.
+no checkpointing will be done.
+=== generation 0.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 1.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 2.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 3.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 4.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 5.

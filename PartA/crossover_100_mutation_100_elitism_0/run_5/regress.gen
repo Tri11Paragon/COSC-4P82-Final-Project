@@ -1,0 +1,295 @@
+
+--boundary_.oOo._ZFPy5kzoiPWEtFXK8c1ImqFtdSt8Z/sD
+Content-Length: 5943
+Content-Type: application/octet-stream
+X-File-MD5: 222aae9b8867eabac924a60cc24f8e4f
+X-File-Mtime: 1711663724
+X-File-Path: /computerdocs/Brock/CS 4P82/Final Project/FP-C-Project/PartA/crossover_100_mutation_100_elitism_0/run_3/regress.sys
+
+
+[ lil-gp Genetic Programming System.
+[ Portions copyright (c) 1995 Michigan State University.  All rights reserved.
+[ kernel version 1.0; 11 July 1995.
+
+
+initialization:
+    parameter database.
+    ephemeral random constants.
+    generation spaces.
+updating function set(s):
+    set 0: removed.
+building function set(s):
+    set 0: * / + - sin cos exp log x R
+    tree 0 uses function set 0.
+    function set complete.
+    no random number seed specfied; using 397.
+creating initial population(s):
+    5616 trees were generated to fill the population of 5000 (5000 trees).
+    initial population(s) complete.
+
+
+starting evolution.
+no checkpointing will be done.
+=== generation 0.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 1.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 2.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 3.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 4.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 5.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 6.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 7.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 8.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 9.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 10.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 11.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 12.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 13.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 14.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 15.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 16.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 17.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 18.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 19.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 20.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 21.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 22.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 23.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 24.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 25.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 26.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 27.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 28.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 29.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 30.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 31.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 32.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 33.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 34.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 35.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 36.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 37.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 38.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 39.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 40.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 41.
+    evaluation complete.  (0s wall)
+    breeding complete.    (1s wall)
+=== generation 42.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 43.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 44.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 45.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 46.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 47.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 48.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 49.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 50.
+    evaluation complete.  (0s wall)
+
+SYSTEM STATISTICS
+
+------- memory -------
+           allocated:      318282673
+               freed:      317280073
+           not freed:      1002600
+       max allocated:      13017900
+    malloc'ed blocks:      748259
+   realloc'ed blocks:      13
+      free'ed blocks:      748109
+
+------- time -------
+             overall:      7s wall
+          evaluation:      6s wall
+            breeding:      1s wall
+
+------- generation spaces -------
+      space   0 size:      500
+      space   1 size:      100
+
+------- ephemeral random constants -------
+                used:      145026
+               freed:      145026
+           allocated:      16000
+              blocks:      31
+
+--boundary_.oOo._ZFPy5kzoiPWEtFXK8c1ImqFtdSt8Z/sD
+Content-Length: 35564
+Content-Type: application/octet-stream
+X-File-MD5: 6e370f884414cbb3e6ca502e5ba629ad
+X-File-Mtime: 1711663724
+X-File-Path: /computerdocs/Brock/CS 4P82/Final Project/FP-C-Project/PartA/crossover_100_mutation_100_elitism_0/run_3/regress.his
+
+=== BEST-OF-RUN ===
+      current generation: 0
+              generation: 0
+                   nodes: 12
+                   depth: 4
+                    hits: 4
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 4
+             raw fitness: 8659.0489
+    standardized fitness: 8659.0489
+        adjusted fitness: 0.0001
+TREE:
+ (* x
+    (- (exp (+ 0.19388 x))
+       (+ (/ x -0.40840) x)))
+=== BEST-OF-RUN ===
+      current generation: 1
+              generation: 1
+                   nodes: 7
+                   depth: 3
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 8644.6280
+    standardized fitness: 8644.6280
+        adjusted fitness: 0.0001
+TREE:
+ (exp (+ (+ 0.98004 x)
+         (cos -0.72223)))
+=== BEST-OF-RUN ===
+      current generation: 2
+              generation: 1
+                   nodes: 7
+                   depth: 3
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 8644.6280
+    standardized fitness: 8644.6280
+        adjusted fitness: 0.0001
+TREE:
+ (exp (+ (+ 0.98004 x)
+         (cos -0.72223)))
+=== BEST-OF-RUN ===
+      current generation: 3
+              generation: 1
+                   nodes: 7
+                   depth: 3
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 8644.6280
+    standardized fitness: 8644.6280
+        adjusted fitness: 0.0001
+TREE:
+ (exp (+ (+ 0.98004 x)
+         (cos -0.72223)))
+=== BEST-OF-RUN ===
+      current generation: 4
+              generation: 1
+               

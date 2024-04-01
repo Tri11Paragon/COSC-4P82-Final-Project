@@ -28,16 +28,15 @@ enum class state_t : blt::u8
     RUN_GENERATIONS,
     CHILD_EVALUATION,
     PRUNE,
+    IDLE,
 };
 
 enum class packet_id : blt::u8
 {
     // NAME,            DIRECTION           PAYLOAD
     EXECUTE_RUN,    //  Server -> Client    NumOfRuns
-//    RUNS_COMPLETE,  //  Client -> Server    NONE
-//    CHILD_EVAL,     //  Server -> Client    NONE (program should send out its fitness and wait)
     CHILD_FIT,      //  Client -> Server    Fitness of Child
-    PRUNE,          //  Server -> Child     Fitness of children to prune. Child should exit if it doesn't meet this
+    PRUNE,          //  Server -> Client    NONE, Child should terminate
 };
 
 struct packet_t

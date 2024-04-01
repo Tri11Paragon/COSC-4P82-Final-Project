@@ -1,0 +1,30 @@
+Run(RV)/(PV)	CC	CO	OO	OC
+0	999	123	1568	120
+1	673	481	1635	21
+2	1072	64	1189	485
+3	1051	63	1362	334
+4	1024	89	1538	159
+5	960	183	1404	263
+6	1102	27	1220	461
+7	1016	112	1580	102
+8	994	130	1573	113
+9	1039	89	1570	112
+
+Best Result:
+	CC	CO	OO	OC
+	999	123	1568	120
+Fitness:	0.998902
+Total results:
+	CC	CO	OO	OC
+	9930	1361	14639	2170
+
+Averaged results:
+	CC	CO	OO	OC
+	993	136	1463	217
+
+
+Average Hits Per Run:	2456
+Average Tests Per Run:	2810
+Average % Correct Per Run:	0.874021
+Total Hits(All runs combined):	24569
+Total Tests(All runs combined):	28100

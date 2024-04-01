@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.0.1}%
+\contentsline {section}{\numberline {2}Symbolic regression}{2}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}Introduction}{2}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}Parameter Table}{2}{subsection.0.2.2}%
+\contentsline {subsection}{\numberline {2.3}Fitness Evaluation}{2}{subsection.0.2.3}%
+\contentsline {subsection}{\numberline {2.4}Fitness Plots}{3}{subsection.0.2.4}%
+\contentsline {subsection}{\numberline {2.5}Analysis and Conclusion}{4}{subsection.0.2.5}%
+\contentsline {section}{\numberline {3}Rice Classification}{4}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Introduction}{4}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}Parameter Table}{4}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fitness Evaluation}{4}{subsection.0.3.3}%
+\contentsline {subsection}{\numberline {3.4}Fitness Plots}{5}{subsection.0.3.4}%
+\contentsline {subsection}{\numberline {3.5}Confusion Matrix}{6}{subsection.0.3.5}%
+\contentsline {subsection}{\numberline {3.6}Analysis and Conclusion}{9}{subsection.0.3.6}%
+\contentsline {section}{\numberline {4}Compiling / Executing}{9}{section.0.4}%
+\contentsline {section}{\numberline {5}Conclusion}{10}{section.0.5}%
+\contentsline {section}{\numberline {6}References}{10}{section.0.6}%

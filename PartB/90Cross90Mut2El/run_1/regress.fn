@@ -1,0 +1,17 @@
+Hits: 2308, Total Size: 2810, Percent Hit: 82.135231
+CC: 673
+CO: 481
+OO: 1635
+OC: 21
+Fitness: 0.998745
+Hits: 796
+
+
+y = (-0.56675 - ((convex * (((exp((major / (major / 0.85721))) - log(log((exp(log(0.36280)) / ((-0.40757 / -0.64541) + area))))) * extent) * convex)) * extent))
+
+ (- -0.56675
+    (* (* convex
+          (* (* (- (exp (/ major
+                           (/ major 0.85721)))
+                   (log (log (/ (exp (log 0.36280))
+                                (+ (/ -0.40757 -0.64541) area))))) extent) convex)) extent))

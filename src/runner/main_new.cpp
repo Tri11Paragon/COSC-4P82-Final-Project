@@ -19,6 +19,8 @@
 #include <blt/profiling/profiler_v2.h>
 #include <blt/std/utility.h>
 #include <blt/fs/loader.h>
+#include <chrono>
+#include <limits>
 #include <unistd.h>
 #include <sys/wait.h>
 #include <thread>
@@ -30,6 +32,7 @@
 #include <fcntl.h>
 #include "blt/std/assert.h"
 #include "blt/std/memory.h"
+#include "blt/std/types.h"
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <ipc.h>
@@ -37,15 +40,13 @@
 class child_t
 {
     private:
-        std::int32_t pid = 0;
         int socket = 0;
         bool socket_closed = false;
+        double fitness = 0;
+        std::vector<packet_t> unprocess_packets;
     public:
         
         child_t() = default;
-        
-        explicit child_t(blt::i32 pid): pid(pid)
-        {}
         
         void open(int sock)
         {
@@ -79,12 +80,41 @@ class child_t
                 return ::read(socket, buffer, count);
             return 0;
         }
+
+        void handlePacket(packet_t packet)
+        {
+            unprocess_packets.push_back(packet);
+        }
         
         [[nodiscard]] inline bool isSocketClosed() const
         {
             return socket_closed;
         }
+
+        [[nodiscard]] inline const std::vector<packet_t>& pendingPackets() const 
+        {
+            return unprocess_packets;
+        }
+
+        inline void clearPackets(packet_id id)
+        {
+            auto it = unprocess_packets.begin();
+            do {
+                it = std::find_if(unprocess_packets.begin(), unprocess_packets.end(), [id](const auto& v) {return v.id == id;});
+                if (it == unprocess_packets.end())
+                    break;
+                std::iter_swap(it, unprocess_packets.end()-1);
+                unprocess_packets.pop_back();
+            } while (true);
+        }
         
+        void setFitness(double f) 
+        { fitness = f; }
+
+        [[nodiscard]] inline double getFitness() const 
+        { return fitness; }
+
+
         ~child_t()
         {
             close(socket);
@@ -98,6 +128,7 @@ int host_socket = 0;
 std::string SOCKET_LOCATION;
 state_t current_state = state_t::RUN_GENERATIONS;
 double fitness = 0;
+std::vector<double> fitness_storage;
 
 int child_fp(blt::arg_parse::arg_results& args, int run_id, const std::string& socket_location)
 {
@@ -199,65 +230,83 @@ void create_parent_socket()
     BLT_ASSERT(ret == 0 && "Failed to listen socket");
 }
 
+void send_execution_command(blt::i32 numGens){
+    packet_t packet{};
+    unsigned char buffer[sizeof(packet_t)];
+    auto it = children.begin();
+    while (it != children.end())
+    {
+        packet.id = packet_id::EXECUTE_RUN;
+        packet.numOfGens = numGens;
+        std::memcpy(buffer, &packet, sizeof(buffer));
+        if (it->second->write(buffer, sizeof(buffer)) <= 0)
+        {
+            if (it->second->isSocketClosed())
+            {
+                it = children.erase(it);
+                continue;
+            }
+            BLT_WARN("Failed to write to child error %d", errno);
+        }
+        ++it;
+    }
+}
+
 void tick_state(blt::arg_parse::arg_results& args)
 {
     packet_t packet{};
     unsigned char buffer[sizeof(packet_t)];
     packet.state = current_state;
+
+    auto it = children.begin();
+    while(it != children.end())
+    {
+        auto& child = *it;
+        ssize_t ret;
+        if (ret = child.second->read(buffer, sizeof(buffer)), ret <= 0)
+        {
+            if (child.second->isSocketClosed())
+            {
+                it = children.erase(it);
+                continue;
+            }
+            if (errno != 0)
+                BLT_WARN("Failed to read to child error %d", errno);
+        } else 
+        {
+            std::memcpy(&packet, buffer, sizeof(buffer));
+            BLT_INFO("We got packet %d", static_cast<int>(packet.id));
+            child.second->handlePacket(packet);
+        }
+        ++it;
+    }
+
     switch (current_state)
     {
         case state_t::RUN_GENERATIONS:
         {
-            auto it = children.begin();
-            while (it != children.end())
-            {
-                packet.id = packet_id::EXECUTE_RUN;
-                packet.numOfGens = args.get<blt::i32>("--num_gen");
-                std::memcpy(buffer, &packet, sizeof(buffer));
-                if (it->second->write(buffer, sizeof(buffer)) <= 0)
-                {
-                    if (it->second->isSocketClosed())
-                    {
-                        it = children.erase(it);
-                        continue;
-                    }
-                    BLT_WARN("Failed to write to child error %d", errno);
-                }
-                ++it;
-            }
+            send_execution_command(args.get<blt::i32>("--num_gen"));
             current_state = state_t::CHILD_EVALUATION;
             break;
         }
         
         case state_t::CHILD_EVALUATION:
         {
-            std::vector<double> fitness_storage;
-            while (fitness_storage.size() != children.size())
+            for (auto& child : children)
             {
-                auto it = children.begin();
-                while (it != children.end())
+                for (const auto& packet : child.second->pendingPackets())
                 {
-                    auto& child = *it;
-                    ssize_t ret;
-                    if (ret = child.second->read(buffer, sizeof(buffer)), ret <= 0)
+                    if (packet.id == packet_id::CHILD_FIT) 
                     {
-                        if (child.second->isSocketClosed())
-                        {
-                            it = children.erase(it);
-                            continue;
-                        }
-                        if (errno != 0)
-                            BLT_WARN("Failed to read to child error %d", errno);
-                    } else
-                    {
-                        std::memcpy(&packet, buffer, sizeof(buffer));
-                        BLT_ASSERT(packet.id == packet_id::CHILD_FIT && "State mismatch!");
+                        child.second->setFitness(packet.fitness); 
                         fitness_storage.push_back(packet.fitness);
+                        break;
                     }
-                    ++it;
                 }
+                child.second->clearPackets(packet_id::CHILD_FIT);
             }
-            
+            if (fitness_storage.size() < children.size())
+                break;
             std::sort(fitness_storage.begin(), fitness_storage.end());
             auto ratio = args.get<double>("--prune_ratio");
             auto cutoff = static_cast<long>(static_cast<double>(fitness_storage.size()) * ratio);
@@ -267,18 +316,17 @@ void tick_state(blt::arg_parse::arg_results& args)
                 BLT_WARN("Running with no active populations?");
             BLT_INFO("Cutoff value %d, current size %d, fitness: %f", cutoff, fitness_storage.size(), fitness);
             current_state = state_t::PRUNE;
-            
+            fitness_storage.clear();
             break;
         }
         case state_t::PRUNE:
         {
-            if (children.size() == 1)
-            {
-                packet.id = packet_id::PRUNE;
-                packet.fitness = 0;
-                std::memcpy(buffer, &packet, sizeof(buffer));
-                for (auto& child : children)
-                    child.second->write(buffer, sizeof(buffer));
+            if (children.size() == 1) {
+                // run to completion, we no longer need to sync with the server. 
+                send_execution_command(std::numeric_limits<blt::i32>::max());
+                // keep the server in idle state, this way we can still handle incoming packets
+                // since we will need to get information about pop stats
+                current_state = state_t::IDLE;
                 break;
             }
             BLT_DEBUG("Pruning with fitness %f", fitness);
@@ -286,23 +334,29 @@ void tick_state(blt::arg_parse::arg_results& args)
             while (it != children.end())
             {
                 auto& child = *it;
-                packet.id = packet_id::PRUNE;
-                packet.fitness = fitness;
-                std::memcpy(buffer, &packet, sizeof(buffer));
-                if (child.second->write(buffer, sizeof(buffer)) <= 0)
+                if (child.second->getFitness() <= fitness)
                 {
-                    if (child.second->isSocketClosed())
+                    packet.id = packet_id::PRUNE;
+                    packet.fitness = fitness;
+                    std::memcpy(buffer, &packet, sizeof(buffer));
+                    if (child.second->write(buffer, sizeof(buffer)) <= 0)
                     {
-                        it = children.erase(it);
-                        continue;
+                        if (child.second->isSocketClosed())
+                        {
+                            it = children.erase(it);
+                            continue;
+                        }
+                        BLT_WARN("Failed to write to child error %d", errno);
                     }
-                    BLT_WARN("Failed to write to child error %d", errno);
                 }
                 ++it;
             }
             current_state = state_t::RUN_GENERATIONS;
             break;
         }
+        case state_t::IDLE:
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            break;
     }
 }
 
@@ -373,7 +427,7 @@ int main(int argc, const char** argv)
         else if (pid > 0)
         {
             // parent
-            children.insert({pid, std::make_unique<child_t>(pid)});
+            children.insert({pid, std::make_unique<child_t>()});
             BLT_TRACE("Forked child to %d", pid);
         } else
         {

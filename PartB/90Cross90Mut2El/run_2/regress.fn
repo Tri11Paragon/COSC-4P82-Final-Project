@@ -1,0 +1,13 @@
+Hits: 2261, Total Size: 2810, Percent Hit: 80.462633
+CC: 1072
+CO: 64
+OO: 1189
+OC: 485
+Fitness: 0.998821
+Hits: 847
+
+
+y = log((extent / (exp(((perimeter + major) / eccentricity)) * extent)))
+
+ (log (/ extent
+         (* (exp (/ (+ perimeter major) eccentricity)) extent)))

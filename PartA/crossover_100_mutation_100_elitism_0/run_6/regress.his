@@ -1,0 +1,1173 @@
+=== BEST-OF-RUN ===
+      current generation: 0
+              generation: 0
+                   nodes: 9
+                   depth: 3
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 10979.4895
+    standardized fitness: 10979.4895
+        adjusted fitness: 0.0001
+TREE:
+ (* x
+    (+ (/ x 0.08101)
+       (+ 0.10205 x)))
+=== BEST-OF-RUN ===
+      current generation: 1
+              generation: 0
+                   nodes: 9
+                   depth: 3
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 10979.4895
+    standardized fitness: 10979.4895
+        adjusted fitness: 0.0001
+TREE:
+ (* x
+    (+ (/ x 0.08101)
+       (+ 0.10205 x)))
+=== BEST-OF-RUN ===
+      current generation: 2
+              generation: 2
+                   nodes: 13
+                   depth: 4
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 10072.5197
+    standardized fitness: 10072.5197
+        adjusted fitness: 0.0001
+TREE:
+ (/ (+ (/ x
+          (* x -0.24576))
+       (* (/ x 0.66434) x)) 0.07873)
+=== BEST-OF-RUN ===
+      current generation: 3
+              generation: 2
+                   nodes: 13
+                   depth: 4
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 10072.5197
+    standardized fitness: 10072.5197
+        adjusted fitness: 0.0001
+TREE:
+ (/ (+ (/ x
+          (* x -0.24576))
+       (* (/ x 0.66434) x)) 0.07873)
+=== BEST-OF-RUN ===
+      current generation: 4
+              generation: 2
+                   nodes: 13
+                   depth: 4
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 10072.5197
+    standardized fitness: 10072.5197
+        adjusted fitness: 0.0001
+TREE:
+ (/ (+ (/ x
+          (* x -0.24576))
+       (* (/ x 0.66434) x)) 0.07873)
+=== BEST-OF-RUN ===
+      current generation: 5
+              generation: 5
+                   nodes: 25
+                   depth: 6
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 9443.4075
+    standardized fitness: 9443.4075
+        adjusted fitness: 0.0001
+TREE:
+ (- (/ (/ x 0.21275)
+       (cos -0.33714))
+    (* (/ x -0.89664)
+       (- (+ (sin (exp x))
+             (+ x x))
+          (/ x
+             (cos (/ -0.51430 0.31150))))))
+=== BEST-OF-RUN ===
+      current generation: 6
+              generation: 5
+                   nodes: 25
+                   depth: 6
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 9443.4075
+    standardized fitness: 9443.4075
+        adjusted fitness: 0.0001
+TREE:
+ (- (/ (/ x 0.21275)
+       (cos -0.33714))
+    (* (/ x -0.89664)
+       (- (+ (sin (exp x))
+             (+ x x))
+          (/ x
+             (cos (/ -0.51430 0.31150))))))
+=== BEST-OF-RUN ===
+      current generation: 7
+              generation: 5
+                   nodes: 25
+                   depth: 6
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 9443.4075
+    standardized fitness: 9443.4075
+        adjusted fitness: 0.0001
+TREE:
+ (- (/ (/ x 0.21275)
+       (cos -0.33714))
+    (* (/ x -0.89664)
+       (- (+ (sin (exp x))
+             (+ x x))
+          (/ x
+             (cos (/ -0.51430 0.31150))))))
+=== BEST-OF-RUN ===
+      current generation: 8
+              generation: 5
+                   nodes: 25
+                   depth: 6
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 9443.4075
+    standardized fitness: 9443.4075
+        adjusted fitness: 0.0001
+TREE:
+ (- (/ (/ x 0.21275)
+       (cos -0.33714))
+    (* (/ x -0.89664)
+       (- (+ (sin (exp x))
+             (+ x x))
+          (/ x
+             (cos (/ -0.51430 0.31150))))))
+=== BEST-OF-RUN ===
+      current generation: 9
+              generation: 5
+                   nodes: 25
+                   depth: 6
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 9443.4075
+    standardized fitness: 9443.4075
+        adjusted fitness: 0.0001
+TREE:
+ (- (/ (/ x 0.21275)
+       (cos -0.33714))
+    (* (/ x -0.89664)
+       (- (+ (sin (exp x))
+             (+ x x))
+          (/ x
+             (cos (/ -0.51430 0.31150))))))
+=== BEST-OF-RUN ===
+      current generation: 10
+              generation: 10
+                   nodes: 71
+                   depth: 10
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 8235.5763
+    standardized fitness: 8235.5763
+        adjusted fitness: 0.0001
+TREE:
+ (- (sin (sin (+ (sin (exp (sin (* (sin x) 0.04044))))
+                 (log (/ x x)))))
+    (* (log (+ (* (cos (* (cos (cos (exp x)))
+                          (log (/ 0.35177
+                                  (* x x)))))
+                  (/ x 0.18486))
+               (- (/ (* (sin x)
+                        (cos x))
+                     (/ (sin x)
+                        (+ x 0.30134)))
+                  (+ (cos (* 0.83024 0.72517))
+                     (+ 0.42754
+                        (+ x 0.45759))))))
+       (/ (+ (log (sin 0.79724))
+             (* (- (exp -0.93321)
+                   (+ -0.06917 x)) x)) 0.19571)))
+=== BEST-OF-RUN ===
+      current generation: 11
+              generation: 11
+                   nodes: 72
+                   depth: 10
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 7680.6622
+    standardized fitness: 7680.6622
+        adjusted fitness: 0.0001
+TREE:
+ (- (sin (sin (+ (sin (exp (sin (* (sin x) 0.04044))))
+                 (log (/ x x)))))
+    (* (log (+ (* (cos (* (cos (cos (exp x)))
+                          (log (/ 0.35177
+                                  (* x x)))))
+                  (/ x 0.18486))
+               (- (/ (* (sin x)
+                        (cos x))
+                     (/ (sin x)
+                        (sin (/ x x))))
+                  (+ (cos (* 0.83024 0.72517))
+                     (+ 0.42754
+                        (+ x 0.45759))))))
+       (/ (+ (log (sin 0.79724))
+             (* (- (exp -0.93321)
+                   (+ -0.06917 x)) x)) 0.19571)))
+=== BEST-OF-RUN ===
+      current generation: 12
+              generation: 12
+                   nodes: 9
+                   depth: 3
+                    hits: 5
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 5
+             raw fitness: 5960.1867
+    standardized fitness: 5960.1867
+        adjusted fitness: 0.0002
+TREE:
+ (+ x
+    (* (* x x)
+       (* x x)))
+=== BEST-OF-RUN ===
+      current generation: 13
+              generation: 12
+                   nodes: 9
+                   depth: 3
+                    hits: 5
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 5
+             raw fitness: 5960.1867
+    standardized fitness: 5960.1867
+        adjusted fitness: 0.0002
+TREE:
+ (+ x
+    (* (* x x)
+       (* x x)))
+=== BEST-OF-RUN ===
+      current generation: 14
+              generation: 12
+                   nodes: 9
+                   depth: 3
+                    hits: 5
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 5
+             raw fitness: 5960.1867
+    standardized fitness: 5960.1867
+        adjusted fitness: 0.0002
+TREE:
+ (+ x
+    (* (* x x)
+       (* x x)))
+=== BEST-OF-RUN ===
+      current generation: 15
+              generation: 12
+                   nodes: 9
+                   depth: 3
+                    hits: 5
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 5
+             raw fitness: 5960.1867
+    standardized fitness: 5960.1867
+        adjusted fitness: 0.0002
+TREE:
+ (+ x
+    (* (* x x)
+       (* x x)))
+=== BEST-OF-RUN ===
+      current generation: 16
+              generation: 16
+                   nodes: 88
+                   depth: 11
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 4135.7495
+    standardized fitness: 4135.7495
+        adjusted fitness: 0.0002
+TREE:
+ (- (sin (sin (+ (sin -0.75748)
+                 (log (/ x x)))))
+    (* (log (+ (* (cos (* (cos (log x))
+                          (log (/ 0.35177
+                                  (* x x)))))
+                  (/ x 0.18486))
+               (- (/ (* (sin x)
+                        (- (log (sin 0.89625))
+                           (* (+ (/ x x)
+                                 (/ 0.98233 x))
+                              (cos x))))
+                     (/ -0.19103
+                        (+ x 0.30134)))
+                  (exp x))))
+       (/ (+ (log (sin 0.79724))
+             (* (- (* (* (- (log (/ x x))
+                            (* (/ 0.29701 x)
+                               (/ -0.81593 x)))
+                         (/ x
+                            (log (/ 0.14265 x))))
+                      (exp x))
+                   (+ -0.06917 x)) x)) 0.19571)))
+=== BEST-OF-RUN ===
+      current generation: 17
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 18
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 19
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 20
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 21
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 22
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 23
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 24
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 25
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 26
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 27
+              generation: 17
+                   nodes: 15
+                   depth: 4
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 2455.0024
+    standardized fitness: 2455.0024
+        adjusted fitness: 0.0004
+TREE:
+ (* (log (exp x))
+    (* (cos (log 0.76176))
+       (* (+ 0.90936 x)
+          (* x x))))
+=== BEST-OF-RUN ===
+      current generation: 28
+              generation: 28
+                   nodes: 40
+                   depth: 10
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 2438.0022
+    standardized fitness: 2438.0022
+        adjusted fitness: 0.0004
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (* (- (log (- (log (exp x))
+                     (cos (exp (+ (sin x)
+                                  (sin -0.60367))))))
+             (+ (cos (* 0.83024 x))
+                (+ (/ x x)
+                   (+ x 0.45759))))
+          (* x x)))
+    (cos -0.30791))
+=== BEST-OF-RUN ===
+      current generation: 29
+              generation: 29
+                   nodes: 46
+                   depth: 10
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 2397.4593
+    standardized fitness: 2397.4593
+        adjusted fitness: 0.0004
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (* (/ x x)
+          (+ x
+             (- (* (cos (exp (cos (sin -0.35236))))
+                   (/ x 0.18486))
+                (exp x)))))
+    (cos (+ (cos (/ (* (* x x)
+                       (+ -0.39746 x))
+                    (/ -0.00191
+                       (exp x))))
+            (cos (+ x x)))))
+=== BEST-OF-RUN ===
+      current generation: 30
+              generation: 30
+                   nodes: 44
+                   depth: 8
+                    hits: 0
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 0
+             raw fitness: 425.9901
+    standardized fitness: 425.9901
+        adjusted fitness: 0.0023
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (* (/ x x)
+          (* (cos (log x))
+             (log (/ 0.35177
+                     (* x x))))))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin -0.43063)
+                      (* x x))))
+             (cos x)))))
+=== BEST-OF-RUN ===
+      current generation: 31
+              generation: 31
+                   nodes: 42
+                   depth: 8
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 288.4772
+    standardized fitness: 288.4772
+        adjusted fitness: 0.0035
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (* (/ x x)
+          (* (cos (log x))
+             (log (/ x x)))))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin -0.43063)
+                      (* x x))))
+             (cos x)))))
+=== BEST-OF-RUN ===
+      current generation: 32
+              generation: 32
+                   nodes: 39
+                   depth: 8
+                    hits: 1
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 1
+             raw fitness: 166.5969
+    standardized fitness: 166.5969
+        adjusted fitness: 0.0060
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (* (/ x x)
+          (+ x
+             (sin (cos -0.14630)))))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin 0.79724)
+                      (* x x))))
+             (cos x)))))
+=== BEST-OF-RUN ===
+      current generation: 33
+              generation: 33
+                   nodes: 59
+                   depth: 16
+                    hits: 3
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 3
+             raw fitness: 119.1859
+    standardized fitness: 119.1859
+        adjusted fitness: 0.0083
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (log (+ (+ -0.06917 x)
+                                              (exp (log (log x)))))
+                                      (/ (+ (log (sin 0.79724))
+                                            (* (- (+ x x)
+                                                  (+ -0.06917 x)) x)) 0.19571)))))
+                      (* x x))))
+             (cos x)))))
+=== BEST-OF-RUN ===
+      current generation: 34
+              generation: 34
+                   nodes: 46
+                   depth: 11
+                    hits: 8
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 8
+             raw fitness: 72.8497
+    standardized fitness: 72.8497
+        adjusted fitness: 0.0135
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (exp (log (cos -0.87793))))
+    (+ (* x
+          (+ (- x 0.20944) -0.14138))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (+ x x))))
+                      (* x x))))
+             (- (sin (cos (log x)))
+                (exp -0.13068))))))
+=== BEST-OF-RUN ===
+      current generation: 35
+              generation: 35
+                   nodes: 61
+                   depth: 16
+                    hits: 7
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 7
+             raw fitness: 33.2214
+    standardized fitness: 33.2214
+        adjusted fitness: 0.0292
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (log (+ (+ -0.06917 x)
+                                              (exp (log (exp x)))))
+                                      (/ (+ (log (sin 0.79724))
+                                            (* (- (+ x x)
+                                                  (+ -0.06917 x)) x)) 0.19571)))))
+                      (* x x))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 36
+              generation: 35
+                   nodes: 61
+                   depth: 16
+                    hits: 7
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 7
+             raw fitness: 33.2214
+    standardized fitness: 33.2214
+        adjusted fitness: 0.0292
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (log (+ (+ -0.06917 x)
+                                              (exp (log (exp x)))))
+                                      (/ (+ (log (sin 0.79724))
+                                            (* (- (+ x x)
+                                                  (+ -0.06917 x)) x)) 0.19571)))))
+                      (* x x))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 37
+              generation: 37
+                   nodes: 58
+                   depth: 16
+                    hits: 10
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 10
+             raw fitness: 32.9079
+    standardized fitness: 32.9079
+        adjusted fitness: 0.0295
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (log (+ (+ -0.06917 x)
+                                              (exp (log (exp x)))))
+                                      (/ (+ (log (sin 0.79724))
+                                            (+ (sin -0.43063)
+                                               (* x x))) 0.19571)))))
+                      (* x x))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 38
+              generation: 38
+                   nodes: 65
+                   depth: 17
+                    hits: 2
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 2
+             raw fitness: 21.5720
+    standardized fitness: 21.5720
+        adjusted fitness: 0.0443
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (log (+ (+ -0.06917 x)
+                                              (exp (log (* (* x x)
+                                                           (* x x))))))
+                                      (/ (+ (log (sin 0.79724))
+                                            (+ 0.65276
+                                               (log (- (/ x -0.02959) x)))) 0.19571)))))
+                      (* x x))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 39
+              generation: 39
+                   nodes: 43
+                   depth: 13
+                    hits: 2
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 2
+             raw fitness: 8.0265
+    standardized fitness: 8.0265
+        adjusted fitness: 0.1108
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* 0.92425
+                                      (/ (* x x) 0.19571)))))
+                      (* x x))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 40
+              generation: 40
+                   nodes: 54
+                   depth: 15
+                    hits: 186
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 186
+             raw fitness: 1.7162
+    standardized fitness: 1.7162
+        adjusted fitness: 0.3682
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (- 0.52868 -0.17197)))
+                                         (* x x))
+                                      (/ (exp -0.93321) 0.19571)))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 41
+              generation: 40
+                   nodes: 54
+                   depth: 15
+                    hits: 186
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 186
+             raw fitness: 1.7162
+    standardized fitness: 1.7162
+        adjusted fitness: 0.3682
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (- 0.52868 -0.17197)))
+                                         (* x x))
+                                      (/ (exp -0.93321) 0.19571)))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 42
+              generation: 40
+                   nodes: 54
+                   depth: 15
+                    hits: 186
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 186
+             raw fitness: 1.7162
+    standardized fitness: 1.7162
+        adjusted fitness: 0.3682
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (- 0.52868 -0.17197)))
+                                         (* x x))
+                                      (/ (exp -0.93321) 0.19571)))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 43
+              generation: 43
+                   nodes: 54
+                   depth: 15
+                    hits: 185
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 185
+             raw fitness: 1.6453
+    standardized fitness: 1.6453
+        adjusted fitness: 0.3780
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (- 0.52868 -0.17197)))
+                                         (* x x))
+                                      (exp (- 0.52868 -0.17197))))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 44
+              generation: 44
+                   nodes: 54
+                   depth: 15
+                    hits: 185
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 185
+             raw fitness: 1.4281
+    standardized fitness: 1.4281
+        adjusted fitness: 0.4118
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.98066))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (- 0.52868 -0.17197)))
+                                         (* x x))
+                                      (/ (exp -0.92006) 0.19571)))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))
+=== BEST-OF-RUN ===
+      current generation: 45
+              generation: 45
+                   nodes: 58
+                   depth: 17
+                    hits: 200
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 200
+             raw fitness: 1.0252
+    standardized fitness: 1.0252
+        adjusted fitness: 0.4938
+TREE:
+ (+ (- (* (* x x)
+          (* x x))
+       (sin 0.72466))
+    (+ (* x
+          (log (exp x)))
+       (+ x
+          (+ (+ 0.91458
+                (* x
+                   (+ (sin (sin (/ x
+                                   (* (* (+ (cos 0.63359)
+                                            (exp (+ (* (sin 0.05858)
+                                                       (exp x))
+                                                    (exp (exp 0.96568))))) x)
+                                      (/ (exp -0.93321) 0.19571)))))
+                      (* x
+                         (log (exp x))))))
+             (+ -0.97154
+                (cos 0.77457))))))

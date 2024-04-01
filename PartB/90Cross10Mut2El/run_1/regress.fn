@@ -1,0 +1,13 @@
+Hits: 2548, Total Size: 2810, Percent Hit: 90.676157
+CC: 970
+CO: 178
+OO: 1578
+OC: 84
+Fitness: 0.998891
+Hits: 901
+
+
+y = log(exp((((major * eccentricity) / -0.57094) * exp(eccentricity))))
+
+ (log (exp (* (/ (* major eccentricity) -0.57094)
+              (exp eccentricity))))

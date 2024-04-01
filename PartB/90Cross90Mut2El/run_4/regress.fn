@@ -1,0 +1,13 @@
+Hits: 2562, Total Size: 2810, Percent Hit: 91.174377
+CC: 1024
+CO: 89
+OO: 1538
+OC: 159
+Fitness: 0.998894
+Hits: 903
+
+
+y = log(exp(((perimeter * (area / -0.61055)) / area)))
+
+ (log (exp (/ (* perimeter
+                 (/ area -0.61055)) area)))

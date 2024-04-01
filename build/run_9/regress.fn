@@ -1,0 +1,15 @@
+Hits: 2586, Total Size: 2810, Percent Hit: 92.028470
+CC: 1042
+CO: 83
+OO: 1544
+OC: 141
+Fitness: 0.998920
+Hits: 925
+
+
+y = ((-0.13137 - major) / exp((perimeter + (exp(-0.51393) / ((minor / major) / major)))))
+
+ (/ (- -0.13137 major)
+    (exp (+ perimeter
+            (/ (exp -0.51393)
+               (/ (/ minor major) major)))))
