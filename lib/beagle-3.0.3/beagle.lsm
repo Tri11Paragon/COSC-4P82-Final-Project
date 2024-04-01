@@ -1,0 +1,16 @@
+Begin3
+Title:          Open BEAGLE
+Version:        3.0.3
+Entered-date:   November 29, 2007
+Description:    C++ Evolutionary Computation Framework.
+Keywords:       Evolutionary computation, genetic algorithms,
+                genetic programming, evolution strategy
+Author:         Christian Gagne <cgagne@gmail.com>
+                Marc Parizeau <parizeau@gel.ulaval.ca>
+Maintained-by:  Christian Gagne <cgagne@gmail.com>
+Primary-site:   http://beagle.gel.ulaval.ca
+Home-page:      http://beagle.gel.ulaval.ca
+Original-site:  http://beagle.gel.ulaval.ca
+Platforms:      Linux and other Unices, Microsoft Windows
+Copying-policy: GNU Lesser General Public License
+End

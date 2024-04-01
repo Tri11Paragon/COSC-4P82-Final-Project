@@ -1,0 +1,13 @@
+Hits: 1558, Total Size: 2810, Percent Hit: 55.444840
+CC: 1081
+CO: 40
+OO: 477
+OC: 1212
+Fitness: 0.998428
+Hits: 635
+
+
+y = ((major / minor) - exp(extent))
+
+ (- (/ major minor)
+    (exp extent))

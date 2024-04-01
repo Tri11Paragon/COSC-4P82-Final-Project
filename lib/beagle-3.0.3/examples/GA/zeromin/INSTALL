@@ -1,0 +1,81 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+ZeroMin (zeromin): Minimization GA example with Open BEAGLE
+
+Copyright (C) 2003
+by  Christian Gagne <cgagne@gmail.com>
+and Marc Parizeau <parizeau@gel.ulaval.ca>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+
+INSTRUCTIONS TO BUILD THE EXAMPLE ON UNIX
+=========================================
+
+To compile the allzeros example on Unix (once the Open BEAGLE framework is built),
+'cd' to the main example directory, and type the following commands.
+
+      ./configure
+      make clean
+      make
+
+Then, the binary will be in directory 'zeromin'.
+      
+'configure' recognizes the following options to control how it
+operates.
+
+'--enable-optimization'
+     Enable the 'optimization' mode by setting the optimization flags
+     of the compiler. Use this flag to compile a version of the examples
+     linked with an optimized version of the framework libraries.
+     
+'--with-beagle=DIR'
+     Specify the installation path of Open BEAGLE.
+
+'--with-beagle-include=DIR'
+     Specify exact installation directory for Open BEAGLE headers.
+
+'--with-beagle-GA-include=DIR'
+     Specify exact installation directory for Open BEAGLE GA headers.
+
+'--with-beagle-GP-include=DIR'
+     Specify exact installation directory for Open BEAGLE GP headers.
+
+'--with-beagle-libdir=DIR'
+     Specify exact installation directory for Open BEAGLE libraries.
+
+'--with-beagle-GA-libdir=DIR'
+     Specify exact installation directory for Open BEAGLE GA libraries.
+
+'--with-beagle-GP-libdir=DIR'
+     Specify exact installation directory for Open BEAGLE GP libraries.
+
+'--cache-file=FILE'
+     Use and save the test results in file FILE instead of
+     './config.cache'.  Set FILE to '/dev/null' to disable caching, for
+     debugging 'configure'.
+
+'--help'
+     Print a summary of the options to 'configure', and exit.
+
+'--quiet'
+'--silent'
+'-q'
+     Do not print messages saying which checks are being made.  To
+     suppress all normal output, redirect it to '/dev/null' (any error
+     messages will still be shown).
+
+'--version'
+     Print the version of Autoconf used to generate the 'configure'
+     script, and exit.
+
+'configure' also accepts some other, not widely useful, options.
+
+
+INSTRUCTIONS TO BUILD THE EXAMPLE ON MS VISUAL C++ .NET
+=======================================================
+
+Go to folder 'MSVCPP' and open the solution file 'zeromin.sln' with
+MS Visual Studio .NET. Then you can compile the example. The binary will
+be in directory 'zeromin'.
+

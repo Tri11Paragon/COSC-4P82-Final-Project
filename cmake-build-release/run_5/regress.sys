@@ -1,0 +1,17 @@
+
+[ lil-gp Genetic Programming System.
+[ Portions copyright (c) 1995 Michigan State University.  All rights reserved.
+[ kernel version 1.0; 11 July 1995.
+
+
+initialization:
+    parameter database.
+    ephemeral random constants.
+    generation spaces.
+updating function set(s):
+    set 0: removed.
+building function set(s):
+    set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
+    tree 0 uses function set 0.
+    function set complete.
+    no random number seed specfied; using 18.

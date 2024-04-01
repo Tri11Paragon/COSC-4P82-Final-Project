@@ -1,0 +1,92 @@
+=== BEST-OF-RUN ===
+      current generation: 0
+              generation: 0
+                   nodes: 32
+                   depth: 5
+                    hits: 757
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 757
+             raw fitness: 757.0000
+    standardized fitness: 757.0000
+        adjusted fitness: 0.9987
+TREE:
+ (/ (log (* (+ (/ major area)
+               (/ area extent))
+            (exp (exp major))))
+    (/ (- (log (- area minor))
+          (* (* area major)
+             (exp eccentricity)))
+       (exp (/ (* eccentricity minor)
+               (log eccentricity)))))
+=== BEST-OF-RUN ===
+      current generation: 1
+              generation: 1
+                   nodes: 3
+                   depth: 1
+                    hits: 768
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 768
+             raw fitness: 768.0000
+    standardized fitness: 768.0000
+        adjusted fitness: 0.9987
+TREE:
+ (+ -0.89503 eccentricity)
+=== BEST-OF-RUN ===
+      current generation: 2
+              generation: 1
+                   nodes: 3
+                   depth: 1
+                    hits: 768
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 768
+             raw fitness: 768.0000
+    standardized fitness: 768.0000
+        adjusted fitness: 0.9987
+TREE:
+ (+ -0.89503 eccentricity)
+=== BEST-OF-RUN ===
+      current generation: 3
+              generation: 3
+                   nodes: 3
+                   depth: 1
+                    hits: 779
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 779
+             raw fitness: 779.0000
+    standardized fitness: 779.0000
+        adjusted fitness: 0.9987
+TREE:
+ (- eccentricity 0.89000)
+=== BEST-OF-RUN ===
+      current generation: 4
+              generation: 3
+                   nodes: 3
+                   depth: 1
+                    hits: 779
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 779
+             raw fitness: 779.0000
+    standardized fitness: 779.0000
+        adjusted fitness: 0.9987
+TREE:
+ (- eccentricity 0.89000)

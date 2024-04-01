@@ -1,0 +1,14 @@
+Hits: 1614, Total Size: 2810, Percent Hit: 57.437722
+CC: 1136
+CO: 13
+OO: 478
+OC: 1183
+Fitness: 0.998397
+Hits: 623
+
+
+y = ((major - (minor - (0.87850 - minor))) - eccentricity)
+
+ (- (- major
+       (- minor
+          (- 0.87850 minor))) eccentricity)

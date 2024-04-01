@@ -1,0 +1,44 @@
+beagleGAdir = $(includedir)/beagle/GA
+beagleGA_HEADERS = \
+BitString.hpp \
+CMAHolder.hpp \
+CrossoverBlendESVecOp.hpp \
+CrossoverBlendFltVecOp.hpp \
+CrossoverIndicesIntVecOp.hpp \
+CrossoverOnePointBitStrOp.hpp \
+CrossoverOnePointESVecOp.hpp \
+CrossoverOnePointFltVecOp.hpp \
+CrossoverOnePointIntVecOp.hpp \
+CrossoverOnePointOpT.hpp \
+CrossoverSBXFltVecOp.hpp \
+CrossoverTwoPointsBitStrOp.hpp \
+CrossoverTwoPointsESVecOp.hpp \
+CrossoverTwoPointsFltVecOp.hpp \
+CrossoverTwoPointsIntVecOp.hpp \
+CrossoverTwoPointsOpT.hpp \
+CrossoverUniformBitStrOp.hpp \
+CrossoverUniformESVecOp.hpp \
+CrossoverUniformFltVecOp.hpp \
+CrossoverUniformIntVecOp.hpp \
+CrossoverUniformOpT.hpp \
+ESVector.hpp \
+EvolverBitString.hpp \
+EvolverES.hpp \
+EvolverFloatVector.hpp \
+EvolverIntegerVector.hpp \
+FloatVector.hpp \
+InitBitStrOp.hpp \
+InitCMAFltVecOp.hpp \
+InitESVecOp.hpp \
+InitFltVecOp.hpp \
+InitIndicesIntVecOp.hpp \
+InitIntVecOp.hpp \
+IntegerVector.hpp \
+MutationCMAFltVecOp.hpp \
+MutationESVecOp.hpp \
+MutationFlipBitStrOp.hpp \
+MutationGaussianFltVecOp.hpp \
+MutationShuffleIntVecOp.hpp \
+MutationUniformIntVecOp.hpp \
+MuWCommaLambdaCMAFltVecOp.hpp \
+TermCMAOp.hpp

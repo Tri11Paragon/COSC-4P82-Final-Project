@@ -1,0 +1,100 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+SPAM e-mail database (spambase): Machine learning using strongly-typed GP
+with Open BEAGLE
+
+Copyright (C) 2001-2003
+by  Christian Gagne <cgagne@gmail.com>
+and Marc Parizeau <parizeau@gel.ulaval.ca>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+
+Getting started
+===============
+
+  Example is compiled in binary 'spambase'. Usage options is described by
+  executing it with command-line argument '-OBusage'. The detailed help can
+  also be obtained with argument '-OBhelp'.
+
+Objective
+=========
+
+  Find a program the will successfully predict whether a given e-mail is spam
+  or not from some extracted features.
+
+Comments
+========
+
+  The evolved programs works on floating-point values AND Booleans values.
+  The programs must return a Boolean value which must be true if e-mail is
+  spam, and false otherwise. Don't expect too much from this program as
+  it is quite basic and not oriented toward performance. It is there mainly
+  to illustrate the use of strongly-typed GP with Open BEAGLE.
+
+Terminal set
+============
+
+  IN0, IN1, ...  up to IN56, the e-mail features.      [floating-point]
+  0 and 1, two Boolean constants.                      [Boolean]
+  Ephemeral constants randomly generated in $[0,100]$  [floating-point]
+
+Function set
+============
+  AND               [Inputs: Booleans,        Output: Boolean]
+  OR                [Input:  Boolean,         Output: Boolean]
+  NOT               [Inputs: Booleans,        Output: Boolean]
+  +                 [Inputs: floating-points, Output: floating-point]
+  -                 [Inputs: floating-points, Output: floating-point]
+  *                 [Inputs: floating-points, Output: floating-point]
+  /                 [Inputs: floating-points, Output: floating-point]
+  <                 [Inputs: floating-points, Output: Booleans]
+  ==                [Inputs: floating-points, Output: Booleans]
+  if-then-else      [1st Input: Boolean, 2nd & 3rd Input: floating-points,
+                     Output: floating-point]
+
+Fitness cases
+=============
+
+  A random sample of 400 e-mails over the database, re-chosen for
+  each fitness evaluation.
+
+Hits
+====
+
+  Number of correct outputs obtained over the 400 fitness cases.
+
+Raw fitness
+===========
+
+  Ignored (always 0).
+
+
+Standardized fitness
+====================
+
+  Rate of correct outputs over the fitness cases where
+  the desired output was 0 (non-spam).
+
+Adjusted fitness
+================
+
+  Rate of correct outputs over the fitness cases where
+  the desired output was 1 (spam).
+
+Normalized fitness
+==================
+
+  Rate of correct outputs obtained over all the 400 fitness cases.
+
+Stopping criteria
+=================
+
+  When the best individual scores 400 hits or when the evolution reaches
+  the maximum number of generations.
+
+Reference
+=========
+
+  Machine learning repository,
+  http://www.ics.uci.edu/~mlearn/MLRepository.html

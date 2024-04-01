@@ -1,0 +1,46 @@
+###
+### Skeletion lilgp app code input file.
+###
+
+### app-specific parameters
+
+
+
+
+### lilgp-specific parameters
+
+# number of threads to use for run
+num_threads = 4
+
+# GP parameters
+max_generations = 50
+pop_size = 500
+random_seed = 1
+
+# name to use for the first part of all output files
+output.basename = skel
+
+# how to generate the initial population
+init.method = half_and_half
+init.depth = 2-6
+
+# limits on tree size.
+max_depth = 17
+
+
+## breeding parameters (emulates Koza Ch. 7)
+## see ../params directory for more examples of breeding params
+
+breed_phases = 1
+
+breed[1].operator=mutation,select=fitness
+breed[1].rate =0.1
+
+breed[1].operator = crossover, select=fitness_overselect
+breed[1].rate = 0.8
+
+breed[2].operator = reproduction, select=fitness_overselect
+breed[2].rate = 0.1
+
+
+

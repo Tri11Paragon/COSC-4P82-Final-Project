@@ -1,0 +1,12 @@
+Hits: 2150, Total Size: 2810, Percent Hit: 76.512456
+CC: 705
+CO: 433
+OO: 1445
+OC: 227
+Fitness: 0.998691
+Hits: 763
+
+
+y = (log(eccentricity) + 0.10748)
+
+ (+ (log eccentricity) 0.10748)

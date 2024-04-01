@@ -1,0 +1,29 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+Traveling Salesman Problem (tsp): Indices integer vector GA example
+
+Copyright (C) 2005-2006 by Christian Gagne <cgagne@gmail.com>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+
+INSTRUCTIONS TO BUILD THE EXAMPLE ON UNIX
+=========================================
+
+To compile the tsp example on Unix (once the Open BEAGLE framework is built),
+'cd' to the main example directory, and type the following commands.
+
+      ./configure
+      make clean
+      make
+
+Then, the binary will be in directory 'tsp'.
+
+
+INSTRUCTIONS TO BUILD THE EXAMPLE ON MS VISUAL C++ .NET
+=======================================================
+
+Go to folder 'MSVCPP' and open the solution file 'tsp.sln' with
+MS Visual Studio .NET. Then you can compile the example. The binary will
+be in directory 'tsp'.
+

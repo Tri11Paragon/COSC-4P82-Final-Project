@@ -1,0 +1,17 @@
+Hits: 2555, Total Size: 2810, Percent Hit: 90.925267
+CC: 918
+CO: 216
+OO: 1637
+OC: 39
+Fitness: 0.998896
+Hits: 905
+
+
+y = (exp(minor) / (-0.32253 / (eccentricity / exp((perimeter - (log(-0.29408) * (extent + major)))))))
+
+ (/ (exp minor)
+    (/ -0.32253
+       (/ eccentricity
+          (exp (- perimeter
+                  (* (log -0.29408)
+                     (+ extent major)))))))

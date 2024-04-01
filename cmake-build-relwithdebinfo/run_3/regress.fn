@@ -1,0 +1,12 @@
+Hits: 2109, Total Size: 2810, Percent Hit: 75.053381
+CC: 1073
+CO: 47
+OO: 1036
+OC: 654
+Fitness: 0.998768
+Hits: 811
+
+
+y = log(exp((-0.06264 * area)))
+
+ (log (exp (* -0.06264 area)))

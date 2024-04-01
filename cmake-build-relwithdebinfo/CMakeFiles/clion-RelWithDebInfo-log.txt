@@ -1,0 +1,27 @@
+/opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_MAKE_PROGRAM=/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project" -B "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-relwithdebinfo"
+
+
+Enabling library compilation
+-- Building standard cxx files
+-- Building profiling cxx files
+-- Building filesystem cxx files
+-- Building parser cxx files
+Found Parallel Hashmaps library, using phmap over std::unordered_map
+Standard Files /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/assert.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/error.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/format.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/logging.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/simd.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/string.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/std/system.cpp
+Profiler Files /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/profiling/profiler.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/profiling/profiler_v2.cpp
+FS Files /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/fs/filesystem.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/fs/loader.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/fs/nbt.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/fs/nbt_block.cpp
+Parser Files /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/parse/argparse.cpp;/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/src/blt/parse/obj_loader.cpp
+Source: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project
+Current Source: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt
+Binary: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-relwithdebinfo
+Current Binary: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-relwithdebinfo/lib/blt
+Enabling platform specific compile options for BLT
+-- GCC Compile: -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+-- GCC Link: -rdynamic
+-- GCC libs: stdc++fs
+Including Parallel Hashmap directory
+BLT 0.15.10 Successfully included!
+Installing to lib with headers at include
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-relwithdebinfo

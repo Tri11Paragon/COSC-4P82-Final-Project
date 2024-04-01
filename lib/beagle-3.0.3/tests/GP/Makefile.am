@@ -1,0 +1,4 @@
+SUBDIRS = \
+FitnessTestGPIndividual \
+ReadGPIndividual \
+WriteRandomGPIndividual

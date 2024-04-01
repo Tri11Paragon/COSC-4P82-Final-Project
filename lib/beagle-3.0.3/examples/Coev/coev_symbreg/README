@@ -1,0 +1,65 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+Co-evolutionary Symbolic Regression (coev_symbreg):
+Mixed real-valued GA - GP co-evolution example with Open BEAGLE
+
+Copyright (C) 2003
+by Jiachuan Wang <jiacwang@ecs.umass.edu>
+and Christian Gagne <cgagne@gmail.com>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+
+Getting started
+===============
+
+  Example is compiled in binary 'coev_symbreg'. Configuration file for
+  real-valued GA population (the evolving training set) is in file
+  'trainset-thread.conf', while configuration file for GP symbolic
+  regression population is in file 'symgp-thread.conf'.
+
+Objective
+=========
+
+  Two populations competitive co-evolution for symbolic regression.
+  First population is made of standard GP mathematical expressions.
+  Second population is made of individual representing 20 $(x_i,y_i)$
+  samples in the domain $[-1,1]$ of the equation $x^4+x^3+x^2+x$.
+  The global objective is to a find symbolic expressions that
+  "generalizes" well over the domain sampled.
+
+Terminal set of GP expressions
+==============================
+
+  X (the independent variable)
+  Ephemeral constants randomly generated in $[-1,1]$
+
+Function set of GP expressions
+==============================
+
+  +
+  -
+  *
+  /     (protected division)
+  
+Representation of training sets
+===============================
+
+Vector of 20 real-valued numbers in $[-1,1]$.
+
+Fitness
+=======
+
+  Root Mean Square (RMS) error of the GP expressions on the 20 samples
+  of the training set. GP expression minimizes the RMS error, while
+  training set maximizes it. Individuals of one population are
+  evaluated against last generation other population best performing
+  individual.
+  
+Reference
+=========
+
+Liviu Panait and Sean Luke, Methods for Evolving Robust Programs,
+Proceedings of Genetic and Evolutionary Computation -- GECCO-2003,
+LNCS, Vol. 2724, pp. 1740-1751, Springer-Verlag, 12-16 July 2003.
+

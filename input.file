@@ -1,0 +1,34 @@
+# This stuff added for bst-lilgp
+num_threads = 8
+# End of bst specific stuff
+
+###
+### sample input parameter file for symbolic regression.
+###
+
+pop_size = 5000
+max_generations = 51
+elitism = 2
+# random_seed = 1234567890
+
+output.basename = regress
+
+# how to generate the initial population
+init.method = half_and_half
+init.depth = 2-6
+
+# limits on tree size.
+max_depth = 17
+
+## breeding parameters (emulates Koza Ch. 7)
+
+breed_phases = 2
+
+breed[1].operator = crossover, select=fitness
+breed[1].rate = 0.1
+
+breed[2].operator = mutation, select=fitness, method=grow,depth=4
+breed[2].rate = 0.1
+
+#breed[2].operator = reproduction, select=fitness
+#breed[2].rate = 0.1

@@ -1,0 +1,10 @@
+This is a version of ant that has been customized to demonstrate
+multithreading and strong typing.  Ant now has a function called
+(if ...) which takes a boolean value.  Based on that value, it
+either evaluates and returns its second or third argument. 
+
+Booleans include food ahead, food behind, food to the right,
+or food to the left.
+
+This code runs great on an Alpha machine running digital Unix 4.0;
+I can't vouch for anything else.

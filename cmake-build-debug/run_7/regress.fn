@@ -1,0 +1,13 @@
+Hits: 2168, Total Size: 2810, Percent Hit: 77.153025
+CC: 969
+CO: 156
+OO: 1199
+OC: 486
+Fitness: 0.998731
+Hits: 787
+
+
+y = log(log((log(exp((eccentricity - major))) / log(exp((convex / major))))))
+
+ (log (log (/ (log (exp (- eccentricity major)))
+              (log (exp (/ convex major))))))

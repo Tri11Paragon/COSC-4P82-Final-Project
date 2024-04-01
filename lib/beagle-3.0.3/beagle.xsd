@@ -1,0 +1,841 @@
+<?xml version="1.0" ?>
+
+<!-- $Id: beagle.xsd,v 1.6 2005/10/06 14:01:40 raspingoo Exp $ -->
+<!-- W3C XML Schema for Open BEAGLE files, by Christian Gagne, originally created April 2004, last updated October 2005 -->
+<!-- See the W3C XML Schema standard at: http://www.w3.org/XML/Schema --> 
+<!-- A good on-line reference on W3C XML Schema: http://www.w3schools.com/schema/default.asp -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation>
+      W3C XML Schema for Open BEAGLE files by Christian Gagne, originally created April 2004, last updated October 2005. Every Open BEAGLE files starts with root element "Beagle".
+    </xs:documentation>
+  </xs:annotation>
+
+
+  <!-- Root tag Beagle -->
+
+  <xs:element name="Beagle">
+    <xs:annotation>
+      <xs:documentation>
+        Root XML tag of Open BEAGLE document. Six main elements can be used: Logger, Evolver, Register, System, Vivarium and Seeds. There is four usual use cases: configuration file, log file, milestone file and seeds file. Configuration file includes Evolver and System elements. Log file includes Logger element. Milestone file includes Evolver, System and Vivarium elements. Seeds file includes Seeds element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Logger"/>
+        <xs:element ref="Evolver"/>
+        <xs:element ref="Register"/>
+        <xs:element ref="System"/>
+        <xs:element ref="Vivarium"/>
+        <xs:element ref="Seeds"/>
+      </xs:choice>
+      <xs:attribute name="version" type="xs:string" use="optional"/>
+      <xs:attribute name="deme" type="xs:nonNegativeInteger" use="optional"/>
+      <xs:attribute name="generation" type="xs:nonNegativeInteger" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Logger -->
+
+  <xs:element name="Logger">
+    <xs:annotation>
+      <xs:documentation>
+        Log file is usually a mix of text message and different XML serialized objects such statistics, register, etc. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Log">
+          <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Stats"/>
+              <xs:element ref="Register"/>
+              <xs:element ref="Evolver"/>
+              <xs:element ref="Fitness"/>
+              <xs:element ref="Individual"/>
+              <xs:element ref="Genotype"/>
+            </xs:choice>
+            <xs:attribute name="level" use="optional">
+              <xs:simpleType>
+                <xs:restriction base="xs:nonNegativeInteger">
+                  <xs:minInclusive value="0"/>
+                  <xs:maxInclusive value="7"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+            <xs:attribute name="class" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Statistics -->
+
+  <xs:element name="Stats">
+    <xs:annotation>
+      <xs:documentation>
+        Stats element denote a statistical set of measures taken on a population (named by attribute "id"), at a given time (stated in attibute "generation"). Statistics are composed of two types of elements: items and measures. Items element are single value taken on the population associated to a key. Measures element are statistical measures (average, standard deviation, maximum, and minimum) taken on the whole population.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Item">
+            <xs:complexType>
+              <xs:simpleContent>
+                <xs:extension base="xs:float">
+                  <xs:attribute name="key" type="xs:string" use="required"/>
+                </xs:extension>
+              </xs:simpleContent>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Measure">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Avg" type="xs:float"/>
+                <xs:element name="Std" type="xs:float"/>
+                <xs:element name="Max" type="xs:float"/>
+                <xs:element name="Min" type="xs:float"/>
+              </xs:sequence>
+              <xs:attribute name="id" type="xs:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+      <xs:attribute name="generation" type="xs:nonNegativeInteger" use="optional"/>
+      <xs:attribute name="popsize" type="xs:nonNegativeInteger" use="optional"/>
+      <xs:attribute name="valid" use="optional" default="yes">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Seeds used to initialize population -->
+
+  <xs:element name="Seeds">
+    <xs:annotation>
+      <xs:documentation>
+        Seeds are individuals used to initialize a population.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Individual"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- System -->
+
+  <xs:element name="System">
+    <xs:annotation>
+      <xs:documentation>
+        The system list the register, the logger, the randomizer and some other optionnal system components such primitive super set in genetic programming.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Logger"/>
+        <xs:element ref="Register"/>
+        <xs:element ref="Randomizer"/>
+        <xs:element ref="PrimitiveSuperSet"/>
+        <xs:any minOccurs="0"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Register and parameters -->
+
+  <xs:element name="Register">
+    <xs:annotation>
+      <xs:documentation>
+        A register is a sequence of entry, where each entry contains the value of a registered parameter named by the key attribute.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Entry">
+         <xs:complexType>
+           <xs:simpleContent>
+             <xs:extension base="xs:string">
+               <xs:attribute name="key" type="xs:string" use="required"/>
+             </xs:extension>
+           </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Randomizer -->
+
+  <xs:element name="Randomizer">
+    <xs:annotation>
+      <xs:documentation>
+        The randomizer contains the state of the Mersenne random number generator.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(([0-9])*,)*(([0-9])*)"/>
+          <xs:attribute name="seed" type="xs:nonNegativeInteger" use="required"/>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- PrimitiveSuperSet -->
+
+  <xs:element name="PrimitiveSuperSet">
+    <xs:annotation>
+      <xs:documentation>
+        The primitive super set contains the list of primitives used to construct the GP programs.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexType>
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="PrimitiveSet">
+            <xs:complexType>
+              <xs:attribute name="name" type="xs:string" use="required"/>
+              <xs:attribute name="bias" type="xs:float" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Populations -->
+
+  <xs:element name="Vivarium">
+    <xs:annotation>
+      <xs:documentation>
+        A vivarium is made of the statistics for the actual generation, an hall-of-fame containing the best-of-run individuals, and the vivarium's demes.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Stats"/>
+        <xs:element ref="HallOfFame"/>
+        <xs:element name="Population">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Deme"/>
+            </xs:sequence>
+            <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="HallOfFame">
+    <xs:annotation>
+      <xs:documentation>
+        An hall-of-fame contains the best-of-run individuals of a given population (vivarium or deme).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Member">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Individual"/>
+            </xs:sequence>
+            <xs:attribute name="generation" type="xs:nonNegativeInteger" use="optional"/>
+            <xs:attribute name="deme" type="xs:nonNegativeInteger" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+      <xs:attribute name="type" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Deme">
+    <xs:annotation>
+      <xs:documentation>
+        A deme is made of the statistics of the population for the actual generation, an hall-of-fame containing the best-of-run individuals, and a population of individuals.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>    
+      <xs:sequence>
+        <xs:element ref="Stats"/>
+        <xs:element ref="HallOfFame"/>
+        <xs:element ref="MigrationBuffer"/>
+        <xs:element name="Population">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Individual"/>
+            </xs:sequence>
+            <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MigrationBuffer">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Individual"/>
+      </xs:sequence>
+      <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Individual">
+    <xs:annotation>
+      <xs:documentation>
+        An individual is the basic element of a population and is made of an optional fitness value and one or more genotypes, that is the actual representation of the individual.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Fitness" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="Genotype" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Fitness -->
+
+  <xs:complexType name="fitness" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        This declares a very generic fitness measure that may contain almost anything. For more specific fitness description, see the following types related to the three standard genotype of the framework (simple fitness measure, multiobjective fitness measure, and Koza's GP fitness).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:any processContents="lax"/>
+    </xs:choice>  
+    <xs:attribute name="type" type="xs:string" use="optional"/>
+    <xs:attribute name="valid" use="optional" default="yes">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="yes"/>
+          <xs:enumeration value="no"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:anyAttribute processContents="lax"/>
+  </xs:complexType>
+
+  <xs:complexType name="fitness-simple">
+    <xs:annotation>
+      <xs:documentation>
+        Representation of simple fitness value (associated to C++ classes Beagle::FitnessSimple and Beagle::FitnessSimpleMin).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>  
+      <xs:extension base="xs:float">
+        <xs:attribute name="type" type="xs:string" fixed="simple" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="fitness-multiobj">
+    <xs:annotation>
+      <xs:documentation>
+        Representation of multiobjective fitness value (associated to C++ classes Beagle::FitnessMultiObj and Beagle::FitnessMultiObjMin).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="Obj" type="xs:float"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" fixed="multiobj" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="fitness-koza">
+    <xs:annotation>
+      <xs:documentation>
+        Representation of GP Koza's fitness (associated to C++ class Beagle::GP::FitnessKoza).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Normalized" type="xs:float"/>
+      <xs:element name="Adjusted" type="xs:float"/>
+      <xs:element name="Standardized" type="xs:float"/>
+      <xs:element name="Raw" type="xs:float"/>
+      <xs:element name="Hit" type="xs:nonNegativeInteger"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" fixed="koza" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="Fitness" type="fitness"/>
+
+
+  <!-- Genotypes -->
+
+  <xs:complexType name="genotype" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        This declares a very generic genotype that may contain almost anything. For more specific genotype description, see the following types related to the five standard genotypes of the framework (GA bitstring, integer-valued GA, real-valued GA, non-isotropic SA-ES and GP trees).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:any processContents="lax"/>
+    </xs:choice>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:anyAttribute processContents="lax"/>
+  </xs:complexType>
+
+  <xs:simpleType name="bitstring">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[01]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="genotype-bitstring">
+    <xs:annotation>
+      <xs:documentation>
+        Binary GA genotype representation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="bitstring">
+        <xs:attribute name="type" type="xs:string" fixed="bitstring" use="required"/>
+        <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="integervector">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([\-]([0-9])*,)*([\-]([0-9])*)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="genotype-integervector">
+    <xs:annotation>
+      <xs:documentation>
+        Integer-valued GA genotype representation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="integervector">
+        <xs:attribute name="type" type="xs:string" fixed="integervector" use="required"/>
+        <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="floatvector">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="((\p{N})*,)*(\p{N})*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="genotype-floatvector">
+    <xs:annotation>
+      <xs:documentation>
+        Real-valued GA genotype representation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="floatvector">
+        <xs:attribute name="type" type="xs:string" fixed="floatvector" use="required"/>
+        <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="esvector">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\((\p{N})*,(\p{N})*\)/)*\((\p{N})*,(\p{N})*\)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="genotype-esvector">
+    <xs:annotation>
+      <xs:documentation>
+        Non-isotropic self-adaptative evolution strategy genotype representation, that is a vector of (value,strategy) pairs.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="esvector">
+        <xs:attribute name="type" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="ESVector"/> 
+              <xs:enumeration value="esvector"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="genotype-gptree">
+    <xs:annotation>
+      <xs:documentation>
+        Canonical GP tree genotype representation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:any processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" fixed="gptree" use="required"/>
+    <xs:attribute name="size" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name="depth" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name="primitSetId" type="xs:nonNegativeInteger" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="Genotype" type="genotype"/>
+
+
+  <!-- Evolver -->
+
+  <xs:element name="Evolver">
+    <xs:annotation>
+      <xs:documentation>
+        An evolvers is composed of a BootStrapSet followed by a MainLoopSet. Each of these sets contains a list operators to apply. As the name of all usable operators are not known beforehand so the content is relaxed to the use of any type. The real condition is that only elements associated to operators can be used.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BootStrapSet">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:any processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MainLoopSet">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:any processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Functional operators  -->
+
+  <xs:element name="IfThenElseOp">
+    <xs:annotation>
+      <xs:documentation>
+        If-then-else operator. Condition is given by a registered parameter (which name is attribute "parameter") which is compared to a given value (attribute "value"). If parameter value is equal to given value, operators in elements "PositiveOpSet" are applied on the population, otherwize operators in elements "NegativeOpSet" are applied.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PositiveOpSet">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:any processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NegativeOpSet">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:any processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="parameter" type="xs:string" use="required"/>
+      <xs:attribute name="value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="plain-operator"/>
+
+  <xs:element name="RegisterReadOp" type="plain-operator"/>
+  <xs:element name="MilestoneReadOp" type="plain-operator"/>
+  <xs:element name="MilestoneWriteOp" type="plain-operator"/>
+  <xs:element name="StatsCalcFitnessSimpleOp" type="plain-operator"/>
+  <xs:element name="StatsCalcFitnessMultiObjOp" type="plain-operator"/>
+  <xs:element name="GP-StatsCalcFitnessSimpleOp" type="plain-operator"/>
+  <xs:element name="GP-StatsCalcFitnessKozaOp" type="plain-operator"/>
+  <xs:element name="GP-PrimitiveUsageStatsOp" type="plain-operator"/>
+  <xs:element name="IndividualSizeFrequencyStatsOp" type="plain-operator"/>
+  <xs:element name="ParetoFrontCalculateOp" type="plain-operator"/>
+  <xs:element name="GP-ValidateOp" type="plain-operator"/>
+
+
+  <!-- Population manipulation operators -->
+
+  <xs:element name="MigrationRandomRingOp" type="plain-operator"/>
+  <xs:element name="DecimateOp" type="plain-operator"/>
+
+
+  <!-- Replacement strategy operators -->
+
+  <xs:complexType name="replacementstrategy-operator">
+    <xs:annotation>
+      <xs:documentation>
+        Elements in replacement strategy must be breeder operators. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:any processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="replacementstrategy-es-operator">
+    <xs:complexContent>
+      <xs:extension base="replacementstrategy-operator">
+        <xs:attribute name="ratio_name" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="GenerationalOp" type="replacementstrategy-operator"/>
+  <xs:element name="SteadyStateOp" type="replacementstrategy-operator"/>
+  <xs:element name="MuCommaLambdaOp" type="replacementstrategy-es-operator"/>
+  <xs:element name="MuPlusLambdaOp" type="replacementstrategy-es-operator"/>
+  <xs:element name="NSGA2Op" type="replacementstrategy-operator"/>
+  <xs:element name="HierarchicalFairCompetitionOp" type="replacementstrategy-operator"/>
+  <xs:element name="OversizeOp" type="replacementstrategy-operator"/>
+  <xs:element name="GA-MuWCommaLambdaCMAFltVecOp" type="replacementstrategy-operator"/>
+
+
+  <!-- Selection operators -->
+
+  <xs:complexType name="selection-operator">
+    <xs:attribute name="repropb" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="SelectRandomOp" type="selection-operator"/>
+  <xs:element name="SelectRouletteOp" type="selection-operator"/>
+  <xs:element name="SelectTournamentOp" type="selection-operator"/>
+  <xs:element name="SelectParsimonyTournOp" type="selection-operator"/>
+  <xs:element name="NPGA2Op" type="plain-operator"/>
+
+
+  <!-- Evaluation operators -->
+
+  <xs:complexType name="evaluation-operator">
+    <xs:annotation>
+      <xs:documentation>
+        One element in an evaluation operator when used in a breeder tree. In a standard operator set, there must be no element in the operator.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:any processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:element name="EvaluationMultipleOp" type="plain-operator"/>
+  <xs:element name="InvalidateFitnessOp" type="plain-operator"/>
+
+
+  <!-- Termination operators -->
+
+  <xs:element name="TermMaxGenOp" type="plain-operator"/>
+  <xs:element name="TermMaxEvalsOp" type="plain-operator"/>
+  <xs:element name="Coev-TermBroadcastOp" type="plain-operator"/>
+
+  <xs:element name="TermMaxFitnessOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="plain-operator">
+          <xs:attribute name="fitness" type="xs:float" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TermMinFitnessOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="plain-operator">
+          <xs:attribute name="fitness" type="xs:float" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TermMaxHitsOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="plain-operator">
+          <xs:attribute name="hits" type="xs:nonNegativeInteger" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+
+
+  <!-- Initialization operators -->
+
+  <xs:element name="GA-InitBitStrOp" type="plain-operator"/>
+  <xs:element name="GA-InitIntStrOp" type="plain-operator"/>
+  <xs:element name="GA-InitIndicesIntStrOp" type="plain-operator"/>
+  <xs:element name="GA-InitFltVecOp" type="plain-operator"/>
+  <xs:element name="GA-InitESVecOp" type="plain-operator"/>
+  <xs:element name="GP-InitFullOp" type="plain-operator"/>
+  <xs:element name="GP-InitGrowOp" type="plain-operator"/>
+  <xs:element name="GP-InitHalfOp" type="plain-operator"/>
+  <xs:element name="GP-InitFullConstrainedOp" type="plain-operator"/>
+  <xs:element name="GP-InitGrowConstrainedOp" type="plain-operator"/>
+  <xs:element name="GP-InitHalfConstrainedOp" type="plain-operator"/>
+
+
+  <!-- Crossover operators  -->
+
+  <xs:complexType name="crossover-operator">
+    <xs:annotation>
+      <xs:documentation>
+        Two elements must be in a crossover operator when used in a breeder tree. In a standard operator set, there must be no element.
+      </xs:documentation>
+    </xs:annotation>
+     <xs:choice minOccurs="0" maxOccurs="1">
+       <xs:sequence>
+         <xs:any processContents="lax"/>
+         <xs:any processContents="lax"/>
+       </xs:sequence>
+     </xs:choice>
+     <xs:attribute name="matingpb" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="crossover-distr-operator">
+    <xs:complexContent>
+      <xs:extension base="crossover-operator">
+        <xs:attribute name="distrpb" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="GA-CrossoverBlendESVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverBlendFltVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverIndicesIntVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverOnePointBitStrOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverOnePointIntVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverOnePointFltVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverOnePointESVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverSBXFltVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverTwoPointsBitStrOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverTwoPointsIntStrOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverTwoPointsFltVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverTwoPointsESVecOp" type="crossover-operator"/>
+  <xs:element name="GA-CrossoverUniformBitStrOp" type="crossover-distr-operator"/>
+  <xs:element name="GA-CrossoverUniformIntStrOp" type="crossover-distr-operator"/>
+  <xs:element name="GA-CrossoverUniformFltVecOp" type="crossover-distr-operator"/>
+  <xs:element name="GA-CrossoverUniformESVecOp" type="crossover-distr-operator"/>
+  <xs:element name="GP-CrossoverOp" type="crossover-distr-operator"/>
+  <xs:element name="GP-CrossoverConstrainedOp" type="crossover-distr-operator"/>
+
+
+  <!-- Mutation operator -->
+
+  <xs:complexType name="mutation-operator">
+    <xs:annotation>
+      <xs:documentation>
+        One element must be in a mutation operator when used in a breeder tree. In a standard operator set, there must be no element.
+      </xs:documentation>
+    </xs:annotation>
+     <xs:choice minOccurs="0" maxOccurs="1">
+       <xs:any processContents="lax"/>
+     </xs:choice>
+     <xs:attribute name="mutationpb" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="mutation-distr-operator">
+    <xs:complexContent>
+      <xs:extension base="mutation-operator">
+        <xs:attribute name="distrpb" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mutation-gpstd-operator">
+    <xs:complexContent>
+      <xs:extension base="mutation-operator">
+        <xs:attribute name="maxdepth" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="GA-MutationCMAFltVecOp" type="mutation-operator"/>
+  <xs:element name="GA-MutationESVecOp" type="mutation-operator"/>
+  <xs:element name="GP-MutationSwapOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationShrinkOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationStandardOp" type="mutation-gpstd-operator"/>
+  <xs:element name="GP-MutationSwapSubtreeOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationEphemeralDoubleOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationSwapConstrainedOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationShrinkConstrainedOp" type="mutation-distr-operator"/>
+  <xs:element name="GP-MutationStandardConstrainedOp" type="mutation-gpstd-operator"/>
+  <xs:element name="GP-MutationSwapSubtreeConstrainedOp" type="mutation-distr-operator"/>
+
+  <xs:element name="GA-MutationFlipBitStrOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mutation-operator">
+          <xs:attribute name="mutbitpb" type="xs:string" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element> 
+
+  <xs:element name="GA-MutationShuffleIntVecOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mutation-operator">
+          <xs:attribute name="ga.mutshuf.intpb" type="xs:string" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="GA-MutationUniformIntVecOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mutation-operator">
+          <xs:attribute name="ga.mutunif.intpb" type="xs:string" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="GA-MutationGaussianFltVecOp">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="mutation-operator">
+          <xs:attribute name="mutfloatpb" type="xs:string" use="optional"/>
+          <xs:attribute name="mutgaussmu" type="xs:string" use="optional"/>
+          <xs:attribute name="mutgausssigma" type="xs:string" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Special GP operators -->
+
+  <xs:element name="GP-ModuleCompressOp" type="plain-operator"/>
+  <xs:element name="GP-ModuleExpandOp" type="plain-operator"/>
+
+</xs:schema>

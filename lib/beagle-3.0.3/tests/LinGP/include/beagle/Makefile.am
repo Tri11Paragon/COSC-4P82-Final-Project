@@ -1,0 +1,4 @@
+SUBDIRS = LinGP
+if COMPILE_TESTS
+noinst_HEADERS = LinGP.hpp
+endif COMPILE_TESTS

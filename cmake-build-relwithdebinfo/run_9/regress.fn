@@ -1,0 +1,14 @@
+Hits: 2459, Total Size: 2810, Percent Hit: 87.508897
+CC: 1086
+CO: 27
+OO: 1373
+OC: 324
+Fitness: 0.998891
+Hits: 901
+
+
+y = (minor / (log((0.00542 * major)) + (major - major)))
+
+ (/ minor
+    (+ (log (* 0.00542 major))
+       (- major major)))

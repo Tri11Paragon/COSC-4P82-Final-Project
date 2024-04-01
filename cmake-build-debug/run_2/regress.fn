@@ -1,0 +1,15 @@
+Hits: 2091, Total Size: 2810, Percent Hit: 74.412811
+CC: 973
+CO: 138
+OO: 1118
+OC: 581
+Fitness: 0.998691
+Hits: 763
+
+
+y = (((0.75415 * convex) - (perimeter / 0.04731)) * (log(perimeter) / exp(major)))
+
+ (* (- (* 0.75415 convex)
+       (/ perimeter 0.04731))
+    (/ (log perimeter)
+       (exp major)))

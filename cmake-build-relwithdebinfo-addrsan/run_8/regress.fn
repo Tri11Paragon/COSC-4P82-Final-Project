@@ -1,0 +1,21 @@
+Hits: 2548, Total Size: 2810, Percent Hit: 90.676157
+CC: 1026
+CO: 92
+OO: 1522
+OC: 170
+Fitness: 0.998918
+Hits: 923
+
+
+y = ((((0.62145 / minor) - major) - (exp(perimeter) - exp(-0.15746))) * exp((((log((convex * log(major))) * log(((minor - major) - ((major + -0.75304) * (minor + area))))) + ((extent / extent) - (perimeter + perimeter))) + 0.89914)))
+
+ (* (- (- (/ 0.62145 minor) major)
+       (- (exp perimeter)
+          (exp -0.15746)))
+    (exp (+ (+ (* (log (* convex
+                          (log major)))
+                  (log (- (- minor major)
+                          (* (+ major -0.75304)
+                             (+ minor area)))))
+               (- (/ extent extent)
+                  (+ perimeter perimeter))) 0.89914)))

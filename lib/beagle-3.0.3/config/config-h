@@ -1,0 +1,171 @@
+/* config/config-h.  Generated from config-h.in by configure.  */
+/* config/config-h.in.  Generated from configure.ac by autoheader.  */
+
+/* define if compilation of tests is active */
+/* #undef COMPILE_TESTS */
+
+/* define if fast compilation mode is active */
+#define FAST_COMPILATION /**/
+
+/* define if full debug mode is active */
+/* #undef FULL_DEBUG */
+
+/* define if bool is a built-in type */
+#define HAVE_BOOL /**/
+
+/* define if the compiler supports const_cast<> */
+#define HAVE_CONST_CAST /**/
+
+/* define if the compiler supports default template parameters */
+#define HAVE_DEFAULT_TEMPLATE_PARAMETERS /**/
+
+/* define if file /dev/urandom exists. */
+#define HAVE_DEV_URANDOM /**/
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#define HAVE_DLFCN_H 1
+
+/* define if the compiler supports dynamic_cast<> */
+#define HAVE_DYNAMIC_CAST /**/
+
+/* define if the compiler supports exceptions */
+#define HAVE_EXCEPTIONS /**/
+
+/* define if the compiler supports the explicit keyword */
+#define HAVE_EXPLICIT /**/
+
+/* define if the compiler supports __gnu_cxx::hash_map */
+/* #undef HAVE_GNUCXX_HASHMAP */
+
+/* define if the compiler supports __gnu_cxx::hash_set */
+/* #undef HAVE_GNUCXX_HASHSET */
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#define HAVE_INTTYPES_H 1
+
+/* define if the macro isfinite exist */
+/* #undef HAVE_ISFINITE */
+
+/* Define to 1 if you have the `z' library (-lz). */
+#define HAVE_LIBZ 1
+
+/* define if long long int type is supported */
+#define HAVE_LONG_LONG /**/
+
+/* define if the compiler implements namespaces */
+#define HAVE_NAMESPACES /**/
+
+/* define if the compiler has numeric_limits<T> */
+#define HAVE_NUMERIC_LIMITS /**/
+
+/* Define if you have POSIX threads libraries and header files. */
+#define HAVE_PTHREAD 1
+
+/* define if the compiler supports reinterpret_cast<> */
+#define HAVE_REINTERPRET_CAST /**/
+
+/* define if the compiler supports Run-Time Type Identification */
+#define HAVE_RTTI /**/
+
+/* define if the compiler has stringstream */
+#define HAVE_SSTREAM /**/
+
+/* define if the compiler supports static_cast<> */
+#define HAVE_STATIC_CAST /**/
+
+/* define if the compiler supports ISO C++ standard library */
+#define HAVE_STD /**/
+
+/* define if the compiler supports stdext::hash_map */
+/* #undef HAVE_STDEXT_HASHMAP */
+
+/* define if the compiler supports stdext::hash_set */
+/* #undef HAVE_STDEXT_HASHSET */
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#define HAVE_STDINT_H 1
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#define HAVE_STDIO_H 1
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#define HAVE_STDLIB_H 1
+
+/* define if the compiler supports std::hash_map */
+/* #undef HAVE_STD_HASHMAP */
+
+/* define if the compiler supports std::hash_set */
+/* #undef HAVE_STD_HASHSET */
+
+/* define if the compiler supports Standard Template Library */
+#define HAVE_STL /**/
+
+/* Define to 1 if you have the <strings.h> header file. */
+#define HAVE_STRINGS_H 1
+
+/* Define to 1 if you have the <string.h> header file. */
+#define HAVE_STRING_H 1
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#define HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#define HAVE_SYS_TYPES_H 1
+
+/* define if the compiler supports basic templates */
+#define HAVE_TEMPLATES /**/
+
+/* define if the compiler supports template-qualified base class specifiers */
+/* #undef HAVE_TEMPLATE_QUALIFIED_BASE_CLASS */
+
+/* define if the compiler supports template-qualified return types */
+#define HAVE_TEMPLATE_QUALIFIED_RETURN_TYPE /**/
+
+/* define if the compiler supports function matching with argument types which
+   are template scope-qualified */
+#define HAVE_TEMPLATE_SCOPED_ARGUMENT_MATCHING /**/
+
+/* define if the compiler recognizes typename */
+#define HAVE_TYPENAME /**/
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#define HAVE_UNISTD_H 1
+
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
+#define LT_OBJDIR ".libs/"
+
+/* define if some debug code is disabled */
+/* #undef NDEBUG */
+
+/* Name of package */
+#define PACKAGE "beagle"
+
+/* Define to the address where bug reports for this package should be sent. */
+#define PACKAGE_BUGREPORT "cgagne@gmail.com"
+
+/* Define to the full name of this package. */
+#define PACKAGE_NAME "Open BEAGLE"
+
+/* Define to the full name and version of this package. */
+#define PACKAGE_STRING "Open BEAGLE 3.0.3"
+
+/* Define to the one symbol short name of this package. */
+#define PACKAGE_TARNAME "beagle"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
+
+/* Define to the version of this package. */
+#define PACKAGE_VERSION "3.0.3"
+
+/* Define to the necessary symbol if this constant uses a non-standard name on
+   your system. */
+/* #undef PTHREAD_CREATE_JOINABLE */
+
+/* Define to 1 if all of the C90 standard headers exist (not just the ones
+   required in a freestanding environment). This macro is provided for
+   backward compatibility; new code need not use it. */
+#define STDC_HEADERS 1
+
+/* Version number of package */
+#define VERSION "3.0.3"

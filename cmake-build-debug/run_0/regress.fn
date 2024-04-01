@@ -1,0 +1,17 @@
+Hits: 2023, Total Size: 2810, Percent Hit: 71.992883
+CC: 727
+CO: 410
+OO: 1296
+OC: 377
+Fitness: 0.998617
+Hits: 722
+
+
+y = ((exp(((major * minor) / (area * -0.26681))) / log((log(eccentricity) / exp(0.52674)))) / log(exp(((perimeter / extent) - exp(-0.35950)))))
+
+ (/ (/ (exp (/ (* major minor)
+               (* area -0.26681)))
+       (log (/ (log eccentricity)
+               (exp 0.52674))))
+    (log (exp (- (/ perimeter extent)
+                 (exp -0.35950)))))

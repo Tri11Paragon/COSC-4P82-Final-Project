@@ -1,0 +1,41 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+Iterated Prisoner's Dilemma (ipd): Co-evolution GA example with Open BEAGLE
+
+Copyright (C) 2003
+by  Christian Gagne <cgagne@gmail.com>
+and Marc Parizeau <parizeau@gel.ulaval.ca>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+
+Getting started
+===============
+
+  Example is compiled in binary 'ipd'. Configuration file for first
+  thread/population is in file 'ipd-thread1.conf', while configuration file
+  for second thread/population is in file 'ipd-thread2.conf'.
+
+Objective
+=========
+
+  Find solutions to the iterated prisoner's dilemma that get the highest reward for
+  its actions.
+
+Representation
+==============
+
+  Bit strings made of 3 bits. First bit is the action to take at the first turn
+  (0=defect, 1=cooperate), the second bit is the action to make knowing that
+  the companion has defected at the last turn, and the third bit is the action to
+  do knowing that the companion has cooperate the last turn.
+
+Fitness
+=======
+
+  For each turn, the individual receives points for its action. Each evaluation is done
+  on a total of 8 turns (iterations). The points given for each turn are the following:
+  - 0 points if the player cooperate and the companion defects.
+  - 1 points if the player defects and the companion defects.
+  - 3 points if the player defects and the companion cooperate.
+  - 5 points if the player cooperate and the companion cooperate.

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="FinalProject_Runner" targetName="FinalProject_Runner" />
+      <config projectName="FinalProject_Runner" targetName="BLT" />
+      <config projectName="FinalProject_Runner" targetName="FinalProject" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DENABLE_ADDRSAN:BOOL=ON -DENABLE_UBSAN:BOOL=ON -DPART_B:BOOL=ON" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+      <configuration PROFILE_NAME="RelWithDebInfo Addrsan" ENABLED="true" CONFIG_NAME="RelWithDebInfo" GENERATION_OPTIONS="-DENABLE_ADDRSAN:BOOL=ON -DENABLE_UBSAN:BOOL=ON -DPART_B:BOOL=ON" />
+      <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aafc3fa6-dda6-4ed9-b799-2d342946ae56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../A1PA.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Rice_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a1pa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a1pb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a1pb_threaded.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap/phmap_lldb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap/phmap_lldb.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:RelWithDebInfo" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/lib/blt" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3.3" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2bj7vEOfiHR6jvJi3MIgHnR1gsT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.Assignment_1.executor": "Run",
+    "CMake Application.Assignment_1_RUNNER.executor": "Run",
+    "CMake Application.FinalProject.executor": "Run",
+    "CMake Application.FinalProject_Runner.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PartB/90Cross10Mut2El" />
+      <recent name="$PROJECT_DIR$/PartA" />
+      <recent name="$PROJECT_DIR$/src/program" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.FinalProject_Runner">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BLT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="BLT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinalProject" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-f ../input.file -p rice_file=../Rice_Cammeo_Osmancik.arff" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="FinalProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FinalProject_Runner" RUN_TARGET_NAME="FinalProject">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinalProject_Runner" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="FinalProject_Runner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FinalProject_Runner" RUN_TARGET_NAME="FinalProject_Runner">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.FinalProject" />
+      <item itemvalue="CMake Application.FinalProject_Runner" />
+      <item itemvalue="CMake Application.BLT" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aafc3fa6-dda6-4ed9-b799-2d342946ae56" name="Changes" comment="" />
+      <created>1706716862343</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706716862343</updated>
+      <workItem from="1706716863516" duration="10920000" />
+      <workItem from="1707138702388" duration="17193000" />
+      <workItem from="1707235271158" duration="18696000" />
+      <workItem from="1707397761364" duration="22094000" />
+      <workItem from="1707424006294" duration="905000" />
+      <workItem from="1707503420820" duration="27000" />
+      <workItem from="1707505182758" duration="3236000" />
+      <workItem from="1707743170111" duration="4477000" />
+      <workItem from="1707749861770" duration="10034000" />
+      <workItem from="1707780508634" duration="4055000" />
+      <workItem from="1707839723862" duration="4041000" />
+      <workItem from="1707845643352" duration="5200000" />
+      <workItem from="1707851055324" duration="20769000" />
+      <workItem from="1707926755639" duration="5775000" />
+      <workItem from="1707937594797" duration="4799000" />
+      <workItem from="1708019003806" duration="1002000" />
+      <workItem from="1708020053635" duration="5002000" />
+      <workItem from="1708099431516" duration="653000" />
+      <workItem from="1708199153302" duration="2000" />
+      <workItem from="1708631332595" duration="257000" />
+      <workItem from="1711728746580" duration="49854000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
