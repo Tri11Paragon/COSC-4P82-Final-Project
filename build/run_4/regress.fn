@@ -1,21 +1,31 @@
-Hits: 2151, Total Size: 2810, Percent Hit: 76.548043
-CC: 1129
-CO: 14
-OO: 1022
-OC: 645
-Fitness: 0.998745
-Hits: 796
+Hits: 2570, Total Size: 2810, Percent Hit: 91.459075
+CC: 1061
+CO: 72
+OO: 1509
+OC: 168
+Fitness: 0.998936
+Hits: 939
 
 
-y = (log(exp(log(((convex / perimeter) - (extent - -0.49143))))) / ((((extent + perimeter) - (convex * extent)) * (exp(eccentricity) + exp(major))) * (((major - 0.27873) + exp(minor)) * (exp(perimeter) * log(perimeter)))))
+y = ((exp(log(((major * eccentricity) / (extent - extent)))) + ((((minor * major) - (-0.52445 - 0.71341)) - ((perimeter + convex) + (perimeter * major))) - ((exp(area) * (minor / minor)) / ((convex + eccentricity) - (extent - major))))) / (exp((log((area * convex)) - (exp(0.63537) * (eccentricity * perimeter)))) * ((exp(minor) + (log(major) / (convex + eccentricity))) - (((perimeter - perimeter) / (0.19608 / major)) - ((minor + extent) - (convex - perimeter))))))
 
- (/ (log (exp (log (- (/ convex perimeter)
-                      (- extent -0.49143)))))
-    (* (* (- (+ extent perimeter)
-             (* convex extent))
-          (+ (exp eccentricity)
-             (exp major)))
-       (* (+ (- major 0.27873)
-             (exp minor))
-          (* (exp perimeter)
-             (log perimeter)))))
+ (/ (+ (exp (log (/ (* major eccentricity)
+                    (- extent extent))))
+       (- (- (- (* minor major)
+                (- -0.52445 0.71341))
+             (+ (+ perimeter convex)
+                (* perimeter major)))
+          (/ (* (exp area)
+                (/ minor minor))
+             (- (+ convex eccentricity)
+                (- extent major)))))
+    (* (exp (- (log (* area convex))
+               (* (exp 0.63537)
+                  (* eccentricity perimeter))))
+       (- (+ (exp minor)
+             (/ (log major)
+                (+ convex eccentricity)))
+          (- (/ (- perimeter perimeter)
+                (/ 0.19608 major))
+             (- (+ minor extent)
+                (- convex perimeter))))))

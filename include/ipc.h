@@ -37,6 +37,10 @@ enum class packet_id : blt::u8
     EXECUTE_RUN,    //  Server -> Client    NumOfRuns
     CHILD_FIT,      //  Client -> Server    Fitness of Child
     PRUNE,          //  Server -> Client    NONE, Child should terminate
+    // avg fitness, best fitness, avg tree size
+    AVG_FIT,        //  Client -> Server    Average Fitness, gen #
+    BEST_FIT,       //  Client -> Server    Best fitness, gen #
+    AVG_TREE,       //  Client -> Server    Avg Tree Size, gen #
 };
 
 struct packet_t
@@ -46,7 +50,10 @@ struct packet_t
     union
     {
         double fitness;
-        blt::i32 numOfGens;
+        struct {
+            blt::i32 numOfGens;
+            blt::i32 generation;
+        };
     };
 };
 

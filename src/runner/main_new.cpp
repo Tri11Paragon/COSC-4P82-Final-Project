@@ -52,6 +52,11 @@ class child_t
         {
             socket = sock;
         }
+
+        void aggregatePackets()
+        {
+
+        }
         
         ssize_t write(unsigned char* buffer, blt::size_t count)
         {
@@ -127,7 +132,7 @@ sockaddr_un name{};
 int host_socket = 0;
 std::string SOCKET_LOCATION;
 state_t current_state = state_t::RUN_GENERATIONS;
-double fitness = 0;
+double fitness_cutoff = 0;
 std::vector<double> fitness_storage;
 
 int child_fp(blt::arg_parse::arg_results& args, int run_id, const std::string& socket_location)
@@ -259,25 +264,30 @@ void tick_state(blt::arg_parse::arg_results& args)
     packet.state = current_state;
 
     auto it = children.begin();
-    while(it != children.end())
+    outer_while: while(it != children.end())
     {
         auto& child = *it;
         ssize_t ret;
-        if (ret = child.second->read(buffer, sizeof(buffer)), ret <= 0)
-        {
-            if (child.second->isSocketClosed())
+        // read all packets
+        do {
+            if (ret = child.second->read(buffer, sizeof(buffer)), ret <= 0)
             {
-                it = children.erase(it);
-                continue;
+                if (child.second->isSocketClosed())
+                {
+                    it = children.erase(it);
+                    // YUCKY
+                    goto outer_while;
+                }
+                if (errno != 0)
+                    BLT_WARN("Failed to read to child error %d", errno);
+            } else 
+            {
+                std::memcpy(&packet, buffer, sizeof(buffer));
+                BLT_INFO("We got packet %d", static_cast<int>(packet.id));
+                child.second->handlePacket(packet);
             }
-            if (errno != 0)
-                BLT_WARN("Failed to read to child error %d", errno);
-        } else 
-        {
-            std::memcpy(&packet, buffer, sizeof(buffer));
-            BLT_INFO("We got packet %d", static_cast<int>(packet.id));
-            child.second->handlePacket(packet);
-        }
+        } while (ret > 0);
+        child.second->aggregatePackets();
         ++it;
     }
 
@@ -311,10 +321,10 @@ void tick_state(blt::arg_parse::arg_results& args)
             auto ratio = args.get<double>("--prune_ratio");
             auto cutoff = static_cast<long>(static_cast<double>(fitness_storage.size()) * ratio);
             if (!fitness_storage.empty())
-                fitness = fitness_storage[cutoff];
+                fitness_cutoff = fitness_storage[cutoff];
             else
                 BLT_WARN("Running with no active populations?");
-            BLT_INFO("Cutoff value %d, current size %d, fitness: %f", cutoff, fitness_storage.size(), fitness);
+            BLT_INFO("Cutoff value %d, current size %d, fitness: %f", cutoff, fitness_storage.size(), fitness_cutoff);
             current_state = state_t::PRUNE;
             fitness_storage.clear();
             break;
@@ -329,15 +339,15 @@ void tick_state(blt::arg_parse::arg_results& args)
                 current_state = state_t::IDLE;
                 break;
             }
-            BLT_DEBUG("Pruning with fitness %f", fitness);
+            BLT_DEBUG("Pruning with fitness %f", fitness_cutoff);
             auto it = children.begin();
             while (it != children.end())
             {
                 auto& child = *it;
-                if (child.second->getFitness() <= fitness)
+                if (child.second->getFitness() <= fitness_cutoff)
                 {
                     packet.id = packet_id::PRUNE;
-                    packet.fitness = fitness;
+                    packet.fitness = fitness_cutoff;
                     std::memcpy(buffer, &packet, sizeof(buffer));
                     if (child.second->write(buffer, sizeof(buffer)) <= 0)
                     {

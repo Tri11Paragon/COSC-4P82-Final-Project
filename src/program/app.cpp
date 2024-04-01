@@ -31,10 +31,12 @@
 #include <blt/fs/loader.h>
 #include <random>
 #include <cstring>
+#include "blt/std/logging.h"
 #include "blt/std/ranges.h"
 #include "blt/std/assert.h"
 #include "blt/std/memory_util.h"
 #include "blt/std/error.h"
+#include "blt/std/types.h"
 #include "rice_loader.h"
 #include <sys/socket.h>
 #include <sys/select.h>
@@ -137,6 +139,11 @@ void handle_networking()
                         std::exit(0);
                     }
                         break;
+                    case packet_id::AVG_FIT:
+                    case packet_id::AVG_TREE:
+                    case packet_id::BEST_FIT:
+                        BLT_ERROR("This should not have been sent to the client!");
+                        break;
                 }
             }
         }
@@ -192,6 +199,18 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
     globaldata* g = get_globaldata();
     set_current_individual(gen_stats[0].best[0]->ind);
     best_individual.store(gen_stats[0].best[0]->ind->a_fitness);
+
+    // {
+    //     double fitness = 0;
+    //     for (int i = 0; i < mpop[0].size; i++){
+    //         fitness += mpop[0].pop[i]->ind->a_fitness;
+    //     }
+
+    //     packet_t packet;
+    //     packet.id = packet_id::AVG_FIT;
+    //     std::scoped_lock lock(send_mutex);
+    //     send_packets.push(packet);
+    // }
     
     if (newbest)
     {
