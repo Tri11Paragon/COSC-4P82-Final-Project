@@ -59,6 +59,7 @@ std::unique_ptr<std::thread> network_thread;
 std::atomic_bool running = true;
 // should the system pause at the beginning of evaluation for further instructions?
 std::atomic_bool paused = true;
+std::atomic_bool close_requested = false;
 // number of generations left to run before switching to child eval
 std::atomic_int32_t generations_left = -1;
 // mutex for accessing any control variable. not needed
@@ -136,7 +137,10 @@ void handle_networking()
                     {
                         BLT_DEBUG("We are a child who is going to be killed!");
                         close(our_socket);
-                        std::exit(0);
+                        //std::exit(0);
+                        close_requested = true;
+                        running = false;
+                        break;
                     }
                         break;
                     case packet_id::AVG_FIT:
@@ -169,7 +173,7 @@ void handle_networking()
     };
 }
 
-extern "C" void app_begin_of_evaluation(int gen, multipop* mpop)
+extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
 {
     BLT_INFO("Running begin of eval, current state: are we paused? %s num of gens left %d", paused ? "true" : "false", generations_left.load());
     if (generations_left == 0)
@@ -191,6 +195,8 @@ extern "C" void app_begin_of_evaluation(int gen, multipop* mpop)
     // i love busy looping
     while (paused)
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
+
+    return close_requested;
 }
 
 extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popstats* gen_stats, popstats* run_stats)

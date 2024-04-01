@@ -1,29 +1,40 @@
 === BEST-OF-RUN ===
-              generation: 2
-                   nodes: 47
-                   depth: 6
-                    hits: 900
+              generation: 4
+                   nodes: 93
+                   depth: 11
+                    hits: 876
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 900
-             raw fitness: 900.0000
-    standardized fitness: 900.0000
+                    hits: 876
+             raw fitness: 876.0000
+    standardized fitness: 876.0000
         adjusted fitness: 0.9989
 TREE:
- (- (* (exp (/ (+ (* area convex)
-                  (- area area))
-               (log (/ extent perimeter))))
-       (- (* (/ (+ major area)
-                (+ major extent))
-             (/ (* major major)
-                (exp area)))
-          (log (- (+ perimeter minor)
-                  (log extent)))))
-    (exp (* (- 0.25550 perimeter)
-            (log (+ extent
-                    (log minor))))))
+ (- (/ (log (/ (/ (exp perimeter)
+                  (* major extent))
+               (exp (- major perimeter))))
+       (* (- (exp (exp eccentricity))
+             (+ (- -0.01190 eccentricity)
+                (log major)))
+          (exp (exp (- eccentricity eccentricity)))))
+    (- (log (+ (+ (exp perimeter)
+                  (+ extent minor))
+               (* (/ eccentricity major)
+                  (log (* (log (- (exp (exp extent))
+                                  (- (- extent eccentricity)
+                                     (* minor major))))
+                          (exp (* perimeter extent)))))))
+       (/ (exp (+ (/ extent area)
+                  (- 0.47920 extent)))
+          (+ (- (* perimeter extent)
+                (exp eccentricity))
+             (log (/ (/ major perimeter)
+                     (/ (+ (log convex)
+                           (log convex))
+                        (/ (log convex)
+                           (log 0.63283)))))))))
 TREE-equ:
-y = ((exp((((area * convex) + (area - area)) / log((extent / perimeter)))) * ((((major + area) / (major + extent)) * ((major * major) / exp(area))) - log(((perimeter + minor) - log(extent))))) - exp(((0.25550 - perimeter) * log((extent + log(minor))))))
+y = ((log(((exp(perimeter) / (major * extent)) / exp((major - perimeter)))) / ((exp(exp(eccentricity)) - ((-0.01190 - eccentricity) + log(major))) * exp(exp((eccentricity - eccentricity))))) - (log(((exp(perimeter) + (extent + minor)) + ((eccentricity / major) * log((log((exp(exp(extent)) - ((extent - eccentricity) - (minor * major)))) * exp((perimeter * extent))))))) - (exp(((extent / area) + (0.47920 - extent))) / (((perimeter * extent) - exp(eccentricity)) + log(((major / perimeter) / ((log(convex) + log(convex)) / (log(convex) / log(0.63283)))))))))

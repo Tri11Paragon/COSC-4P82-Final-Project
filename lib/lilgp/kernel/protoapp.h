@@ -39,7 +39,7 @@ int app_initialize ( int );
 void app_uninitialize ( void );
 void app_write_checkpoint ( FILE * );
 void app_read_checkpoint ( FILE * );
-void app_begin_of_evaluation(int, multipop *);
+int app_begin_of_evaluation(int, multipop *);
 int app_end_of_evaluation ( int, multipop *, int, popstats *, popstats * );
 void app_end_of_breeding ( int, multipop * );
 

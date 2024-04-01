@@ -175,9 +175,12 @@ void run_gp(multipop* mpop, int startgen,
     /* the big loop. */
     for (gen = startgen; gen <= maxgen && !term; ++gen)
     {
+        term = app_begin_of_evaluation(gen, mpop);
+
+        if (term)
+            break;
         oprintf(OUT_SYS, 20,
                 "=== generation %d.\n", gen);
-        app_begin_of_evaluation(gen, mpop);
         
         /* unless this is the first generation after loading a checkpoint
        file... */

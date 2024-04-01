@@ -14,9 +14,9 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 110.
+    no random number seed specfied; using 1873.
 creating initial population(s):
-    7385 trees were generated to fill the population of 5000 (5000 trees).
+    7213 trees were generated to fill the population of 5000 (5000 trees).
     initial population(s) complete.
 
 
@@ -26,19 +26,19 @@ no checkpointing will be done.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 1.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 2.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 3.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 4.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 5.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 6.
     evaluation complete.  (0s wall)
@@ -50,10 +50,10 @@ no checkpointing will be done.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 9.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 10.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 11.
     evaluation complete.  (0s wall)
@@ -71,13 +71,13 @@ no checkpointing will be done.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 16.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 17.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 18.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 19.
     evaluation complete.  (0s wall)
@@ -98,3 +98,108 @@ no checkpointing will be done.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 25.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 26.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 27.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 28.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 29.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 30.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 31.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 32.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 33.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 34.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 35.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 36.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 37.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 38.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 39.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 40.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 41.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 42.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 43.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 44.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 45.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 46.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 47.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 48.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 49.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 50.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 51.
+    evaluation complete.  (0s wall)
+
+SYSTEM STATISTICS
+
+------- memory -------
+           allocated:      62989999
+               freed:      62941999
+           not freed:      48000
+       max allocated:      2545167
+    malloc'ed blocks:      925350
+   realloc'ed blocks:      8
+      free'ed blocks:      925344
+
+------- time -------
+             overall:      6s wall
+          evaluation:      6s wall
+            breeding:      0s wall
+
+------- generation spaces -------
+      space   0 size:      200
+      space   1 size:      100
+
+------- ephemeral random constants -------
+                used:      23680
+               freed:      23680
+           allocated:      6000
+              blocks:      11
