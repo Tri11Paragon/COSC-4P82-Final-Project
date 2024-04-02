@@ -1,192 +1,303 @@
 === BEST-OF-RUN ===
       current generation: 0
               generation: 0
-                   nodes: 42
-                   depth: 5
-                    hits: 718
+                   nodes: 25
+                   depth: 4
+                    hits: 529
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 718
-             raw fitness: 718.0000
-    standardized fitness: 718.0000
-        adjusted fitness: 0.9986
+                    hits: 529
+             raw fitness: 529.0000
+    standardized fitness: 529.0000
+        adjusted fitness: 0.9981
 TREE:
- (- (* (log (* (log minor)
-               (log eccentricity)))
-       (log (/ (- major area)
-               (* minor major))))
-    (- (/ (- (log area)
-             (* 0.93176 minor))
-          (- (+ area area)
-             (+ convex convex)))
-       (/ (/ (- convex eccentricity)
-             (exp area))
-          (exp (/ major major)))))
+ (- (- (- (+ convex major)
+          (log major))
+       (* (+ minor extent)
+          (* 0.33292 convex)))
+    (exp (log (/ convex major))))
 === BEST-OF-RUN ===
       current generation: 1
-              generation: 1
-                   nodes: 3
-                   depth: 1
-                    hits: 752
+              generation: 0
+                   nodes: 25
+                   depth: 4
+                    hits: 529
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 752
-             raw fitness: 752.0000
-    standardized fitness: 752.0000
-        adjusted fitness: 0.9987
+                    hits: 529
+             raw fitness: 529.0000
+    standardized fitness: 529.0000
+        adjusted fitness: 0.9981
 TREE:
- (+ eccentricity -0.88071)
+ (- (- (- (+ convex major)
+          (log major))
+       (* (+ minor extent)
+          (* 0.33292 convex)))
+    (exp (log (/ convex major))))
 === BEST-OF-RUN ===
       current generation: 2
-              generation: 1
-                   nodes: 3
-                   depth: 1
-                    hits: 752
+              generation: 2
+                   nodes: 43
+                   depth: 8
+                    hits: 563
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 752
-             raw fitness: 752.0000
-    standardized fitness: 752.0000
-        adjusted fitness: 0.9987
+                    hits: 563
+             raw fitness: 563.0000
+    standardized fitness: 563.0000
+        adjusted fitness: 0.9982
 TREE:
- (+ eccentricity -0.88071)
+ (* (exp (* (- (/ major convex)
+               (/ area area))
+            (log (/ minor eccentricity))))
+    (+ (+ (log (exp (* (+ (log area)
+                          (log extent))
+                       (- minor 0.65823))))
+          (- (* -0.31320 perimeter)
+             (exp perimeter)))
+       (+ (/ (/ minor -0.36652)
+             (exp extent))
+          (exp (exp -0.81269)))))
 === BEST-OF-RUN ===
       current generation: 3
-              generation: 3
-                   nodes: 7
-                   depth: 5
-                    hits: 818
+              generation: 2
+                   nodes: 43
+                   depth: 8
+                    hits: 563
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 818
-             raw fitness: 818.0000
-    standardized fitness: 818.0000
-        adjusted fitness: 0.9988
+                    hits: 563
+             raw fitness: 563.0000
+    standardized fitness: 563.0000
+        adjusted fitness: 0.9982
 TREE:
- (log (exp (/ (log (exp perimeter)) -0.64550)))
+ (* (exp (* (- (/ major convex)
+               (/ area area))
+            (log (/ minor eccentricity))))
+    (+ (+ (log (exp (* (+ (log area)
+                          (log extent))
+                       (- minor 0.65823))))
+          (- (* -0.31320 perimeter)
+             (exp perimeter)))
+       (+ (/ (/ minor -0.36652)
+             (exp extent))
+          (exp (exp -0.81269)))))
 === BEST-OF-RUN ===
       current generation: 4
-              generation: 3
-                   nodes: 7
-                   depth: 5
-                    hits: 818
+              generation: 2
+                   nodes: 43
+                   depth: 8
+                    hits: 563
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 818
-             raw fitness: 818.0000
-    standardized fitness: 818.0000
-        adjusted fitness: 0.9988
+                    hits: 563
+             raw fitness: 563.0000
+    standardized fitness: 563.0000
+        adjusted fitness: 0.9982
 TREE:
- (log (exp (/ (log (exp perimeter)) -0.64550)))
+ (* (exp (* (- (/ major convex)
+               (/ area area))
+            (log (/ minor eccentricity))))
+    (+ (+ (log (exp (* (+ (log area)
+                          (log extent))
+                       (- minor 0.65823))))
+          (- (* -0.31320 perimeter)
+             (exp perimeter)))
+       (+ (/ (/ minor -0.36652)
+             (exp extent))
+          (exp (exp -0.81269)))))
 === BEST-OF-RUN ===
       current generation: 5
-              generation: 3
-                   nodes: 7
+              generation: 5
+                   nodes: 9
                    depth: 5
-                    hits: 818
+                    hits: 650
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 818
-             raw fitness: 818.0000
-    standardized fitness: 818.0000
-        adjusted fitness: 0.9988
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
 TREE:
- (log (exp (/ (log (exp perimeter)) -0.64550)))
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
 === BEST-OF-RUN ===
       current generation: 6
-              generation: 3
-                   nodes: 7
+              generation: 5
+                   nodes: 9
                    depth: 5
-                    hits: 818
+                    hits: 650
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 818
-             raw fitness: 818.0000
-    standardized fitness: 818.0000
-        adjusted fitness: 0.9988
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
 TREE:
- (log (exp (/ (log (exp perimeter)) -0.64550)))
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
 === BEST-OF-RUN ===
       current generation: 7
-              generation: 7
-                   nodes: 16
-                   depth: 7
-                    hits: 833
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 833
-             raw fitness: 833.0000
-    standardized fitness: 833.0000
-        adjusted fitness: 0.9988
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
 TREE:
- (/ (exp major)
-    (log (exp (* major
-                 (/ major
-                    (+ (* -0.60973 minor)
-                       (/ extent major)))))))
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
 === BEST-OF-RUN ===
       current generation: 8
-              generation: 7
-                   nodes: 16
-                   depth: 7
-                    hits: 833
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 833
-             raw fitness: 833.0000
-    standardized fitness: 833.0000
-        adjusted fitness: 0.9988
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
 TREE:
- (/ (exp major)
-    (log (exp (* major
-                 (/ major
-                    (+ (* -0.60973 minor)
-                       (/ extent major)))))))
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
 === BEST-OF-RUN ===
       current generation: 9
-              generation: 7
-                   nodes: 16
-                   depth: 7
-                    hits: 833
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 833
-             raw fitness: 833.0000
-    standardized fitness: 833.0000
-        adjusted fitness: 0.9988
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
 TREE:
- (/ (exp major)
-    (log (exp (* major
-                 (/ major
-                    (+ (* -0.60973 minor)
-                       (/ extent major)))))))
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
+=== BEST-OF-RUN ===
+      current generation: 10
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
+TREE:
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
+=== BEST-OF-RUN ===
+      current generation: 11
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
+TREE:
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
+=== BEST-OF-RUN ===
+      current generation: 12
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
+TREE:
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
+=== BEST-OF-RUN ===
+      current generation: 13
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
+TREE:
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))
+=== BEST-OF-RUN ===
+      current generation: 14
+              generation: 5
+                   nodes: 9
+                   depth: 5
+                    hits: 650
+TOP INDIVIDUAL:
+
+
+
+-- #1 --
+                    hits: 650
+             raw fitness: 650.0000
+    standardized fitness: 650.0000
+        adjusted fitness: 0.9985
+TREE:
+ (log (* (exp (* 0.50838
+                 (+ -0.71594 eccentricity))) eccentricity))

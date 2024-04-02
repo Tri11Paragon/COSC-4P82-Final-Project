@@ -17,6 +17,7 @@
 #include "blt/std/assert.h"
 #include "blt/std/memory.h"
 #include "blt/std/types.h"
+#include <aggregation.h>
 #include <blt/fs/loader.h>
 #include <blt/parse/argparse.h>
 #include <blt/profiling/profiler_v2.h>
@@ -36,7 +37,6 @@
 #include <sys/wait.h>
 #include <thread>
 #include <unistd.h>
-#include <aggregation.h>
 
 class child_t
 {
@@ -448,5 +448,7 @@ int main(int argc, const char** argv)
         }
     }
     init_sockets(args);
-    process_files(args.get<std::string>("--out_file"), args.get<std::string>("--write_file"), args.get<int>("--num_pops"));
+    process_files(args.get<std::string>("--out_file"),
+                  args.get<std::string>("--write_file"),
+                  args.get<int>("--num_pops"));
 }

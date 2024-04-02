@@ -1,13 +1,14 @@
-Hits: 2154, Total Size: 2810, Percent Hit: 76.654804
-CC: 1006
-CO: 129
-OO: 1148
-OC: 527
-Fitness: 0.998726
-Hits: 784
+Hits: 1778, Total Size: 2810, Percent Hit: 63.274021
+CC: 412
+CO: 747
+OO: 1366
+OC: 285
+Fitness: 0.998379
+Hits: 616
 
 
-y = ((extent / minor) / (-0.88541 + eccentricity))
+y = (log(convex) / ((log((-0.57488 - extent)) / (-0.15959 / eccentricity)) + eccentricity))
 
- (/ (/ extent minor)
-    (+ -0.88541 eccentricity))
+ (/ (log convex)
+    (+ (/ (log (- -0.57488 extent))
+          (/ -0.15959 eccentricity)) eccentricity))
