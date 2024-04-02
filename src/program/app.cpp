@@ -202,7 +202,6 @@ extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
 extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popstats* gen_stats, popstats* run_stats)
 {
     generations_left--;
-    globaldata* g = get_globaldata();
     set_current_individual(gen_stats[0].best[0]->ind);
     best_individual.store(gen_stats[0].best[0]->ind->a_fitness);
 

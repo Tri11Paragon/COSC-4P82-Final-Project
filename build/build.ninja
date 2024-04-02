@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: FinalProject_Runner
-# Configurations: Debug
+# Configurations: RelWithDebInfo
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = RelWithDebInfo
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,242 +49,242 @@ cmake_ninja_workdir = /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-P
 
 build cmake_object_order_depends_target_FinalProject: phony || cmake_object_order_depends_target_BLT
 
-build CMakeFiles/FinalProject.dir/src/program/app.cpp.o: CXX_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/app.cpp || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/src/program/app.cpp.o: CXX_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/app.cpp || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/src/program/app.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/program
 
-build CMakeFiles/FinalProject.dir/src/program/function.cpp.o: CXX_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/function.cpp || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/src/program/function.cpp.o: CXX_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/function.cpp || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/src/program/function.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/program
 
-build CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o: CXX_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/rice_loader.h.cpp || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o: CXX_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/program/rice_loader.h.cpp || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/program
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/main.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/main.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/gp.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/gp.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/eval.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/eval.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/tree.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/tree.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/change.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/change.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/crossovr.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/crossovr.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/reproduc.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/reproduc.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/mutate.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/mutate.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/select.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/select.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/tournmnt.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/tournmnt.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/bstworst.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/bstworst.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/fitness.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/fitness.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/genspace.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/genspace.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/exch.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/exch.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/populate.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/populate.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/ephem.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/ephem.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/ckpoint.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/ckpoint.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/event.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/event.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/pretty.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/pretty.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/individ.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/individ.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/params.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/params.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/random.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/random.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/memory.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/memory.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/output.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/output.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/boltzman.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/boltzman.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/sigma.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/sigma.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
 
-build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o: C_COMPILER__FinalProject_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/fsetupdate.c || cmake_object_order_depends_target_FinalProject
+build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o: C_COMPILER__FinalProject_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/lilgp/kernel/fsetupdate.c || cmake_object_order_depends_target_FinalProject
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o.d
-  FLAGS = -g -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu11 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/lib/lilgp/kernel
@@ -297,9 +297,9 @@ build CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o: C_COMPILER__F
 #############################################
 # Link the executable FinalProject
 
-build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalProject.dir/src/program/app.cpp.o CMakeFiles/FinalProject.dir/src/program/function.cpp.o CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || lib/blt/libBLT.a
-  FLAGS = -g
-  LINK_FLAGS = -Wall -Wextra -Wpedantic -Wno-comment -rdynamic
+build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_RelWithDebInfo CMakeFiles/FinalProject.dir/src/program/app.cpp.o CMakeFiles/FinalProject.dir/src/program/function.cpp.o CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || lib/blt/libBLT.a
+  FLAGS = -O2 -g -DNDEBUG
+  LINK_FLAGS = -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -rdynamic
   LINK_LIBRARIES = lib/blt/libBLT.a  -lm  -lpthread  /usr/lib/x86_64-linux-gnu/libz.so  -lstdc++fs
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   POST_BUILD = :
@@ -316,18 +316,18 @@ build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalPr
 
 build cmake_object_order_depends_target_FinalProject_Runner: phony || FinalProject cmake_object_order_depends_target_BLT
 
-build CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main.cpp || cmake_object_order_depends_target_FinalProject_Runner
+build CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/aggregation.cpp || cmake_object_order_depends_target_FinalProject_Runner
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
-  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o.d
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/Runner" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject_Runner.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject_Runner.dir/src/runner
 
-build CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main_new.cpp || cmake_object_order_depends_target_FinalProject_Runner
+build CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main.cpp || cmake_object_order_depends_target_FinalProject_Runner
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
-  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
+  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o.d
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/Runner" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject_Runner.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject_Runner.dir/src/runner
@@ -340,9 +340,9 @@ build CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o: CXX_COMPILER
 #############################################
 # Link the executable FinalProject_Runner
 
-build FinalProject_Runner: CXX_EXECUTABLE_LINKER__FinalProject_Runner_Debug CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || FinalProject lib/blt/libBLT.a
-  FLAGS = -g
-  LINK_FLAGS = -Wall -Wextra -Wpedantic -Wno-comment -rdynamic
+build FinalProject_Runner: CXX_EXECUTABLE_LINKER__FinalProject_Runner_RelWithDebInfo CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || FinalProject lib/blt/libBLT.a
+  FLAGS = -O2 -g -DNDEBUG
+  LINK_FLAGS = -Wall -Wextra -Wpedantic -Wno-comment -fsanitize=address -fsanitize=undefined -rdynamic
   LINK_LIBRARIES = lib/blt/libBLT.a  -lm  -lpthread  /usr/lib/x86_64-linux-gnu/libz.so  -lstdc++fs
   OBJECT_DIR = CMakeFiles/FinalProject_Runner.dir
   POST_BUILD = :
@@ -429,122 +429,122 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_BLT: phony || lib/blt/CMakeFiles/BLT.dir
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/assert.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/assert.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/assert.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/assert.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/assert.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/error.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/error.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/error.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/error.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/error.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/format.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/format.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/simd.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/simd.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/simd.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/simd.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/simd.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/string.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/string.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/string.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/string.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/string.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/system.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/std/system.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/std
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/profiling/profiler.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/profiling/profiler.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/profiling
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler_v2.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/profiling/profiler_v2.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler_v2.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/profiling/profiler_v2.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler_v2.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/profiling
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/filesystem.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/filesystem.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/filesystem.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/filesystem.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/fs/filesystem.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/fs
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/loader.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/loader.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/loader.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/loader.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/fs/loader.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/fs
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/nbt.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/nbt.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/fs
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt_block.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/nbt_block.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt_block.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/fs/nbt_block.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt_block.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/fs
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/parse/argparse.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/parse/argparse.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/parse
 
-build lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o: CXX_COMPILER__BLT_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/parse/obj_loader.cpp || cmake_object_order_depends_target_BLT
+build lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o: CXX_COMPILER__BLT_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/src/blt/parse/obj_loader.cpp || cmake_object_order_depends_target_BLT
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT.dir/src/blt/parse
@@ -557,8 +557,8 @@ build lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o: CXX_COMPILER__B
 #############################################
 # Link the static library lib/blt/libBLT.a
 
-build lib/blt/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Debug lib/blt/CMakeFiles/BLT.dir/src/blt/std/assert.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/error.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/simd.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/string.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler_v2.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/filesystem.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/loader.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt_block.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o
-  LANGUAGE_COMPILE_FLAGS = -g
+build lib/blt/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_RelWithDebInfo lib/blt/CMakeFiles/BLT.dir/src/blt/std/assert.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/error.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/simd.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/string.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/profiling/profiler_v2.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/filesystem.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/loader.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/fs/nbt_block.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o lib/blt/CMakeFiles/BLT.dir/src/blt/parse/obj_loader.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
   OBJECT_DIR = lib/blt/CMakeFiles/BLT.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -574,58 +574,58 @@ build lib/blt/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Debug lib/blt/CMakeFiles/
 
 build cmake_object_order_depends_target_BLT_TESTS: phony || cmake_object_order_depends_target_BLT
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/container_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/container_test.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/container_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/container_test.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/container_test.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/datastructure_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/datastructure_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/datastructure_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/datastructure_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/datastructure_tests.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/main.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/main.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/main.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/main.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/memory_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/memory_test.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/memory_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/memory_test.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/memory_test.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/nbt_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/nbt_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/nbt_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/nbt_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/nbt_tests.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/string_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/string_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/string_tests.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/string_tests.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/string_tests.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
 
-build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_Debug /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/utility_test.cpp || cmake_object_order_depends_target_BLT_TESTS
+build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o: CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/lib/blt/tests/src/utility_test.cpp || cmake_object_order_depends_target_BLT_TESTS
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
   DEP_FILE = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o.d
-  FLAGS = -g -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always
+  FLAGS = -O2 -g -DNDEBUG -std=gnu++17 -mieee-fp -Wall -Wextra -Wpedantic -fdiagnostics-color=always -fsanitize=address -fsanitize=undefined
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/build/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/tests/include"
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   OBJECT_FILE_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src
@@ -638,9 +638,9 @@ build lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o: CXX_COMPILE
 #############################################
 # Link the executable lib/blt/BLT_TESTS
 
-build lib/blt/BLT_TESTS: CXX_EXECUTABLE_LINKER__BLT_TESTS_Debug lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/container_test.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/datastructure_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/main.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/memory_test.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/nbt_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/string_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || lib/blt/libBLT.a
-  FLAGS = -g
-  LINK_FLAGS = -rdynamic
+build lib/blt/BLT_TESTS: CXX_EXECUTABLE_LINKER__BLT_TESTS_RelWithDebInfo lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/container_test.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/datastructure_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/main.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/memory_test.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/nbt_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/string_tests.cpp.o lib/blt/CMakeFiles/BLT_TESTS.dir/tests/src/utility_test.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || lib/blt/libBLT.a
+  FLAGS = -O2 -g -DNDEBUG
+  LINK_FLAGS = -rdynamic -fsanitize=address -fsanitize=undefined
   LINK_LIBRARIES = lib/blt/libBLT.a  -lstdc++fs  /usr/lib/x86_64-linux-gnu/libz.so
   OBJECT_DIR = lib/blt/CMakeFiles/BLT_TESTS.dir
   POST_BUILD = :

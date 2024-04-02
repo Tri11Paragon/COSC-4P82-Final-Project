@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20.2)
 project(FinalProject C CXX)
-set(PROJECT_VERSION 0.2.0)
+set(PROJECT_VERSION 0.3.0)
 
 option(ENABLE_ADDRSAN "Enable the address sanitizer" OFF)
 option(ENABLE_UBSAN "Enable the ub sanitizer" OFF)
@@ -75,18 +75,21 @@ target_compile_options(FinalProject_Runner PRIVATE -Wall -Wextra -Wpedantic -Wno
 target_link_options(FinalProject_Runner PRIVATE -Wall -Wextra -Wpedantic -Wno-comment)
 add_dependencies(FinalProject_Runner FinalProject)
 
+message("Checking for sanatizers")
 if (${ENABLE_ADDRSAN} MATCHES ON)
     target_compile_options(FinalProject_Runner PRIVATE -fsanitize=address)
     target_link_options(FinalProject_Runner PRIVATE -fsanitize=address)
+    message(STATUS "Enabled addrsan")
 endif ()
 
 if (${ENABLE_UBSAN} MATCHES ON)
     target_compile_options(FinalProject_Runner PRIVATE -fsanitize=undefined)
     target_link_options(FinalProject_Runner PRIVATE -fsanitize=undefined)
+    message(STATUS "Enabled UBsan")
 endif ()
 
 if (${ENABLE_TSAN} MATCHES ON)
     target_compile_options(FinalProject_Runner PRIVATE -fsanitize=thread)
     target_link_options(FinalProject_Runner PRIVATE -fsanitize=thread)
+    message(STATUS "Enabled threadsan")
 endif ()
-

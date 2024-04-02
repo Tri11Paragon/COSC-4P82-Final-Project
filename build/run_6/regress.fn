@@ -1,15 +1,12 @@
-Hits: 2574, Total Size: 2810, Percent Hit: 91.601423
-CC: 964
-CO: 164
-OO: 1610
-OC: 72
-Fitness: 0.998888
-Hits: 898
+Hits: 2208, Total Size: 2810, Percent Hit: 78.576512
+CC: 901
+CO: 252
+OO: 1307
+OC: 350
+Fitness: 0.998731
+Hits: 787
 
 
-y = (((major / convex) - (perimeter / 0.38274)) / exp((((0.90756 - minor) - (major + perimeter)) + -0.25489)))
+y = (eccentricity + -0.89196)
 
- (/ (- (/ major convex)
-       (/ perimeter 0.38274))
-    (exp (+ (- (- 0.90756 minor)
-               (+ major perimeter)) -0.25489)))
+ (+ eccentricity -0.89196)

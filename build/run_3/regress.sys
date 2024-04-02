@@ -14,26 +14,26 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 102.
+    no random number seed specfied; using 1812.
 creating initial population(s):
-    7434 trees were generated to fill the population of 5000 (5000 trees).
+    7281 trees were generated to fill the population of 5000 (5000 trees).
     initial population(s) complete.
 
 
 starting evolution.
 no checkpointing will be done.
 === generation 0.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 1.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 2.
     evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 3.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (2s wall)
     breeding complete.    (0s wall)
 === generation 4.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)

@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: FinalProject_Runner
-# Configurations: Debug
+# Configurations: RelWithDebInfo
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__FinalProject_unscanned_Debug
+rule C_COMPILER__FinalProject_unscanned_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__FinalProject_unscanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FinalProject_unscanned_Debug
+rule CXX_COMPILER__FinalProject_unscanned_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -34,7 +34,7 @@ rule CXX_COMPILER__FinalProject_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__FinalProject_Debug
+rule CXX_EXECUTABLE_LINKER__FinalProject_RelWithDebInfo
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -43,7 +43,7 @@ rule CXX_EXECUTABLE_LINKER__FinalProject_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FinalProject_Runner_unscanned_Debug
+rule CXX_COMPILER__FinalProject_Runner_unscanned_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -53,7 +53,7 @@ rule CXX_COMPILER__FinalProject_Runner_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__FinalProject_Runner_Debug
+rule CXX_EXECUTABLE_LINKER__FinalProject_Runner_RelWithDebInfo
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -70,7 +70,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__BLT_unscanned_Debug
+rule CXX_COMPILER__BLT_unscanned_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -80,7 +80,7 @@ rule CXX_COMPILER__BLT_unscanned_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__BLT_Debug
+rule CXX_STATIC_LIBRARY_LINKER__BLT_RelWithDebInfo
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -89,7 +89,7 @@ rule CXX_STATIC_LIBRARY_LINKER__BLT_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__BLT_TESTS_unscanned_Debug
+rule CXX_COMPILER__BLT_TESTS_unscanned_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -99,7 +99,7 @@ rule CXX_COMPILER__BLT_TESTS_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__BLT_TESTS_Debug
+rule CXX_EXECUTABLE_LINKER__BLT_TESTS_RelWithDebInfo
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
