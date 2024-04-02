@@ -1,17 +1,15 @@
-Hits: 2510, Total Size: 2810, Percent Hit: 89.323843
-CC: 1029
-CO: 104
-OO: 1481
-OC: 196
-Fitness: 0.998884
-Hits: 895
+Hits: 2517, Total Size: 2810, Percent Hit: 89.572954
+CC: 851
+CO: 263
+OO: 1666
+OC: 30
+Fitness: 0.998865
+Hits: 880
 
 
-y = log((log(((convex + perimeter) / extent)) + ((((area / perimeter) + (perimeter + -0.43095)) / log((major / area))) / (extent + log((area / extent))))))
+y = (exp((log((exp((eccentricity * perimeter)) / eccentricity)) / -0.56864)) * ((log(convex) + (area * -0.82066)) - (major + 0.30614)))
 
- (log (+ (log (/ (+ convex perimeter) extent))
-         (/ (/ (+ (/ area perimeter)
-                  (+ perimeter -0.43095))
-               (log (/ major area)))
-            (+ extent
-               (log (/ area extent))))))
+ (* (exp (/ (log (/ (exp (* eccentricity perimeter)) eccentricity)) -0.56864))
+    (- (+ (log convex)
+          (* area -0.82066))
+       (+ major 0.30614)))

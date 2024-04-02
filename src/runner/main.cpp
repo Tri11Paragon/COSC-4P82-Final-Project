@@ -38,24 +38,48 @@
 #include <thread>
 #include <unistd.h>
 
+struct timer_info
+{
+    blt::u64 wall_time;
+    blt::u64 cpu_time;
+    blt::u64 cpu_cylces;
+};
+
+// run id - > timer info
+blt::hashmap_t<blt::i32, timer_info> run_timers;
+
 class child_t
 {
     private:
+        blt::i32 run;
         int socket = 0;
         bool socket_closed = false;
         double fitness = 0;
-        std::vector<packet_t> unprocess_packets;
+        std::vector<packet_t> unprocessed_packets;
     
     public:
-        child_t() = default;
+        explicit child_t(blt::i32 run): run(run)
+        {};
         
         void open(int sock)
         {
             socket = sock;
         }
         
-        void aggregatePackets()
+        void processPackets()
         {
+            for (const auto& v : unprocessed_packets)
+            {
+                if (v.id == packet_id::EXEC_TIME)
+                    run_timers[run].wall_time = v.timer;
+                else if (v.id == packet_id::CPU_TIME)
+                    run_timers[run].cpu_time = v.timer;
+                else if (v.id == packet_id::CPU_CYCLES)
+                    run_timers[run].cpu_cylces = v.timer;
+            }
+            clearPackets(packet_id::EXEC_TIME);
+            clearPackets(packet_id::CPU_TIME);
+            clearPackets(packet_id::CPU_CYCLES);
         }
         
         ssize_t write(unsigned char* buffer, blt::size_t count)
@@ -88,7 +112,7 @@ class child_t
         
         void handlePacket(packet_t packet)
         {
-            unprocess_packets.push_back(packet);
+            unprocessed_packets.push_back(packet);
         }
         
         [[nodiscard]] inline bool isSocketClosed() const
@@ -98,19 +122,19 @@ class child_t
         
         [[nodiscard]] inline const std::vector<packet_t>& pendingPackets() const
         {
-            return unprocess_packets;
+            return unprocessed_packets;
         }
         
         inline void clearPackets(packet_id id)
         {
-            auto it = unprocess_packets.begin();
+            auto it = unprocessed_packets.begin();
             do
             {
-                it = std::find_if(unprocess_packets.begin(), unprocess_packets.end(), [id](const auto& v) { return v.id == id; });
-                if (it == unprocess_packets.end())
+                it = std::find_if(unprocessed_packets.begin(), unprocessed_packets.end(), [id](const auto& v) { return v.id == id; });
+                if (it == unprocessed_packets.end())
                     break;
-                std::iter_swap(it, unprocess_packets.end() - 1);
-                unprocess_packets.pop_back();
+                std::iter_swap(it, unprocessed_packets.end() - 1);
+                unprocessed_packets.pop_back();
             } while (true);
         }
         
@@ -294,7 +318,7 @@ outer_while:
                 child.second->handlePacket(packet);
             }
         } while (ret > 0);
-        child.second->aggregatePackets();
+        child.second->processPackets();
         ++it;
     }
     
@@ -311,12 +335,12 @@ outer_while:
         {
             for (auto& child : children)
             {
-                for (const auto& packet : child.second->pendingPackets())
+                for (const auto& p : child.second->pendingPackets())
                 {
-                    if (packet.id == packet_id::CHILD_FIT)
+                    if (p.id == packet_id::CHILD_FIT)
                     {
-                        child.second->setFitness(packet.fitness);
-                        fitness_storage.push_back(packet.fitness);
+                        child.second->setFitness(p.fitness);
+                        fitness_storage.push_back(p.fitness);
                         break;
                     }
                 }
@@ -396,8 +420,8 @@ int main(int argc, const char** argv)
 {
     blt::arg_parse parser;
     
-    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("10").setHelp("Number of populations to start").build());
-    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("500").setHelp("Number of generations between pruning").build());
+    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("120").setHelp("Number of populations to start").build());
+    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("5").setHelp("Number of generations between pruning").build());
     parser.addArgument(blt::arg_builder("-p", "--prune_ratio").setDefault("0.2").setHelp("Number of generations to run before pruning").build());
     parser.addArgument(blt::arg_builder("--program").setDefault("./FinalProject").setHelp("GP Program to execute per run").build());
     parser.addArgument(blt::arg_builder("--out_file").setDefault("regress")
@@ -446,7 +470,7 @@ int main(int argc, const char** argv)
         else if (pid > 0)
         {
             // parent
-            children.insert({pid, std::make_unique<child_t>()});
+            children.insert({pid, std::make_unique<child_t>(i)});
             BLT_TRACE("Forked child to %d", pid);
         } else
         {

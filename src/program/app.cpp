@@ -34,6 +34,8 @@
 #include "blt/std/logging.h"
 #include "blt/std/ranges.h"
 #include "blt/std/assert.h"
+#include "blt/std/system.h"
+#include "blt/std/time.h"
 #include "blt/std/memory_util.h"
 #include "blt/std/error.h"
 #include "blt/std/types.h"
@@ -69,6 +71,12 @@ std::atomic<double> best_individual;
 std::mutex send_mutex;
 std::queue<packet_t> send_packets;
 int our_socket;
+blt::u64 cpu_cycles_start = 0;
+blt::u64 cpu_cycles_end = 0;
+blt::u64 cpu_time_start = 0;
+blt::u64 cpu_time_end = 0;
+blt::u64 wall_time_start = 0;
+blt::u64 wall_time_end = 0;
 
 
 static int fitness_cases = -1;
@@ -136,10 +144,7 @@ void handle_networking()
                     case packet_id::PRUNE:
                     {
                         BLT_DEBUG("We are a child who is going to be killed!");
-                        close(our_socket);
-                        //std::exit(0);
                         close_requested = true;
-                        running = false;
                         break;
                     }
                         break;
@@ -431,11 +436,41 @@ extern "C" int app_initialize(int startfromcheckpoint)
     else
         value_cutoff = strtod(param, NULL);
     
+    wall_time_start = blt::system::getCurrentTimeMilliseconds();
+    cpu_time_start = blt::system::getCPUTime();
+    cpu_cycles_start = blt::system::rdtsc();
     return 0;
 }
 
 extern "C" void app_uninitialize(void)
 {
+    wall_time_end = blt::system::getCurrentTimeMilliseconds();
+    cpu_time_end = blt::system::getCPUTime();
+    cpu_cycles_end = blt::system::rdtsc();
+    packet_t wall_time_packet{};
+    packet_t cpu_time_packet{};
+    packet_t cpu_cycles_packet{};
+    wall_time_packet.id = packet_id::EXEC_TIME;
+    wall_time_packet.timer = wall_time_end - wall_time_start;
+    cpu_time_packet.id = packet_id::CPU_TIME;
+    cpu_time_packet.timer = cpu_time_end - cpu_time_start;
+    cpu_cycles_packet.id = packet_id::CPU_CYCLES;
+    cpu_cycles_packet.timer = cpu_cycles_end - cpu_time_start;
+    {
+        std::scoped_lock lock(send_mutex);
+        send_packets.push(wall_time_packet);
+        send_packets.push(cpu_time_packet);
+        send_packets.push(cpu_cycles_packet);
+    }
+    do
+    {
+        {
+            std::scoped_lock lock(send_mutex);
+            if (send_packets.empty())
+                break;
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(16));
+    } while(true);
     running = false;
     if (network_thread->joinable())
         network_thread->join();

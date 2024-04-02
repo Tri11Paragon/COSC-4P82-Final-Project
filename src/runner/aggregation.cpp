@@ -285,25 +285,42 @@ void process_files(const std::string& outfile, const std::string& writefile, int
         stats.runs.push_back(run_stats::from_file(path + ".stt", path + ".fn"));
     }
     
-    auto best_gens = averaged_stats::from_vec(stats.getBestFromGenerations());
+    auto best_gen = stats.getBestFromGenerations();
+    
+//    for (const auto& v : best_gen)
+//    {
+//        write_fn_file(std::cout, v.fn);
+//        for (const auto& r : v.stt.records)
+//        {
+//            write_stt_record(std::cout, r);
+//        }
+//        std::cout << "\n\n";
+//    }
+    
+    auto best_gens = averaged_stats::from_vec(best_gen);
     auto best_fit = averaged_stats::from_vec(stats.getBestFromFitness());
     auto best_hits = averaged_stats::from_vec(stats.getBestFromHits());
+    auto best_all = averaged_stats::from_vec(stats.runs);
     
     std::ofstream writer_best_gens(writefile + "_best_generations.tsv");
     std::ofstream writer_best_fit(writefile + "_best_fitness.tsv");
     std::ofstream writer_best_hits(writefile + "_best_hits.tsv");
+    std::ofstream writer_best_all(writefile + "_all.tsv");
     
     writer_best_gens << "Aggregation Count:\t" << best_gens.count << '\n';
     writer_best_fit << "Aggregation Count:\t" << best_fit.count << '\n';
     writer_best_hits << "Aggregation Count:\t" << best_hits.count << '\n';
+    writer_best_all << "Aggregation Count:\t" << best_all.count << '\n';
     
     write_fn_file(writer_best_gens, best_gens.stats.fn);
     write_fn_file(writer_best_fit, best_fit.stats.fn);
     write_fn_file(writer_best_hits, best_hits.stats.fn);
+    write_fn_file(writer_best_all, best_all.stats.fn);
     
     write_stt_header(writer_best_gens);
     write_stt_header(writer_best_fit);
     write_stt_header(writer_best_hits);
+    write_stt_header(writer_best_all);
     
     for (const auto& v : best_gens.stats.stt.records)
         write_stt_record(writer_best_gens, v);
@@ -311,4 +328,6 @@ void process_files(const std::string& outfile, const std::string& writefile, int
         write_stt_record(writer_best_fit, v);
     for (const auto& v : best_hits.stats.stt.records)
         write_stt_record(writer_best_hits, v);
+    for (const auto& v : best_all.stats.stt.records)
+        write_stt_record(writer_best_all, v);
 }

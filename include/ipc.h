@@ -34,9 +34,12 @@ enum class state_t : blt::u8
 enum class packet_id : blt::u8
 {
     // NAME,            DIRECTION           PAYLOAD
-    EXECUTE_RUN,    //  Server -> Client    NumOfRuns
-    CHILD_FIT,      //  Client -> Server    Fitness of Child
-    PRUNE,          //  Server -> Client    NONE, Child should terminate
+    EXECUTE_RUN,    //  Server -> Client    numOfGens,  Number of runs to execute
+    CHILD_FIT,      //  Client -> Server    fitness,    Fitness of Child
+    PRUNE,          //  Server -> Client    NONE,       Child should terminate
+    EXEC_TIME,      //  Client -> Server    timer,      wall time in ms
+    CPU_TIME,       //  Client -> Server    timer,      cpu time in ms
+    CPU_CYCLES,     //  Client -> Server    timer,      number of cpu cycles used
     // avg fitness, best fitness, avg tree size
     // unused
     AVG_FIT,        //  Client -> Server    Average Fitness, gen #
@@ -58,7 +61,7 @@ struct packet_t
                 blt::i32 numOfGens;
                 blt::i32 generation;
             };
-            blt::u64 clock_time;
+            blt::u64 timer;
         };
     };
 };

@@ -1,15 +1,12 @@
-Hits: 2165, Total Size: 2810, Percent Hit: 77.046263
-CC: 638
-CO: 465
-OO: 1527
-OC: 180
-Fitness: 0.998615
-Hits: 721
+Hits: 2195, Total Size: 2810, Percent Hit: 78.113879
+CC: 863
+CO: 248
+OO: 1332
+OC: 367
+Fitness: 0.998753
+Hits: 801
 
 
-y = log((convex / (minor * (minor / exp(-0.59814)))))
+y = (eccentricity + -0.89188)
 
- (log (/ convex
-         (* minor
-            (/ minor
-               (exp -0.59814)))))
+ (+ eccentricity -0.89188)

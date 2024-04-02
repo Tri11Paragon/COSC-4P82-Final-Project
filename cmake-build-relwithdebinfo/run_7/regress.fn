@@ -1,14 +1,13 @@
-Hits: 2601, Total Size: 2810, Percent Hit: 92.562278
-CC: 1041
-CO: 100
-OO: 1560
-OC: 109
-Fitness: 0.998924
-Hits: 928
+Hits: 1862, Total Size: 2810, Percent Hit: 66.263345
+CC: 263
+CO: 872
+OO: 1599
+OC: 76
+Fitness: 0.998294
+Hits: 585
 
 
-y = log((-0.19211 * exp(((-0.66480 * exp(eccentricity)) * perimeter))))
+y = (exp(convex) / ((eccentricity - 0.32481) - extent))
 
- (log (* -0.19211
-         (exp (* (* -0.66480
-                    (exp eccentricity)) perimeter))))
+ (/ (exp convex)
+    (- (- eccentricity 0.32481) extent))
