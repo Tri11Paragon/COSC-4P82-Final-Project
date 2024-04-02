@@ -1,14 +1,12 @@
-Hits: 2459, Total Size: 2810, Percent Hit: 87.508897
-CC: 1086
-CO: 27
-OO: 1373
-OC: 324
-Fitness: 0.998891
-Hits: 901
+Hits: 2266, Total Size: 2810, Percent Hit: 80.640569
+CC: 791
+CO: 364
+OO: 1475
+OC: 180
+Fitness: 0.998726
+Hits: 784
 
 
-y = (minor / (log((0.00542 * major)) + (major - major)))
+y = (((perimeter / -0.03569) + convex) - perimeter)
 
- (/ minor
-    (+ (log (* 0.00542 major))
-       (- major major)))
+ (- (+ (/ perimeter -0.03569) convex) perimeter)

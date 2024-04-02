@@ -18,6 +18,7 @@
 
 #include "blt/std/hashmap.h"
 #include "blt/std/memory.h"
+
 #ifndef FINALPROJECT_RUNNER_AGGREGATION_H
 #define FINALPROJECT_RUNNER_AGGREGATION_H
 
@@ -74,10 +75,18 @@ struct stt_record
         static stt_record from_string_array(int generation, size_t& idx, blt::span<std::string> values);
 };
 
+struct stt_file
+{
+    std::vector<stt_record> records;
+    blt::size_t generations = 0;
+    
+    static stt_file from_file(std::string_view file);
+};
+
 /**
  * Structure used to store information loaded from the .fn file
  */
-struct fn_record
+struct fn_file
 {
     // real value = 'cammeo' predicted value = 'cammeo'
     blt::size_t cc = 0;
@@ -88,51 +97,26 @@ struct fn_record
     // real value = 'osmancik' predicted value = 'cammeo'
     blt::size_t oc = 0;
     double fitness = 0;
-    // hits from the training data, kinda useless
+    // hits from testing data
     blt::size_t hits = 0;
+    // total data values
+    blt::size_t total = 0;
+    
+    static fn_file from_file(std::string_view file);
 };
 
-struct runs_stt_data
+struct run_stats
 {
-    // per generation (map stores from gen -> list of rows (records))
-    blt::hashmap_t<int, std::vector<stt_record>> averages;
-    // per RUN generation size
-    std::vector<int> runs_generation_size;
-    // count of the number of generations that use the same number of generations (used for calculating mode) exists [0, largest_generation]
-    blt::scoped_buffer<int> generations_size_count;
-    // largest number of generations from all runs
-    int largest_generation = 0;
-    // total number of generations across all runs (r1...rn)
-    int total_generations = 0;
-    // total / runs
-    int generations_average = 0;
-    // # of run lengths value is `data.generations_size_count[data.mode_generation]`
-    int generations_mode = 0;
-    // the generation that is the mode
-    int mode_generation = 0;
+    stt_file stt;
+    fn_file fn;
+    
+    static run_stats from_file(std::string_view sst_file, std::string_view fn_file);
 };
 
-struct runs_fn_data
+struct search_stats
 {
-    std::vector<fn_record> runs;
-    // index of the best recorded run
-    blt::size_t best = 0;
-    // total number of hits from all runs
-    blt::size_t total_hits = 0;
-    // total number of rice testing data
-    blt::size_t total_tests = 0;
-    // hits / tests for all runs
-    blt::size_t average_hits = 0;
-    blt::size_t average_tests = 0;
-    // percent of valid tests
-    double average_valid = 0;
-    double total_fitness = 0;
-    double average_fitness = 0;
+    std::vector<run_stats> runs;
 };
-
-void process_stt_file(runs_stt_data& data, int& max_gen, std::string_view file);
-
-runs_stt_data get_per_generation_averages(const std::string& outfile, int runs);
 
 // in case you are wondering why all these functions are using template parameters, it is so that I can pass BLT_?*_STREAM into them
 // allowing for output to stdout
@@ -162,61 +146,6 @@ inline void write_record(T& writer, const stt_record& r)
     writer << r.worse_tree_depth_run << '\n';
 }
 
-template<typename T, typename FUNC, typename... Args>
-inline void write_data_values(T& writer, const std::string& function, const bool end, FUNC func, Args... args)
-{
-    const char BASE = 'a';
-    for (int i = 0; i < 20; i++)
-    {
-        char c = static_cast<char>(BASE + i);
-        writer << function;
-        func(writer, c, args...);
-        if (i != 19 || !end)
-            writer << '\t';
-        // spacing tab
-        if (i == 19 && !end)
-            writer << '\t';
-    }
-}
-
-// writes functions operating on runs per generation
-template<typename T>
-inline void write_func_gens(T& writer, const char c, const int current_gen, runs_stt_data& data, const blt::size_t gen_offset, const blt::size_t offset)
-{
-    auto runs = data.averages[current_gen].size();
-    for (size_t j = 0; j < runs; j++)
-    {
-        writer << c << ((gen_offset) + (offset + j));
-        if (j != runs - 1)
-            writer << ", ";
-        else
-            writer << ')';
-    }
-}
-
-// operates on the aggregated data created by the above function giving totals for the entire population
-template<typename T>
-inline void write_func_pop(T& writer, const char c, const int gen_size, const blt::size_t offset)
-{
-    for (int j = 0; j < gen_size; j++)
-    {
-        // get the position of our aggregated data, which the offset contains
-        writer << c << (offset - gen_size - 1 + j);
-        if (j != gen_size - 1)
-            writer << ", ";
-        else
-            writer << ')';
-    }
-}
-
-void write_averaged_output(const std::string& writefile, const runs_stt_data& data, const std::vector<stt_record>& generation_averages);
-
-void write_full_output(const std::string& writefile, const runs_stt_data& data, const std::vector<std::vector<stt_record>>& ordered_records);
-
-void process_stt(const std::string& outfile, const std::string& writefile, const std::string& writefile_run, int runs);
-
-void process_fn(const std::string& outfile, const std::string& writefile, int runs);
-
-void process_files(const std::string& outfile, const std::string writefile, int runs);
+void process_files(const std::string& outfile, const std::string& writefile, int runs);
 
 #endif //FINALPROJECT_RUNNER_AGGREGATION_H

@@ -203,6 +203,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/blt/window" TYPE FILE FILES "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include/blt/window/window.h")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/blt" TYPE FILE FILES "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-release/config/blt/config.h")
 endif()
 

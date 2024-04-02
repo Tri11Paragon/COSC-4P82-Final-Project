@@ -211,7 +211,7 @@ struct stt_record
 /**
  * Structure used to store information loaded from the .fn file
  */
-struct fn_record
+struct fn_file
 {
     // real value = 'cammeo' predicted value = 'cammeo'
     blt::size_t cc = 0;
@@ -294,7 +294,7 @@ struct runs_stt_data
 
 struct runs_fn_data
 {
-    std::vector<fn_record> runs;
+    std::vector<fn_file> runs;
     // index of the best recorded run
     blt::size_t best = 0;
     // total number of hits from all runs
@@ -504,7 +504,7 @@ inline void write_full_output(const std::string& writefile, const runs_stt_data&
 
 void process_stt(const std::string& outfile, const std::string& writefile, const std::string& writefile_run, int runs)
 {
-    BLT_INFO("Processing .sst file");
+    BLT_INFO("Processing .stt file");
     BLT_DEBUG("Loading generation data");
     auto data = get_per_generation_averages(outfile, runs);
     
@@ -567,7 +567,7 @@ void process_fn(const std::string& outfile, const std::string& writefile, int ru
         }
         
         blt::size_t idx = 1;
-        fn_record record;
+        fn_file record;
         fill_value(record.cc, lines[idx++]);
         fill_value(record.co, lines[idx++]);
         fill_value(record.oo, lines[idx++]);

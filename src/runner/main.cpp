@@ -41,93 +41,94 @@
 class child_t
 {
     private:
-    int socket = 0;
-    bool socket_closed = false;
-    double fitness = 0;
-    std::vector<packet_t> unprocess_packets;
-
+        int socket = 0;
+        bool socket_closed = false;
+        double fitness = 0;
+        std::vector<packet_t> unprocess_packets;
+    
     public:
-    child_t() = default;
-
-    void open(int sock)
-    {
-        socket = sock;
-    }
-
-    void aggregatePackets()
-    {
-    }
-
-    ssize_t write(unsigned char* buffer, blt::size_t count)
-    {
-        pollfd fds_write{socket, POLLOUT, 0};
-        if (poll(&fds_write, 1, 1) < 0)
-            BLT_WARN("Error polling write %d", errno);
-        if (fds_write.revents & POLLHUP)
-            socket_closed = true;
-        if (fds_write.revents & POLLERR || fds_write.revents & POLLHUP || fds_write.revents & POLLNVAL)
+        child_t() = default;
+        
+        void open(int sock)
+        {
+            socket = sock;
+        }
+        
+        void aggregatePackets()
+        {
+        }
+        
+        ssize_t write(unsigned char* buffer, blt::size_t count)
+        {
+            pollfd fds_write{socket, POLLOUT, 0};
+            if (poll(&fds_write, 1, 1) < 0)
+                BLT_WARN("Error polling write %d", errno);
+            if (fds_write.revents & POLLHUP)
+                socket_closed = true;
+            if (fds_write.revents & POLLERR || fds_write.revents & POLLHUP || fds_write.revents & POLLNVAL)
+                return 0;
+            if (fds_write.revents & POLLOUT)
+                return ::write(socket, buffer, count);
             return 0;
-        if (fds_write.revents & POLLOUT)
-            return ::write(socket, buffer, count);
-        return 0;
-    }
-
-    ssize_t read(unsigned char* buffer, blt::size_t count)
-    {
-        pollfd fds_read{socket, POLLIN, 0};
-        if (poll(&fds_read, 1, 1) < 0)
-            BLT_WARN("Error polling read %d", errno);
-        if (fds_read.revents & POLLHUP)
-            socket_closed = true;
-        if (fds_read.revents & POLLERR || fds_read.revents & POLLHUP || fds_read.revents & POLLNVAL)
+        }
+        
+        ssize_t read(unsigned char* buffer, blt::size_t count)
+        {
+            pollfd fds_read{socket, POLLIN, 0};
+            if (poll(&fds_read, 1, 1) < 0)
+                BLT_WARN("Error polling read %d", errno);
+            if (fds_read.revents & POLLHUP)
+                socket_closed = true;
+            if (fds_read.revents & POLLERR || fds_read.revents & POLLHUP || fds_read.revents & POLLNVAL)
+                return 0;
+            if (fds_read.revents & POLLIN)
+                return ::read(socket, buffer, count);
             return 0;
-        if (fds_read.revents & POLLIN)
-            return ::read(socket, buffer, count);
-        return 0;
-    }
-
-    void handlePacket(packet_t packet)
-    {
-        unprocess_packets.push_back(packet);
-    }
-
-    [[nodiscard]] inline bool isSocketClosed() const
-    {
-        return socket_closed;
-    }
-
-    [[nodiscard]] inline const std::vector<packet_t>& pendingPackets() const
-    {
-        return unprocess_packets;
-    }
-
-    inline void clearPackets(packet_id id)
-    {
-        auto it = unprocess_packets.begin();
-        do {
-            it = std::find_if(unprocess_packets.begin(), unprocess_packets.end(), [id](const auto& v) { return v.id == id; });
-            if (it == unprocess_packets.end())
-                break;
-            std::iter_swap(it, unprocess_packets.end() - 1);
-            unprocess_packets.pop_back();
-        } while (true);
-    }
-
-    void setFitness(double f)
-    {
-        fitness = f;
-    }
-
-    [[nodiscard]] inline double getFitness() const
-    {
-        return fitness;
-    }
-
-
-    ~child_t()
-    {
-        close(socket);
-    }
+        }
+        
+        void handlePacket(packet_t packet)
+        {
+            unprocess_packets.push_back(packet);
+        }
+        
+        [[nodiscard]] inline bool isSocketClosed() const
+        {
+            return socket_closed;
+        }
+        
+        [[nodiscard]] inline const std::vector<packet_t>& pendingPackets() const
+        {
+            return unprocess_packets;
+        }
+        
+        inline void clearPackets(packet_id id)
+        {
+            auto it = unprocess_packets.begin();
+            do
+            {
+                it = std::find_if(unprocess_packets.begin(), unprocess_packets.end(), [id](const auto& v) { return v.id == id; });
+                if (it == unprocess_packets.end())
+                    break;
+                std::iter_swap(it, unprocess_packets.end() - 1);
+                unprocess_packets.pop_back();
+            } while (true);
+        }
+        
+        void setFitness(double f)
+        {
+            fitness = f;
+        }
+        
+        [[nodiscard]] inline double getFitness() const
+        {
+            return fitness;
+        }
+        
+        
+        ~child_t()
+        {
+            close(socket);
+        }
 };
 
 // children PIDs
@@ -146,27 +147,27 @@ int child_fp(blt::arg_parse::arg_results& args, int run_id, const std::string& s
     auto rice_file = "../" + args.get<std::string>("rice");
     auto dir = "./run_" + std::to_string(run_id);
     BLT_DEBUG("Running GP program '%s' on run %d", program.c_str(), run_id);
-
+    
     mkdir(dir.c_str(), S_IREAD | S_IWRITE | S_IEXEC | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH);
     if (chdir(dir.c_str()))
     {
         BLT_ERROR(errno);
         return 1;
     }
-
+    
     auto command = program + " -f " + file + " -p rice_file='" + rice_file + "' -p socket_location='" + socket_location + "' -p process_id=" +
                    std::to_string(getpid());
     BLT_TRACE("Running command %s", command.c_str());
-
+    
     FILE* process = popen(command.c_str(), "r");
     char buffer[4096];
     while (fgets(buffer, 4096, process) != nullptr)
     {
         BLT_TRACE_STREAM << buffer;
     }
-
+    
     pclose(process);
-
+    
     return 0;
 }
 
@@ -178,18 +179,18 @@ void create_child_sockets()
     {
         int socket_fd = accept(host_socket, nullptr, nullptr);
         BLT_ASSERT(socket_fd != -1 && "Failed to create data socket!");
-
+        
         // wait until client sends pid data.
         do
         {
             std::memset(data, 0, sizeof(data));
             ret = read(socket_fd, data, sizeof(data));
         } while (ret != sizeof(data));
-
+        
         pid_t pid;
         blt::mem::fromBytes(data, pid);
         //pid -= 1;
-
+        
         if (!children.contains(pid))
             BLT_WARN("This PID '%d' does not exist as a child!", pid);
         else
@@ -216,7 +217,7 @@ void remove_pending_finished_child_process()
                 return;
             }
             children.erase(child);
-
+            
             BLT_TRACE("Closing process %d finished!", pid);
         }
     }
@@ -227,9 +228,9 @@ void create_parent_socket()
     std::memset(&name, 0, sizeof(name));
     name.sun_family = AF_UNIX;
     std::strncpy(name.sun_path, SOCKET_LOCATION.c_str(), sizeof(name.sun_path) - 1);
-
+    
     int ret;
-
+    
     BLT_INFO("Creating socket for %s", SOCKET_LOCATION.c_str());
     host_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);
     BLT_ASSERT(host_socket != -1 && "Failed to create socket!");
@@ -267,7 +268,7 @@ void tick_state(blt::arg_parse::arg_results& args)
     packet_t packet{};
     unsigned char buffer[sizeof(packet_t)];
     packet.state = current_state;
-
+    
     auto it = children.begin();
 outer_while:
     while (it != children.end())
@@ -275,7 +276,8 @@ outer_while:
         auto& child = *it;
         ssize_t ret;
         // read all packets
-        do {
+        do
+        {
             if (ret = child.second->read(buffer, sizeof(buffer)), ret <= 0)
             {
                 if (child.second->isSocketClosed())
@@ -296,16 +298,18 @@ outer_while:
         child.second->aggregatePackets();
         ++it;
     }
-
+    
     switch (current_state)
     {
-        case state_t::RUN_GENERATIONS: {
+        case state_t::RUN_GENERATIONS:
+        {
             send_execution_command(args.get<blt::i32>("--num_gen"));
             current_state = state_t::CHILD_EVALUATION;
             break;
         }
-
-        case state_t::CHILD_EVALUATION: {
+        
+        case state_t::CHILD_EVALUATION:
+        {
             for (auto& child : children)
             {
                 for (const auto& packet : child.second->pendingPackets())
@@ -333,7 +337,8 @@ outer_while:
             fitness_storage.clear();
             break;
         }
-        case state_t::PRUNE: {
+        case state_t::PRUNE:
+        {
             if (children.size() == 1)
             {
                 // run to completion, we no longer need to sync with the server.
@@ -383,7 +388,7 @@ void init_sockets(blt::arg_parse::arg_results& args)
         tick_state(args);
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
-
+    
     unlink(name.sun_path);
     close(host_socket);
 }
@@ -391,25 +396,29 @@ void init_sockets(blt::arg_parse::arg_results& args)
 int main(int argc, const char** argv)
 {
     blt::arg_parse parser;
-
+    
     parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("10").setHelp("Number of populations to start").build());
     parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("5").setHelp("Number of generations between pruning").build());
     parser.addArgument(blt::arg_builder("-p", "--prune_ratio").setDefault("0.2").setHelp("Number of generations to run before pruning").build());
     parser.addArgument(blt::arg_builder("--program").setDefault("./FinalProject").setHelp("GP Program to execute per run").build());
-    parser.addArgument(blt::arg_builder("--out_file").setDefault("regress").setHelp("Name of the stats file (without extension) to use in building the final data").build());
-    parser.addArgument(blt::arg_builder("--write_file").setDefault("aggregated").setHelp("Name of the file to write the aggregated data to (without extension)").build());
+    parser.addArgument(blt::arg_builder("--out_file").setDefault("regress")
+                                                     .setHelp("Name of the stats file (without extension) to use in building the final data")
+                                                     .build());
+    parser.addArgument(
+            blt::arg_builder("--write_file").setDefault("aggregated").setHelp("Name of the file to write the aggregated data to (without extension)")
+                                            .build());
     parser.addArgument(blt::arg_builder("--file").setDefault("../input.file").setHelp("File to run the GP on").build());
     parser.addArgument(blt::arg_builder("--rice").setDefault("../Rice_Cammeo_Osmancik.arff").setHelp("Rice file to run the GP on").build());
-
+    
     auto args = parser.parse_args(argc, argv);
-
+    
     BLT_INFO("%b", args.contains("--num_pops"));
     BLT_INFO(args.get<std::string>("--write_file"));
-
+    
     BLT_INFO("Parsing user arguments:");
     for (auto& v : args.data)
         BLT_INFO("\t%s = %s", v.first.c_str(), blt::to_string(v.second).c_str());
-
+    
     std::string random_id;
     std::random_device dev;
     std::mt19937_64 engine(dev());
@@ -423,12 +432,12 @@ int main(int argc, const char** argv)
         else
             random_id += static_cast<char>(charGenUpper(engine));
     }
-
+    
     auto runs = args.get<std::int32_t>("num_pops");
     BLT_DEBUG("Running with %d runs", runs);
-
+    
     SOCKET_LOCATION = "/tmp/gp_program_" + random_id + ".socket";
-
+    
     create_parent_socket();
     for (auto i = 0; i < runs; i++)
     {
@@ -448,7 +457,5 @@ int main(int argc, const char** argv)
         }
     }
     init_sockets(args);
-    process_files(args.get<std::string>("--out_file"),
-                  args.get<std::string>("--write_file"),
-                  args.get<int>("--num_pops"));
+    process_files(args.get<std::string>("--out_file"), args.get<std::string>("--write_file"), args.get<int>("--num_pops"));
 }

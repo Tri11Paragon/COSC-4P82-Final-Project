@@ -20,8 +20,9 @@ Enabling platform specific compile options for BLT
 -- GCC Link: -rdynamic
 -- GCC libs: stdc++fs
 Including Parallel Hashmap directory
-BLT 0.15.10 Successfully included!
+BLT 0.15.11 Successfully included!
 Installing to lib with headers at include
+Checking for sanatizers
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-relwithdebinfo

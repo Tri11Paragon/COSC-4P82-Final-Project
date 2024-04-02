@@ -38,6 +38,7 @@ enum class packet_id : blt::u8
     CHILD_FIT,      //  Client -> Server    Fitness of Child
     PRUNE,          //  Server -> Client    NONE, Child should terminate
     // avg fitness, best fitness, avg tree size
+    // unused
     AVG_FIT,        //  Client -> Server    Average Fitness, gen #
     BEST_FIT,       //  Client -> Server    Best fitness, gen #
     AVG_TREE,       //  Client -> Server    Avg Tree Size, gen #
@@ -50,9 +51,14 @@ struct packet_t
     union
     {
         double fitness;
-        struct {
-            blt::i32 numOfGens;
-            blt::i32 generation;
+        union
+        {
+            struct
+            {
+                blt::i32 numOfGens;
+                blt::i32 generation;
+            };
+            blt::u64 clock_time;
         };
     };
 };

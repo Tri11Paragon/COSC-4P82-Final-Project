@@ -316,17 +316,17 @@ build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Release CMakeFiles/Final
 
 build cmake_object_order_depends_target_FinalProject_Runner: phony || FinalProject cmake_object_order_depends_target_BLT
 
-build CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Release /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main.cpp || cmake_object_order_depends_target_FinalProject_Runner
+build CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Release /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/aggregation.cpp || cmake_object_order_depends_target_FinalProject_Runner
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-release\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
-  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o.d
+  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/Runner" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-release/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject_Runner.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject_Runner.dir/src/runner
 
-build CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Release /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main_new.cpp || cmake_object_order_depends_target_FinalProject_Runner
+build CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o: CXX_COMPILER__FinalProject_Runner_unscanned_Release /home/brett/Documents/Brock/CS$ 4P82/Final$ Project/FP-C-Project/src/runner/main.cpp || cmake_object_order_depends_target_FinalProject_Runner
   DEFINES = -DBUILD_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-release\"" -DPART_B -DPOSIX_MT -DRANDOMSEEDTIME -DSOURCE_DIR="\"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project\"" -DUSEVFORK
-  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o.d
+  DEP_FILE = CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -mieee-fp -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=always
   INCLUDES = -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/lilgp/kernel" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/Runner" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/include" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-release/lib/blt/config" -I"/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/lib/blt/libraries/parallel-hashmap"
   OBJECT_DIR = CMakeFiles/FinalProject_Runner.dir
@@ -340,7 +340,7 @@ build CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o: CXX_COMPILER
 #############################################
 # Link the executable FinalProject_Runner
 
-build FinalProject_Runner: CXX_EXECUTABLE_LINKER__FinalProject_Runner_Release CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || FinalProject lib/blt/libBLT.a
+build FinalProject_Runner: CXX_EXECUTABLE_LINKER__FinalProject_Runner_Release CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o | lib/blt/libBLT.a /usr/lib/x86_64-linux-gnu/libz.so || FinalProject lib/blt/libBLT.a
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wall -Wextra -Wpedantic -Wno-comment -rdynamic
   LINK_LIBRARIES = lib/blt/libBLT.a  -lm  -lpthread  /usr/lib/x86_64-linux-gnu/libz.so  -lstdc++fs
