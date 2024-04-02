@@ -168,6 +168,30 @@ fn_file fn_file::from_file(std::string_view file)
     return record;
 }
 
+fn_file& fn_file::operator+=(const fn_file& r)
+{
+    cc += r.cc;
+    co += r.co;
+    oc += r.oc;
+    oo += r.oo;
+    fitness += r.fitness;
+    hits += r.hits;
+    total += r.total;
+    return *this;
+}
+
+fn_file& fn_file::operator/=(int i)
+{
+    cc /= i;
+    co /= i;
+    oo /= i;
+    oc /= i;
+    fitness /= i;
+    hits /= i;
+    total /= i;
+    return *this;
+}
+
 run_stats run_stats::from_file(std::string_view sst_file, std::string_view fn_file)
 {
     run_stats stats;
@@ -176,35 +200,83 @@ run_stats run_stats::from_file(std::string_view sst_file, std::string_view fn_fi
     return stats;
 }
 
-
-void process_stt_file(runs_stt_data& data, int& max_gen, std::string_view file)
+std::vector<run_stats> search_stats::getBestFromGenerations()
 {
-    auto lines = blt::fs::getLinesFromFile(file);
-    for (std::string_view line : blt::itr_offset(lines, 1))
+    std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
+        return a.stt.generations > b.stt.generations;
+    });
+    std::vector<run_stats> best;
+    blt::size_t generation = runs[0].stt.generations;
+    for (const auto& v : runs)
     {
-        auto values = blt::string::split(line, '\t');
-        if (values.size() <= 1)
-            continue;
-        else if (values.size() < 21)
-        {
-            BLT_WARN("Size of vector (%ld) is less than expected (21). Skipping line!", values.size());
-            continue;
-        }
-        blt::size_t idx = 0;
-        
-        auto generation = std::stoi(values[idx++]);
-        max_gen = std::max(max_gen, generation);
-        
-        data.averages[generation].push_back(stt_record::from_string_array(generation, idx, values));
+        if (v.stt.generations == generation)
+            best.push_back(v);
     }
+    return best;
+}
+
+std::vector<run_stats> search_stats::getBestFromFitness()
+{
+    std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
+        return a.fn.fitness > b.fn.fitness;
+    });
+    std::vector<run_stats> best;
+    double fitness = runs[0].fn.fitness;
+    for (const auto& v : runs)
+    {
+        if (v.fn.fitness >= fitness)
+            best.push_back(v);
+    }
+    return best;
+}
+
+std::vector<run_stats> search_stats::getBestFromHits()
+{
+    std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
+        return (static_cast<double>(a.fn.hits) / static_cast<double>(a.fn.total)) >
+               (static_cast<double>(b.fn.hits) / static_cast<double>(b.fn.total));
+    });
+    std::vector<run_stats> best;
+    double hits = (static_cast<double>(runs[0].fn.hits) / static_cast<double>(runs[0].fn.total));
+    for (const auto& v : runs)
+    {
+        if ((static_cast<double>(v.fn.hits) / static_cast<double>(v.fn.total)) >= hits)
+            best.push_back(v);
+    }
+    return best;
+}
+
+averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
+{
+    run_stats stats;
+    
+    auto it = runs.begin();
+    
+    // populate stt stats
+    for (const auto& v : it->stt.records)
+        stats.stt.records.push_back(v);
+    // populate fn file
+    stats.fn = it->fn;
+    
+    while (++it != runs.end())
+    {
+        // combine stt records
+        for (const auto& v : blt::enumerate(it->stt.records))
+            stats.stt.records[v.first] += v.second;
+        // combine fn records
+        stats.fn += it->fn;
+    }
+    
+    // take the mean
+    stats.fn /= static_cast<int>(runs.size());
+    for (auto& v : stats.stt.records)
+        v /= static_cast<int>(runs.size());
+    
+    return averaged_stats(stats, runs.size());
 }
 
 void process_files(const std::string& outfile, const std::string& writefile, int runs)
 {
-    const auto writefile_avg = writefile + ".tsv";
-    const auto writefile_run = writefile + "_runs.tsv";
-    const auto writefile_fn = writefile + "_fn.tsv";
-    
     search_stats stats;
     
     for (int i = 0; i < runs; i++)
@@ -213,5 +285,30 @@ void process_files(const std::string& outfile, const std::string& writefile, int
         stats.runs.push_back(run_stats::from_file(path + ".stt", path + ".fn"));
     }
     
-    BLT_TRACE("Hello there!");
+    auto best_gens = averaged_stats::from_vec(stats.getBestFromGenerations());
+    auto best_fit = averaged_stats::from_vec(stats.getBestFromFitness());
+    auto best_hits = averaged_stats::from_vec(stats.getBestFromHits());
+    
+    std::ofstream writer_best_gens(writefile + "_best_generations.tsv");
+    std::ofstream writer_best_fit(writefile + "_best_fitness.tsv");
+    std::ofstream writer_best_hits(writefile + "_best_hits.tsv");
+    
+    writer_best_gens << "Aggregation Count:\t" << best_gens.count << '\n';
+    writer_best_fit << "Aggregation Count:\t" << best_fit.count << '\n';
+    writer_best_hits << "Aggregation Count:\t" << best_hits.count << '\n';
+    
+    write_fn_file(writer_best_gens, best_gens.stats.fn);
+    write_fn_file(writer_best_fit, best_fit.stats.fn);
+    write_fn_file(writer_best_hits, best_hits.stats.fn);
+    
+    write_stt_header(writer_best_gens);
+    write_stt_header(writer_best_fit);
+    write_stt_header(writer_best_hits);
+    
+    for (const auto& v : best_gens.stats.stt.records)
+        write_stt_record(writer_best_gens, v);
+    for (const auto& v : best_fit.stats.stt.records)
+        write_stt_record(writer_best_fit, v);
+    for (const auto& v : best_hits.stats.stt.records)
+        write_stt_record(writer_best_hits, v);
 }

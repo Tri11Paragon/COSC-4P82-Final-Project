@@ -1,23 +1,23 @@
 === BEST-OF-RUN ===
-              generation: 0
-                   nodes: 2
-                   depth: 1
-                    hits: 513
+              generation: 29
+                   nodes: 27
+                   depth: 6
+                    hits: 895
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 513
-             raw fitness: 513.0000
-    standardized fitness: 513.0000
-        adjusted fitness: 0.9981
+                    hits: 895
+             raw fitness: 895.0000
+    standardized fitness: 895.0000
+        adjusted fitness: 0.9989
 TREE:
- (* (/ (exp (+ major minor))
-       (- (* eccentricity major)
-          (* 0.97781 minor)))
-    (+ (exp (- eccentricity convex))
-       (* (* 0.49033 minor)
-          (log eccentricity))))
+ (log (+ (log (/ (+ convex perimeter) extent))
+         (/ (/ (+ (/ area perimeter)
+                  (+ perimeter -0.43095))
+               (log (/ major area)))
+            (+ extent
+               (log (/ area extent))))))
 TREE-equ:
-y = ((exp((major + minor)) / ((eccentricity * major) - (0.97781 * minor))) * (exp((eccentricity - convex)) + ((0.49033 * minor) * log(eccentricity))))
+y = log((log(((convex + perimeter) / extent)) + ((((area / perimeter) + (perimeter + -0.43095)) / log((major / area))) / (extent + log((area / extent))))))

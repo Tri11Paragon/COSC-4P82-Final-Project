@@ -14,7 +14,7 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 2034.
+    no random number seed specfied; using 5138.
 creating initial population(s):
     342 trees were generated to fill the population of 250 (250 trees).
     initial population(s) complete.
@@ -178,13 +178,13 @@ no checkpointing will be done.
 SYSTEM STATISTICS
 
 ------- memory -------
-           allocated:      3410991
-               freed:      3362991
+           allocated:      3160132
+               freed:      3112132
            not freed:      48000
-       max allocated:      222198
-    malloc'ed blocks:      46958
-   realloc'ed blocks:      7
-      free'ed blocks:      46952
+       max allocated:      209758
+    malloc'ed blocks:      46452
+   realloc'ed blocks:      6
+      free'ed blocks:      46446
 
 ------- time -------
              overall:      0s wall
@@ -192,11 +192,11 @@ SYSTEM STATISTICS
             breeding:      0s wall
 
 ------- generation spaces -------
-      space   0 size:      200
+      space   0 size:      100
       space   1 size:      100
 
 ------- ephemeral random constants -------
-                used:      1151
-               freed:      1151
+                used:      1121
+               freed:      1121
            allocated:      1000
               blocks:      1

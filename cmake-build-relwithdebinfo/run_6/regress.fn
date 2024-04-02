@@ -1,14 +1,16 @@
-Hits: 1882, Total Size: 2810, Percent Hit: 66.975089
-CC: 340
-CO: 779
-OO: 1542
-OC: 149
-Fitness: 0.998328
-Hits: 597
+Hits: 2157, Total Size: 2810, Percent Hit: 76.761566
+CC: 1006
+CO: 125
+OO: 1151
+OC: 528
+Fitness: 0.998720
+Hits: 780
 
 
-y = (0.90309 - (((eccentricity - eccentricity) + exp(extent)) - eccentricity))
+y = (((eccentricity / major) * (eccentricity + -0.88515)) / (exp(eccentricity) - (convex * (area / -0.45528))))
 
- (- 0.90309
-    (- (+ (- eccentricity eccentricity)
-          (exp extent)) eccentricity))
+ (/ (* (/ eccentricity major)
+       (+ eccentricity -0.88515))
+    (- (exp eccentricity)
+       (* convex
+          (/ area -0.45528))))

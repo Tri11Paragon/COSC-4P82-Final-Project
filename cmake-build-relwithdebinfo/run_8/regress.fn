@@ -1,12 +1,15 @@
-Hits: 1105, Total Size: 2810, Percent Hit: 39.323843
-CC: 1105
-CO: 0
-OO: 0
-OC: 1705
-Fitness: 0.998099
-Hits: 525
+Hits: 2210, Total Size: 2810, Percent Hit: 78.647687
+CC: 897
+CO: 227
+OO: 1313
+OC: 373
+Fitness: 0.998734
+Hits: 789
 
 
-y = ((area + perimeter) - eccentricity)
+y = ((((eccentricity * minor) - (area * exp(0.91529))) / convex) + exp(eccentricity))
 
- (- (+ area perimeter) eccentricity)
+ (+ (/ (- (* eccentricity minor)
+          (* area
+             (exp 0.91529))) convex)
+    (exp eccentricity))

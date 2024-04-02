@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20.2)
 project(FinalProject C CXX)
-set(PROJECT_VERSION 0.3.4)
+set(PROJECT_VERSION 0.4.0)
 
 option(ENABLE_ADDRSAN "Enable the address sanitizer" OFF)
 option(ENABLE_UBSAN "Enable the ub sanitizer" OFF)

@@ -284,7 +284,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/lib/blt" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -307,7 +307,7 @@
     "CMake Application.Assignment_1.executor": "Run",
     "CMake Application.Assignment_1_RUNNER.executor": "Run",
     "CMake Application.FinalProject.executor": "Run",
-    "CMake Application.FinalProject_Runner.executor": "Debug",
+    "CMake Application.FinalProject_Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -315,7 +315,7 @@
     "cf.advertisement.text.has.clang-format": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

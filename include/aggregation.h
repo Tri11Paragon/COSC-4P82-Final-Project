@@ -30,6 +30,7 @@
 #include <blt/std/logging.h>
 #include <blt/std/utility.h>
 #include <string_view>
+#include <utility>
 
 template<typename T>
 static inline void fill_value(T& v, const std::string& str)
@@ -102,6 +103,10 @@ struct fn_file
     // total data values
     blt::size_t total = 0;
     
+    fn_file& operator+=(const fn_file& r);
+    
+    fn_file& operator/=(int i);
+    
     static fn_file from_file(std::string_view file);
 };
 
@@ -116,12 +121,30 @@ struct run_stats
 struct search_stats
 {
     std::vector<run_stats> runs;
+    
+    // return the best based on gen count, ie normally only the runs that actually complete
+    std::vector<run_stats> getBestFromGenerations();
+    
+    std::vector<run_stats> getBestFromFitness();
+    
+    std::vector<run_stats> getBestFromHits();
+};
+
+struct averaged_stats
+{
+    run_stats stats;
+    blt::size_t count;
+    
+    explicit averaged_stats(run_stats stats, blt::size_t count): stats(std::move(stats)), count(count)
+    {}
+    
+    static averaged_stats from_vec(const std::vector<run_stats>& runs);
 };
 
 // in case you are wondering why all these functions are using template parameters, it is so that I can pass BLT_?*_STREAM into them
 // allowing for output to stdout
 template<typename T>
-inline void write_record(T& writer, const stt_record& r)
+inline void write_stt_record(T& writer, const stt_record& r)
 {
     writer << r.gen << '\t';
     writer << r.sub << '\t';
@@ -144,6 +167,26 @@ inline void write_record(T& writer, const stt_record& r)
     writer << r.best_tree_depth_run << '\t';
     writer << r.worse_tree_size_run << '\t';
     writer << r.worse_tree_depth_run << '\n';
+}
+
+template<typename T>
+inline void write_stt_header(T& writer)
+{
+    writer << "GEN#\tSUB#\tμFGEN\tFsBestGEN\tFsWorstGEN\tμTreeSzGEN\tμTreeDpGEN\tbTreeSzGEN\tbTreeDpGEN\twTreeSzGEN\twTreeDpGEN\tμFRUN\t"
+              "FsBestRUN\tFsWorstRUN\tμTreeSzRUN\tμTreeDpRUN\tbTreeSzRUN\tbTreeDpRUN\twTreeSzRUN\twTreeDpRUN\n";
+}
+
+template<typename T>
+inline void write_fn_file(T& writer, const fn_file& file)
+{
+    writer << "Hits\tTotal\n";
+    writer << file.hits << '\t' << file.total << '\n';
+    writer << "Percent Hit:\t" << ((static_cast<double>(file.hits) / static_cast<double>(file.total)) * 100) << "%\n";
+    writer << "Fitness\n";
+    writer << file.fitness << '\n';
+    writer << "Real|Predicted\n";
+    writer << "Cammeo|Cammeo\tCammeo|Osmancik\tOsmancik|Osmancik\tOsmancik|Cammeo\n";
+    writer << file.cc << '\t' << file.co << '\t' << file.oo << '\t' << file.oc << '\n';
 }
 
 void process_files(const std::string& outfile, const std::string& writefile, int runs);

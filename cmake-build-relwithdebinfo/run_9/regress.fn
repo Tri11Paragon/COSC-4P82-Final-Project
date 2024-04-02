@@ -1,12 +1,13 @@
-Hits: 2266, Total Size: 2810, Percent Hit: 80.640569
-CC: 791
-CO: 364
-OO: 1475
-OC: 180
-Fitness: 0.998726
-Hits: 784
+Hits: 2104, Total Size: 2810, Percent Hit: 74.875445
+CC: 435
+CO: 705
+OO: 1669
+OC: 1
+Fitness: 0.998584
+Hits: 705
 
 
-y = (((perimeter / -0.03569) + convex) - perimeter)
+y = ((0.19802 / (exp((perimeter + major)) * perimeter)) / -0.81639)
 
- (- (+ (/ perimeter -0.03569) convex) perimeter)
+ (/ (/ 0.19802
+       (* (exp (+ perimeter major)) perimeter)) -0.81639)

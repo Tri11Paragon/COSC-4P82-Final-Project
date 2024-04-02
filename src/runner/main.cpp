@@ -291,7 +291,6 @@ outer_while:
             } else
             {
                 std::memcpy(&packet, buffer, sizeof(buffer));
-                BLT_INFO("We got packet %d", static_cast<int>(packet.id));
                 child.second->handlePacket(packet);
             }
         } while (ret > 0);
@@ -398,7 +397,7 @@ int main(int argc, const char** argv)
     blt::arg_parse parser;
     
     parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("10").setHelp("Number of populations to start").build());
-    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("5").setHelp("Number of generations between pruning").build());
+    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("500").setHelp("Number of generations between pruning").build());
     parser.addArgument(blt::arg_builder("-p", "--prune_ratio").setDefault("0.2").setHelp("Number of generations to run before pruning").build());
     parser.addArgument(blt::arg_builder("--program").setDefault("./FinalProject").setHelp("GP Program to execute per run").build());
     parser.addArgument(blt::arg_builder("--out_file").setDefault("regress")

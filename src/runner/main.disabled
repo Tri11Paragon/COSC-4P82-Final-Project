@@ -372,7 +372,7 @@ inline runs_stt_data get_per_generation_averages(const std::string& outfile, int
 // encase you are wondering why all these functions are using template parameters, it is so that I can pass BLT_?*_STREAM into them
 // allowing for output to stdout
 template<typename T>
-inline void write_record(T& writer, const stt_record& r)
+inline void write_stt_record(T& writer, const stt_record& r)
 {
     writer << r.gen << '\t';
     writer << r.sub << '\t';
@@ -456,7 +456,7 @@ inline void write_averaged_output(const std::string& writefile, const runs_stt_d
               "FsBestRUN\tFsWorstRUN\tμTreeSzRUN\tμTreeDpRUN\tbTreeSzRUN\tbTreeDpRUN\twTreeSzRUN\twTreeDpRUN\n";
     
     for (const auto& r : generation_averages)
-        write_record(writer, r);
+        write_stt_record(writer, r);
 }
 
 inline void write_full_output(const std::string& writefile, const runs_stt_data& data, const std::vector<std::vector<stt_record>>& ordered_records)
@@ -499,7 +499,7 @@ inline void write_full_output(const std::string& writefile, const runs_stt_data&
     // after we create the rows which will calculate the required data for us, we can write all the runs information into the file. Ordered by gen
     for (const auto& run : ordered_records)
         for (const auto& v : run)
-            write_record(writer, v);
+            write_stt_record(writer, v);
 }
 
 void process_stt(const std::string& outfile, const std::string& writefile, const std::string& writefile_run, int runs)

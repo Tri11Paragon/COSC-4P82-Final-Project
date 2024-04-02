@@ -1,18 +1,19 @@
 === BEST-OF-RUN ===
-              generation: 6
-                   nodes: 7
-                   depth: 3
-                    hits: 784
+              generation: 14
+                   nodes: 10
+                   depth: 5
+                    hits: 705
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 784
-             raw fitness: 784.0000
-    standardized fitness: 784.0000
-        adjusted fitness: 0.9987
+                    hits: 705
+             raw fitness: 705.0000
+    standardized fitness: 705.0000
+        adjusted fitness: 0.9986
 TREE:
- (- (+ (/ perimeter -0.03569) convex) perimeter)
+ (/ (/ 0.19802
+       (* (exp (+ perimeter major)) perimeter)) -0.81639)
 TREE-equ:
-y = (((perimeter / -0.03569) + convex) - perimeter)
+y = ((0.19802 / (exp((perimeter + major)) * perimeter)) / -0.81639)
