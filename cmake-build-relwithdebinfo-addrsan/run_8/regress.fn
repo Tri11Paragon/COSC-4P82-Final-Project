@@ -1,12 +1,35 @@
-Hits: 2165, Total Size: 2810, Percent Hit: 77.046263
-CC: 1050
-CO: 114
-OO: 1115
-OC: 531
-Fitness: 0.998695
-Hits: 765
+Hits: 2130, Total Size: 2810, Percent Hit: 75.800712
+CC: 978
+CO: 127
+OO: 1152
+OC: 553
+Fitness: 0.998710
+Hits: 774
 
 
-y = (eccentricity + -0.88461)
+y = (((convex * (area * extent)) / extent) * (((eccentricity - minor) / (area + 0.06321)) / (((perimeter + (exp(eccentricity) * (((exp(((perimeter - 0.20147) - exp(convex))) - ((((-0.21195 / minor) * convex) / (perimeter + area)) + log(exp(major)))) + log(log(log(log((((-0.57336 - eccentricity) - (eccentricity * major)) - (exp(major) - extent))))))) + (log((log((eccentricity - major)) * (-0.17648 / ((-0.83847 * -0.09235) - (area / extent))))) * exp((log((eccentricity - minor)) + (log(minor) - (major * perimeter)))))))) * (log(eccentricity) + log(area))) / (log(major) / convex))))
 
- (+ eccentricity -0.88461)
+ (* (/ (* convex
+          (* area extent)) extent)
+    (/ (/ (- eccentricity minor)
+          (+ area 0.06321))
+       (/ (* (+ perimeter
+                (* (exp eccentricity)
+                   (+ (+ (- (exp (- (- perimeter 0.20147)
+                                    (exp convex)))
+                            (+ (/ (* (/ -0.21195 minor) convex)
+                                  (+ perimeter area))
+                               (log (exp major))))
+                         (log (log (log (log (- (- (- -0.57336 eccentricity)
+                                                   (* eccentricity major))
+                                                (- (exp major) extent)))))))
+                      (* (log (* (log (- eccentricity major))
+                                 (/ -0.17648
+                                    (- (* -0.83847 -0.09235)
+                                       (/ area extent)))))
+                         (exp (+ (log (- eccentricity minor))
+                                 (- (log minor)
+                                    (* major perimeter))))))))
+             (+ (log eccentricity)
+                (log area)))
+          (/ (log major) convex))))

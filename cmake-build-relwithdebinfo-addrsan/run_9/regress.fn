@@ -1,13 +1,12 @@
-Hits: 2612, Total Size: 2810, Percent Hit: 92.953737
-CC: 1021
-CO: 93
-OO: 1591
-OC: 105
-Fitness: 0.998919
-Hits: 924
+Hits: 1709, Total Size: 2810, Percent Hit: 60.818505
+CC: 1094
+CO: 21
+OO: 615
+OC: 1080
+Fitness: 0.998532
+Hits: 680
 
 
-y = (-0.15156 * exp((major / -0.25798)))
+y = (-0.86958 + eccentricity)
 
- (* -0.15156
-    (exp (/ major -0.25798)))
+ (+ -0.86958 eccentricity)

@@ -200,7 +200,7 @@ inline void write_process_info(T& writer, const process_info_t& run_processes)
     writer << "CPU Cycles:\t" << run_processes.cpu_cycles << '\n';
     writer << "Snapshot #\tSnapshot Time(ms)\tValue(Bytes)\n";
     for (const auto& v : blt::enumerate(run_processes.snapshots))
-        writer << (v.first + 1) << v.second.timeSinceStart << '\t' << v.second.memory << '\n';
+        writer << (v.first + 1) << '\t' << v.second.timeSinceStart << '\t' << v.second.memory << '\n';
 }
 
 void process_files(const std::string& outfile, const std::string& writefile, int runs, blt::hashmap_t<blt::i32, process_info_t>& run_processes);

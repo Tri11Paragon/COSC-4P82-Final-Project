@@ -1,29 +1,18 @@
-Hits: 2101, Total Size: 2810, Percent Hit: 74.768683
-CC: 1021
-CO: 131
-OO: 1080
-OC: 578
-Fitness: 0.998679
-Hits: 756
+Hits: 2525, Total Size: 2810, Percent Hit: 89.857651
+CC: 987
+CO: 151
+OO: 1538
+OC: 134
+Fitness: 0.998885
+Hits: 896
 
 
-y = ((exp(exp(log((-0.43888 * perimeter)))) / (exp(((minor / convex) * (extent + extent))) * ((log(-0.16812) / exp(perimeter)) - ((0.62636 - -0.65079) / log(convex))))) - (((log(eccentricity) + ((major + convex) * log(major))) - exp((exp(log((((major * major) - (area + extent)) / (log(perimeter) * exp(eccentricity))))) * (extent / minor)))) * log((exp(convex) * ((convex * minor) * (major / area))))))
+y = log(((major + perimeter) / ((convex + (exp(major) * (extent - log(major)))) * (exp((perimeter / eccentricity)) + exp((minor - perimeter))))))
 
- (- (/ (exp (exp (log (* -0.43888 perimeter))))
-       (* (exp (* (/ minor convex)
-                  (+ extent extent)))
-          (- (/ (log -0.16812)
-                (exp perimeter))
-             (/ (- 0.62636 -0.65079)
-                (log convex)))))
-    (* (- (+ (log eccentricity)
-             (* (+ major convex)
-                (log major)))
-          (exp (* (exp (log (/ (- (* major major)
-                                  (+ area extent))
-                               (* (log perimeter)
-                                  (exp eccentricity)))))
-                  (/ extent minor))))
-       (log (* (exp convex)
-               (* (* convex minor)
-                  (/ major area))))))
+ (log (/ (+ major perimeter)
+         (* (+ convex
+               (* (exp major)
+                  (- extent
+                     (log major))))
+            (+ (exp (/ perimeter eccentricity))
+               (exp (- minor perimeter))))))

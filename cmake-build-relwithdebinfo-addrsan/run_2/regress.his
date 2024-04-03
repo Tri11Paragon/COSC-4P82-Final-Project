@@ -1,275 +1,90 @@
 === BEST-OF-RUN ===
       current generation: 0
               generation: 0
-                   nodes: 50
-                   depth: 6
-                    hits: 561
+                   nodes: 7
+                   depth: 2
+                    hits: 591
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 561
-             raw fitness: 561.0000
-    standardized fitness: 561.0000
-        adjusted fitness: 0.9982
+                    hits: 591
+             raw fitness: 591.0000
+    standardized fitness: 591.0000
+        adjusted fitness: 0.9983
 TREE:
- (+ (- (log (log (* (exp minor)
-                    (+ major major))))
-       (log (/ (* (* eccentricity extent)
-                  (/ -0.60125 minor))
-               (- (+ extent major)
-                  (+ minor eccentricity)))))
-    (* (- (exp (- (- perimeter 0.65230)
-                  (log major)))
-          (log (- (log eccentricity)
-                  (+ extent major))))
-       (log (log (* (log area)
-                    (/ perimeter convex))))))
+ (+ (- convex area)
+    (* perimeter -0.64856))
 === BEST-OF-RUN ===
       current generation: 1
-              generation: 1
-                   nodes: 27
-                   depth: 8
-                    hits: 586
+              generation: 0
+                   nodes: 7
+                   depth: 2
+                    hits: 591
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 586
-             raw fitness: 586.0000
-    standardized fitness: 586.0000
+                    hits: 591
+             raw fitness: 591.0000
+    standardized fitness: 591.0000
         adjusted fitness: 0.9983
 TREE:
- (log (log (* (exp (* (* major extent)
-                      (/ eccentricity perimeter)))
-              (/ (* (log extent)
-                    (log minor))
-                 (exp (/ area
-                         (* (* convex convex)
-                            (+ minor minor))))))))
+ (+ (- convex area)
+    (* perimeter -0.64856))
 === BEST-OF-RUN ===
       current generation: 2
-              generation: 1
-                   nodes: 27
-                   depth: 8
-                    hits: 586
+              generation: 0
+                   nodes: 7
+                   depth: 2
+                    hits: 591
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 586
-             raw fitness: 586.0000
-    standardized fitness: 586.0000
+                    hits: 591
+             raw fitness: 591.0000
+    standardized fitness: 591.0000
         adjusted fitness: 0.9983
 TREE:
- (log (log (* (exp (* (* major extent)
-                      (/ eccentricity perimeter)))
-              (/ (* (log extent)
-                    (log minor))
-                 (exp (/ area
-                         (* (* convex convex)
-                            (+ minor minor))))))))
+ (+ (- convex area)
+    (* perimeter -0.64856))
 === BEST-OF-RUN ===
       current generation: 3
-              generation: 3
-                   nodes: 46
-                   depth: 8
-                    hits: 723
+              generation: 0
+                   nodes: 7
+                   depth: 2
+                    hits: 591
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 723
-             raw fitness: 723.0000
-    standardized fitness: 723.0000
-        adjusted fitness: 0.9986
+                    hits: 591
+             raw fitness: 591.0000
+    standardized fitness: 591.0000
+        adjusted fitness: 0.9983
 TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity perimeter)))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
+ (+ (- convex area)
+    (* perimeter -0.64856))
 === BEST-OF-RUN ===
       current generation: 4
-              generation: 3
-                   nodes: 46
-                   depth: 8
-                    hits: 723
+              generation: 0
+                   nodes: 7
+                   depth: 2
+                    hits: 591
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 723
-             raw fitness: 723.0000
-    standardized fitness: 723.0000
-        adjusted fitness: 0.9986
+                    hits: 591
+             raw fitness: 591.0000
+    standardized fitness: 591.0000
+        adjusted fitness: 0.9983
 TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity perimeter)))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
-=== BEST-OF-RUN ===
-      current generation: 5
-              generation: 5
-                   nodes: 48
-                   depth: 8
-                    hits: 725
-TOP INDIVIDUAL:
-
-
-
--- #1 --
-                    hits: 725
-             raw fitness: 725.0000
-    standardized fitness: 725.0000
-        adjusted fitness: 0.9986
-TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity
-                     (/ area area))))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
-=== BEST-OF-RUN ===
-      current generation: 6
-              generation: 5
-                   nodes: 48
-                   depth: 8
-                    hits: 725
-TOP INDIVIDUAL:
-
-
-
--- #1 --
-                    hits: 725
-             raw fitness: 725.0000
-    standardized fitness: 725.0000
-        adjusted fitness: 0.9986
-TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity
-                     (/ area area))))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
-=== BEST-OF-RUN ===
-      current generation: 7
-              generation: 5
-                   nodes: 48
-                   depth: 8
-                    hits: 725
-TOP INDIVIDUAL:
-
-
-
--- #1 --
-                    hits: 725
-             raw fitness: 725.0000
-    standardized fitness: 725.0000
-        adjusted fitness: 0.9986
-TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity
-                     (/ area area))))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
-=== BEST-OF-RUN ===
-      current generation: 8
-              generation: 5
-                   nodes: 48
-                   depth: 8
-                    hits: 725
-TOP INDIVIDUAL:
-
-
-
--- #1 --
-                    hits: 725
-             raw fitness: 725.0000
-    standardized fitness: 725.0000
-        adjusted fitness: 0.9986
-TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity
-                     (/ area area))))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
-=== BEST-OF-RUN ===
-      current generation: 9
-              generation: 5
-                   nodes: 48
-                   depth: 8
-                    hits: 725
-TOP INDIVIDUAL:
-
-
-
--- #1 --
-                    hits: 725
-             raw fitness: 725.0000
-    standardized fitness: 725.0000
-        adjusted fitness: 0.9986
-TREE:
- (- (/ (- extent
-          (- (exp (- perimeter 0.51575))
-             (log (log minor))))
-       (exp (- (* (+ minor perimeter)
-                  (log extent))
-               (+ (+ (/ extent
-                        (+ area major)) perimeter)
-                  (/ eccentricity
-                     (/ area area))))))
-    (/ (* (* major
-             (- extent extent)) extent)
-       (/ perimeter
-          (/ (- eccentricity convex) eccentricity))))
+ (+ (- convex area)
+    (* perimeter -0.64856))
