@@ -1,13 +1,12 @@
-Hits: 2166, Total Size: 2810, Percent Hit: 77.081851
-CC: 954
-CO: 161
-OO: 1212
-OC: 483
-Fitness: 0.998734
-Hits: 789
+Hits: 2027, Total Size: 2810, Percent Hit: 72.135231
+CC: 1028
+CO: 72
+OO: 999
+OC: 711
+Fitness: 0.998713
+Hits: 776
 
 
-y = log(log(((major / convex) * (eccentricity - major))))
+y = log(log(((area / major) / major)))
 
- (log (log (* (/ major convex)
-              (- eccentricity major))))
+ (log (log (/ (/ area major) major)))

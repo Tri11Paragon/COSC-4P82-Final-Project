@@ -22,6 +22,8 @@
 #include <iostream>
 #include <fstream>
 
+extern process_info_t total_time;
+
 stt_record stt_record::from_string_array(int generation, size_t& idx, blt::span<std::string> values)
 {
     stt_record r{};
@@ -281,6 +283,29 @@ averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
     return averaged_stats(stats, runs.size());
 }
 
+process_info_t total(const std::vector<run_stats>& runs)
+{
+    process_info_t t;
+    
+    auto it = runs.begin();
+    
+    // populate process info
+    t = it->process_info;
+    
+    while (++it != runs.end())
+    {
+        // combine process info records
+        t += it->process_info;
+    }
+    
+    for (auto& v : t.snapshots)
+        v.timeSinceStart /= v.count;
+    
+    t.wall_time = total_time.wall_time;
+    
+    return t;
+}
+
 void process_files(const std::string& outfile, const std::string& writefile, int runs, blt::hashmap_t<blt::i32, process_info_t>& run_processes)
 {
     full_stats stats;
@@ -291,8 +316,10 @@ void process_files(const std::string& outfile, const std::string& writefile, int
         stats.runs.push_back(run_stats::from_file(path + ".stt", path + ".fn", run_processes[i]));
     }
     
-    auto best_gen = stats.getBestFromGenerations();
-    
+    auto best_gens_vec = stats.getBestFromGenerations();
+    auto best_fit_vec = stats.getBestFromFitness();
+    auto best_hits_vec = stats.getBestFromHits();
+
 //    for (const auto& v : best_gen)
 //    {
 //        write_fn_file(std::cout, v.fn);
@@ -303,15 +330,20 @@ void process_files(const std::string& outfile, const std::string& writefile, int
 //        std::cout << "\n\n";
 //    }
     
-    auto best_gens = averaged_stats::from_vec(best_gen);
-    auto best_fit = averaged_stats::from_vec(stats.getBestFromFitness());
-    auto best_hits = averaged_stats::from_vec(stats.getBestFromHits());
+    auto best_gens = averaged_stats::from_vec(best_gens_vec);
+    auto best_fit = averaged_stats::from_vec(best_fit_vec);
+    auto best_hits = averaged_stats::from_vec(best_hits_vec);
     auto best_all = averaged_stats::from_vec(stats.runs);
     
     std::ofstream writer_best_gens(writefile + "_best_generations.tsv");
     std::ofstream writer_best_fit(writefile + "_best_fitness.tsv");
     std::ofstream writer_best_hits(writefile + "_best_hits.tsv");
     std::ofstream writer_best_all(writefile + "_all.tsv");
+    
+    write_process_info(writer_best_gens, total(best_gens_vec));
+    write_process_info(writer_best_fit, total(best_fit_vec));
+    write_process_info(writer_best_hits, total(best_hits_vec));
+    write_process_info(writer_best_all, total(stats.runs));
     
     writer_best_gens << "Aggregation Count:\t" << best_gens.count << '\n';
     writer_best_fit << "Aggregation Count:\t" << best_fit.count << '\n';

@@ -17,6 +17,8 @@
 #include "blt/std/assert.h"
 #include "blt/std/memory.h"
 #include "blt/std/types.h"
+#include "blt/std/time.h"
+#include "blt/std/system.h"
 #include <aggregation.h>
 #include <blt/fs/loader.h>
 #include <blt/parse/argparse.h>
@@ -40,6 +42,7 @@
 
 // run id - > timer info
 blt::hashmap_t<blt::i32, process_info_t> run_processes;
+process_info_t total_time;
 
 class child_t
 {
@@ -415,7 +418,7 @@ int main(int argc, const char** argv)
 {
     blt::arg_parse parser;
     
-    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("120").setHelp("Number of populations to start").build());
+    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("10").setHelp("Number of populations to start").build());
     parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("5").setHelp("Number of generations between pruning").build());
     parser.addArgument(blt::arg_builder("-p", "--prune_ratio").setDefault("0.2").setHelp("Number of generations to run before pruning").build());
     parser.addArgument(blt::arg_builder("--program").setDefault("./FinalProject").setHelp("GP Program to execute per run").build());
@@ -457,6 +460,9 @@ int main(int argc, const char** argv)
     SOCKET_LOCATION = "/tmp/gp_program_" + random_id + ".socket";
     
     create_parent_socket();
+    total_time.wall_time = blt::system::getCurrentTimeMilliseconds();
+    total_time.cpu_time = blt::system::getCPUTime();
+    total_time.cpu_cycles = blt::system::rdtsc();
     for (auto i = 0; i < runs; i++)
     {
         auto pid = fork();
@@ -475,5 +481,8 @@ int main(int argc, const char** argv)
         }
     }
     init_sockets(args);
+    total_time.wall_time = blt::system::getCurrentTimeMilliseconds() - total_time.wall_time;
+    total_time.cpu_time = blt::system::getCPUTime() - total_time.cpu_time;
+    total_time.cpu_cycles = blt::system::rdtsc() - total_time.cpu_cycles;
     process_files(args.get<std::string>("--out_file"), args.get<std::string>("--write_file"), args.get<int>("--num_pops"), run_processes);
 }
