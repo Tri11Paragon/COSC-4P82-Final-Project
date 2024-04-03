@@ -274,7 +274,7 @@ averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
     
     // take the mean
     stats.fn /= static_cast<int>(runs.size());
-    stats.process_info /= static_cast<int>(runs.size());
+    stats.process_info.calc_mean(static_cast<int>(runs.size()));
     for (auto& v : stats.stt.records)
         v /= static_cast<int>(runs.size());
     

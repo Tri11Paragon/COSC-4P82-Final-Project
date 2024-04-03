@@ -14,58 +14,58 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 200.
+    no random number seed specfied; using 797.
 creating initial population(s):
-    1128 trees were generated to fill the population of 800 (800 trees).
+    1122 trees were generated to fill the population of 800 (800 trees).
     initial population(s) complete.
 
 
 starting evolution.
 no checkpointing will be done.
 === generation 0.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (2s wall)
     breeding complete.    (0s wall)
 === generation 1.
     evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 2.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 3.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 4.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 5.
     evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 6.
-    evaluation complete.  (0s wall)
+    evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 7.
-    evaluation complete.  (1s wall)
-    breeding complete.    (0s wall)
-=== generation 8.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
-=== generation 9.
+=== generation 8.
     evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 9.
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 
 SYSTEM STATISTICS
 
 ------- memory -------
-           allocated:      3048604
-               freed:      3000604
+           allocated:      3298053
+               freed:      3250053
            not freed:      48000
-       max allocated:      444869
-    malloc'ed blocks:      36915
+       max allocated:      464149
+    malloc'ed blocks:      37496
    realloc'ed blocks:      7
-      free'ed blocks:      36909
+      free'ed blocks:      37490
 
 ------- time -------
-             overall:      9s wall
+             overall:      8s wall
           evaluation:      7s wall
             breeding:      0s wall
 
@@ -74,7 +74,7 @@ SYSTEM STATISTICS
       space   1 size:      100
 
 ------- ephemeral random constants -------
-                used:      1318
-               freed:      1318
+                used:      1444
+               freed:      1444
            allocated:      1000
               blocks:      1

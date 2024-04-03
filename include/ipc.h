@@ -59,7 +59,7 @@ struct stored_snapshot
 {
     blt::u64 memory;
     blt::u64 timeSinceStart;
-    blt::u64 count = 0;
+    blt::u64 count = 1;
     
     explicit stored_snapshot(memory_snapshot snap): memory(snap.memory), timeSinceStart(snap.timeSinceStart)
     {}
@@ -88,7 +88,6 @@ struct process_info_t
     
     process_info_t& operator/=(int i)
     {
-        
         wall_time /= i;
         cpu_time /= i;
         cpu_cycles /= i;
