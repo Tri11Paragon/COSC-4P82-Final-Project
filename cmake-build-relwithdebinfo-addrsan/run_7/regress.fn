@@ -1,13 +1,14 @@
-Hits: 2190, Total Size: 2810, Percent Hit: 77.935943
-CC: 932
-CO: 200
-OO: 1258
-OC: 420
-Fitness: 0.998745
-Hits: 796
+Hits: 2020, Total Size: 2810, Percent Hit: 71.886121
+CC: 906
+CO: 231
+OO: 1114
+OC: 559
+Fitness: 0.998643
+Hits: 736
 
 
-y = (exp(log(major)) * log((0.11045 + eccentricity)))
+y = (eccentricity + ((perimeter / minor) - log(perimeter)))
 
- (* (exp (log major))
-    (log (+ 0.11045 eccentricity)))
+ (+ eccentricity
+    (- (/ perimeter minor)
+       (log perimeter)))

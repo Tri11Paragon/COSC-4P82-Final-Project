@@ -15,24 +15,6 @@
 ########################
 
 //Value Computed by CMake
-Assignment_1_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-debug
-
-//Value Computed by CMake
-Assignment_1_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Assignment_1_RUNNER_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-debug
-
-//Value Computed by CMake
-Assignment_1_RUNNER_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Assignment_1_RUNNER_SOURCE_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project
-
-//Value Computed by CMake
-Assignment_1_SOURCE_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project
-
-//Value Computed by CMake
 BLT_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-debug/lib/blt
 
 //Disable blt::logging BLT_DEBUG macro
@@ -98,8 +80,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable colored diagnostics throughout.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:UNINITIALIZED=/usr/bin/g++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -124,8 +106,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:UNINITIALIZED=/usr/bin/gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -270,16 +252,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=FinalProject_Runner
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.11.3
+CMAKE_PROJECT_VERSION:STATIC=0.15.12
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=11
+CMAKE_PROJECT_VERSION_MINOR:STATIC=15
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=3
+CMAKE_PROJECT_VERSION_PATCH:STATIC=12
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -363,15 +345,6 @@ FinalProject_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project
 
 //Value Computed by CMake
 FinalProject_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-FinalProject_RUNNER_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-debug
-
-//Value Computed by CMake
-FinalProject_RUNNER_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-FinalProject_RUNNER_SOURCE_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project
 
 //Value Computed by CMake
 FinalProject_Runner_BINARY_DIR:STATIC=/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project/cmake-build-debug

@@ -38,15 +38,8 @@
 #include <thread>
 #include <unistd.h>
 
-struct timer_info
-{
-    blt::u64 wall_time;
-    blt::u64 cpu_time;
-    blt::u64 cpu_cylces;
-};
-
 // run id - > timer info
-blt::hashmap_t<blt::i32, timer_info> run_timers;
+blt::hashmap_t<blt::i32, process_info_t> run_processes;
 
 class child_t
 {
@@ -71,15 +64,18 @@ class child_t
             for (const auto& v : unprocessed_packets)
             {
                 if (v.id == packet_id::EXEC_TIME)
-                    run_timers[run].wall_time = v.timer;
+                    run_processes[run].wall_time = v.timer;
                 else if (v.id == packet_id::CPU_TIME)
-                    run_timers[run].cpu_time = v.timer;
+                    run_processes[run].cpu_time = v.timer;
                 else if (v.id == packet_id::CPU_CYCLES)
-                    run_timers[run].cpu_cylces = v.timer;
+                    run_processes[run].cpu_cycles = v.timer;
+                else if (v.id == packet_id::MEM_USAGE)
+                    run_processes[run].snapshots.push_back(v.snapshot);
             }
             clearPackets(packet_id::EXEC_TIME);
             clearPackets(packet_id::CPU_TIME);
             clearPackets(packet_id::CPU_CYCLES);
+            clearPackets(packet_id::MEM_USAGE);
         }
         
         ssize_t write(unsigned char* buffer, blt::size_t count)
@@ -479,5 +475,5 @@ int main(int argc, const char** argv)
         }
     }
     init_sockets(args);
-    process_files(args.get<std::string>("--out_file"), args.get<std::string>("--write_file"), args.get<int>("--num_pops"));
+    process_files(args.get<std::string>("--out_file"), args.get<std::string>("--write_file"), args.get<int>("--num_pops"), run_processes);
 }

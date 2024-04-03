@@ -192,15 +192,16 @@ fn_file& fn_file::operator/=(int i)
     return *this;
 }
 
-run_stats run_stats::from_file(std::string_view sst_file, std::string_view fn_file)
+run_stats run_stats::from_file(std::string_view sst_file, std::string_view fn_file, const process_info_t& pi)
 {
     run_stats stats;
     stats.stt = stt_file::from_file(sst_file);
     stats.fn = fn_file::from_file(fn_file);
+    stats.process_info = pi;
     return stats;
 }
 
-std::vector<run_stats> search_stats::getBestFromGenerations()
+std::vector<run_stats> full_stats::getBestFromGenerations()
 {
     std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
         return a.stt.generations > b.stt.generations;
@@ -215,7 +216,7 @@ std::vector<run_stats> search_stats::getBestFromGenerations()
     return best;
 }
 
-std::vector<run_stats> search_stats::getBestFromFitness()
+std::vector<run_stats> full_stats::getBestFromFitness()
 {
     std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
         return a.fn.fitness > b.fn.fitness;
@@ -230,7 +231,7 @@ std::vector<run_stats> search_stats::getBestFromFitness()
     return best;
 }
 
-std::vector<run_stats> search_stats::getBestFromHits()
+std::vector<run_stats> full_stats::getBestFromHits()
 {
     std::sort(runs.begin(), runs.end(), [](const run_stats& a, const run_stats& b) {
         return (static_cast<double>(a.fn.hits) / static_cast<double>(a.fn.total)) >
@@ -275,14 +276,14 @@ averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
     return averaged_stats(stats, runs.size());
 }
 
-void process_files(const std::string& outfile, const std::string& writefile, int runs)
+void process_files(const std::string& outfile, const std::string& writefile, int runs, blt::hashmap_t<blt::i32, process_info_t>& run_processes)
 {
-    search_stats stats;
+    full_stats stats;
     
     for (int i = 0; i < runs; i++)
     {
         std::string path = ("./run_" + (std::to_string(i) += "/")) += outfile;
-        stats.runs.push_back(run_stats::from_file(path + ".stt", path + ".fn"));
+        stats.runs.push_back(run_stats::from_file(path + ".stt", path + ".fn", run_processes[i]));
     }
     
     auto best_gen = stats.getBestFromGenerations();

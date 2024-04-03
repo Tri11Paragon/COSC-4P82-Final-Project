@@ -1,14 +1,17 @@
-Hits: 2544, Total Size: 2810, Percent Hit: 90.533808
-CC: 1043
-CO: 51
-OO: 1501
-OC: 215
-Fitness: 0.998909
-Hits: 916
+Hits: 1990, Total Size: 2810, Percent Hit: 70.818505
+CC: 1007
+CO: 145
+OO: 983
+OC: 675
+Fitness: 0.998681
+Hits: 757
 
 
-y = ((major - 0.98921) * (log(log((log(major) * log(0.59476)))) / eccentricity))
+y = ((-0.18535 + log(exp((eccentricity * major)))) + ((((eccentricity - minor) + (eccentricity / eccentricity)) * log((extent / 0.11096))) - log((area + convex))))
 
- (* (- major 0.98921)
-    (/ (log (log (* (log major)
-                    (log 0.59476)))) eccentricity))
+ (+ (+ -0.18535
+       (log (exp (* eccentricity major))))
+    (- (* (+ (- eccentricity minor)
+             (/ eccentricity eccentricity))
+          (log (/ extent 0.11096)))
+       (log (+ area convex))))

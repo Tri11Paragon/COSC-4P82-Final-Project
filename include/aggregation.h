@@ -18,6 +18,7 @@
 
 #include "blt/std/hashmap.h"
 #include "blt/std/memory.h"
+#include "ipc.h"
 
 #ifndef FINALPROJECT_RUNNER_AGGREGATION_H
 #define FINALPROJECT_RUNNER_AGGREGATION_H
@@ -114,11 +115,12 @@ struct run_stats
 {
     stt_file stt;
     fn_file fn;
+    process_info_t process_info;
     
-    static run_stats from_file(std::string_view sst_file, std::string_view fn_file);
+    static run_stats from_file(std::string_view sst_file, std::string_view fn_file, const process_info_t& pi);
 };
 
-struct search_stats
+struct full_stats
 {
     std::vector<run_stats> runs;
     
@@ -189,6 +191,18 @@ inline void write_fn_file(T& writer, const fn_file& file)
     writer << file.cc << '\t' << file.co << '\t' << file.oo << '\t' << file.oc << '\n';
 }
 
-void process_files(const std::string& outfile, const std::string& writefile, int runs);
+template<typename T>
+inline void write_process_info(T& writer, const process_info_t& run_processes)
+{
+    writer << "Timer Name\tValue\n";
+    writer << "CPU Time (ms):\t" << run_processes.cpu_time << '\n';
+    writer << "Wall Time (ms):\t" << run_processes.wall_time << '\n';
+    writer << "CPU Cycles:\t" << run_processes.cpu_cycles << '\n';
+    writer << "Snapshot Time\tValue\n";
+    for (const auto& v : run_processes.snapshots)
+        writer << v.timeSinceStart << '\t' << v.memory << '\n';
+}
+
+void process_files(const std::string& outfile, const std::string& writefile, int runs, blt::hashmap_t<blt::i32, process_info_t>& run_processes);
 
 #endif //FINALPROJECT_RUNNER_AGGREGATION_H

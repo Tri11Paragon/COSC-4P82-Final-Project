@@ -25,39 +25,39 @@
  *  
  */
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 #define BLT_DISABLE_TRACE
 #define BLT_DISABLE_DEBUG
 #define BLT_DISABLE_INFO
 
-#include <blt/fs/loader.h>
-#include <random>
-#include <cstring>
-#include "blt/std/logging.h"
-#include "blt/std/ranges.h"
 #include "blt/std/assert.h"
+#include "blt/std/error.h"
+#include "blt/std/logging.h"
+#include "blt/std/memory_util.h"
+#include "blt/std/ranges.h"
 #include "blt/std/system.h"
 #include "blt/std/time.h"
-#include "blt/std/memory_util.h"
-#include "blt/std/error.h"
 #include "blt/std/types.h"
 #include "rice_loader.h"
-#include <sys/socket.h>
+#include <atomic>
+#include <blt/fs/loader.h>
+#include <cstring>
+#include <fcntl.h>
+#include <ipc.h>
+#include <mutex>
+#include <poll.h>
+#include <queue>
+#include <random>
 #include <sys/select.h>
+#include <sys/socket.h>
 #include <sys/un.h>
 #include <thread>
-#include <ipc.h>
-#include <atomic>
-#include <poll.h>
-#include <fcntl.h>
-#include <queue>
-#include <mutex>
 
 extern "C" {
-#include <lilgp.h>
 #include "protos.h"
+#include <lilgp.h>
 }
 
 std::unique_ptr<std::thread> network_thread;
@@ -187,7 +187,10 @@ extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
     {
         packet_t memory_packet{};
         memory_packet.id = packet_id::MEM_USAGE;
-        memory_packet.timer = blt::system::get_memory_process().resident;
+        memory_packet.snapshot = memory_snapshot{
+            blt::system::get_memory_process().resident,
+            blt::system::getCurrentTimeMilliseconds() - wall_time_start
+        };
         
         std::scoped_lock lock(send_mutex);
         send_packets.push(memory_packet);
@@ -271,15 +274,15 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
             if (dv)
             {
                 if (v >= 0)
-                    results.cc++; // cammeo cammeo
+                    results.cc++;// cammeo cammeo
                 else if (v < 0)
-                    results.co++; // cammeo osmancik
+                    results.co++;// cammeo osmancik
             } else
             {
                 if (v < 0)
-                    results.oo++; // osmancik osmancik
+                    results.oo++;// osmancik osmancik
                 else if (v >= 0)
-                    results.oc++; // osmancik cammeo
+                    results.oc++;// osmancik cammeo
             }
         }
         
@@ -414,12 +417,12 @@ extern "C" int app_initialize(int startfromcheckpoint)
             const double range = 10;
             const double half_range = range / 2.0;
             x = (random_double(&globrand) * range) - half_range;
-            
+
             /* change this line to modify the goal function. */
             y = x * x * x * x + x * x * x + x * x + x;
-////            y = x * cos(x) + sin(x) * log(x + x * x + x) + x * x;
-///*			y = x*x; */
-            
+            ////            y = x * cos(x) + sin(x) * log(x + x * x + x) + x * x;
+            ///*			y = x*x; */
+
             app_fitness_cases[0][i] = x;
             app_fitness_cases[1][i] = y;
             oprintf(OUT_PRG, 50, "    x = %12.5lf, y = %12.5lf\n", x, y);
@@ -437,7 +440,6 @@ extern "C" int app_initialize(int startfromcheckpoint)
                     data[i].area, data[i].perimeter, data[i].major_axis_length, data[i].minor_axis_length, data[i].eccentricity, data[i].convex_area,
                     data[i].extent, data[i].type[0]);
 #endif
-        
         }
     } else
     {
@@ -594,7 +596,7 @@ extern "C" void app_eval_fitness(individual* ind)
         ind->a_fitness = 1 - (1 / (1 + ind->s_fitness));
 #else
         disp = fabs(dv - v);
-        
+
         if (disp < value_cutoff)
         {
             ind->r_fitness += disp;

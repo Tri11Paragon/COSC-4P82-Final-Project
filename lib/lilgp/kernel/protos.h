@@ -28,6 +28,10 @@
 #ifndef _PROTOS_H
 #define _PROTOS_H
 
+#include <types.h>
+#include "defines.h"
+#include "event.h"
+#include "app.h"
 
 extern randomgen globrand;
 extern genspace gensp[GENSPACE_COUNT];

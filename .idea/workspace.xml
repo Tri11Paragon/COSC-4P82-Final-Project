@@ -25,159 +25,158 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aafc3fa6-dda6-4ed9-b799-2d342946ae56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/aggregation.cpp.3D7EBE6C6EE8B669.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/aggregation.cpp.3D7EBE6C6EE8B669.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/aggregation.h.10961E6F313783FF.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/aggregation.h.10961E6F313783FF.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/app.cpp.31056FF7DE1D18B5.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/app.cpp.31056FF7DE1D18B5.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/argparse.cpp.676267E193413084.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/argparse.cpp.676267E193413084.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/ipc.h.FCE3B1C8E3EF93E4.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/ipc.h.FCE3B1C8E3EF93E4.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/clangd/index/main.cpp.DFCCD6C019B42452.idx" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/clangd/index/main.cpp.DFCCD6C019B42452.idx" afterDir="false" />
+    <list default="true" id="c30da5f4-6ed9-4b76-bfff-423669272208" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Assignment 1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/FinalProject_Runner.dir/src/runner/aggregation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/FinalProject" beforeDir="false" afterPath="$PROJECT_DIR$/build/FinalProject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/FinalProject_Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/FinalProject_Runner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/blt/BLT_TESTS" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/blt/BLT_TESTS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/blt/libBLT.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/blt/libBLT.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_0/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_0/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_1/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_1/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_2/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_2/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_3/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_3/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_4/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_4/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_5/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_5/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_6/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_6/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_7/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_7/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_8/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_8/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run_9/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/build/run_9/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d39d1f7dc0878ef8f992.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-53567c6150040651c8e5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/event.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/memory.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/src/program/function.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject.dir/src/program/rice_loader.h.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FinalProject_Runner.dir/src/runner/main_new.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/boltzman.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/bstworst.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ckpoint.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/crossovr.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/ephem.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/eval.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/exch.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fitness.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/fsetupdate.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/genspace.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/gp.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/individ.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/mutate.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/output.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/params.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/populate.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/pretty.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/random.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/reproduc.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/select.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/sigma.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tournmnt.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/tree.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/src/program/function.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject.dir/src/program/function.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/FinalProject" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/FinalProject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/FinalProject_Runner" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/FinalProject_Runner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/lib/blt/CMakeFiles/BLT.dir/src/blt/parse/argparse.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/lib/blt/libBLT.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/lib/blt/libBLT.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_0/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_1/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_2/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_3/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_4/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_5/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_6/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_7/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_8/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.bst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.fn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.his" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.prg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.stt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo-addrsan/run_9/regress.sys" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject.dir/lib/lilgp/kernel/change.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject.dir/src/program/app.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/FinalProject_Runner.dir/src/runner/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/FinalProject" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/FinalProject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/FinalProject_Runner" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/FinalProject_Runner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_0/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_1/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_2/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_3/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_4/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_5/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_6/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_7/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_8/regress.sys" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.bst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.bst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.fn" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.fn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.his" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.his" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.prg" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.prg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.stt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.stt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.sys" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/run_9/regress.sys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/aggregation.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/aggregation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/ipc.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/ipc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.file" beforeDir="false" afterPath="$PROJECT_DIR$/input.file" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap/phmap_lldb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blt/libraries/parallel-hashmap/phmap_lldb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/lilgp/kernel/change.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lilgp/kernel/change.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lilgp/kernel/protos.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lilgp/kernel/protos.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lilgp/kernel/types.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lilgp/kernel/types.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/app.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runner/aggregation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/runner/aggregation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runner/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/runner/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,51 +187,37 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:RelWithDebInfo" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CMakeLists.txt" />
-      </list>
-    </option>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:RelWithDebInfo Addrsan" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="NamedScopeManager">
-    <scope name="Sources" pattern="(file[Assignment 1]:src//*||file[Assignment 1]:include//*||file[Assignment 1]:lib/blt/include//*||file[Assignment 1]:lib/blt/src//*||file[Assignment 1]:lib/blt/tests//*)&amp;&amp;!file[Assignment 1]:lib/lilgp/kernel/*||file[Assignment 1]:lib/lilgp/kernel//*" />
-  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2023" />
-    <option name="minorVersion" value="3.3" />
+    <option name="minorVersion" value="3.4" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2bj7vEOfiHR6jvJi3MIgHnR1gsT" />
+  <component name="ProjectId" id="2eZkbfSaIX9X5h11WuQsKlJ92zB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "CMake Application.Assignment_1.executor": "Run",
-    "CMake Application.Assignment_1_RUNNER.executor": "Run",
-    "CMake Application.FinalProject.executor": "Run",
     "CMake Application.FinalProject_Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.advertisement.text.has.clang-format": "true",
+    "cf.advertisement.text.overridden": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/brett/Documents/Brock/CS 4P82/Final Project/FP-C-Project",
     "node.js.detected.package.eslint": "true",
@@ -240,31 +225,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "structure.view.defaults.are.configured": "true",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/include" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PartB/90Cross10Mut2El" />
-      <recent name="$PROJECT_DIR$/PartA" />
-      <recent name="$PROJECT_DIR$/src/program" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
-  </component>
-  <component name="RunManager" selected="CMake Application.FinalProject">
+  <component name="RunManager" selected="CMake Application.FinalProject_Runner">
     <configuration name="BLT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="BLT" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinalProject" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-f ../input.file -p rice_file=../Rice_Cammeo_Osmancik.arff" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="FinalProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FinalProject_Runner" RUN_TARGET_NAME="FinalProject">
+    <configuration name="FinalProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FinalProject_Runner" TARGET_NAME="FinalProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FinalProject_Runner" RUN_TARGET_NAME="FinalProject">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -274,45 +245,27 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="CMake Application.BLT" />
       <item itemvalue="CMake Application.FinalProject" />
       <item itemvalue="CMake Application.FinalProject_Runner" />
+      <item itemvalue="CMake Application.BLT" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aafc3fa6-dda6-4ed9-b799-2d342946ae56" name="Changes" comment="" />
-      <created>1706716862343</created>
+      <changelist id="c30da5f4-6ed9-4b76-bfff-423669272208" name="Changes" comment="" />
+      <created>1712119560240</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1706716862343</updated>
-      <workItem from="1706716863516" duration="10920000" />
-      <workItem from="1707138702388" duration="17193000" />
-      <workItem from="1707235271158" duration="18696000" />
-      <workItem from="1707397761364" duration="22094000" />
-      <workItem from="1707424006294" duration="905000" />
-      <workItem from="1707503420820" duration="27000" />
-      <workItem from="1707505182758" duration="3236000" />
-      <workItem from="1707743170111" duration="4477000" />
-      <workItem from="1707749861770" duration="10034000" />
-      <workItem from="1707780508634" duration="4055000" />
-      <workItem from="1707839723862" duration="4041000" />
-      <workItem from="1707845643352" duration="5200000" />
-      <workItem from="1707851055324" duration="20769000" />
-      <workItem from="1707926755639" duration="5775000" />
-      <workItem from="1707937594797" duration="4799000" />
-      <workItem from="1708019003806" duration="1002000" />
-      <workItem from="1708020053635" duration="5002000" />
-      <workItem from="1708099431516" duration="653000" />
-      <workItem from="1708199153302" duration="2000" />
-      <workItem from="1708631332595" duration="257000" />
-      <workItem from="1711728746580" duration="50515000" />
-      <workItem from="1712009539323" duration="1257000" />
-      <workItem from="1712011072655" duration="738000" />
-      <workItem from="1712119171043" duration="64000" />
-      <workItem from="1712119244658" duration="59000" />
+      <updated>1712119560240</updated>
+      <workItem from="1712119561264" duration="102000" />
+      <workItem from="1712119682330" duration="3898000" />
     </task>
     <servers />
   </component>
@@ -323,20 +276,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

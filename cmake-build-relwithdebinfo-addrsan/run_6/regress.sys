@@ -14,9 +14,9 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 248.
+    no random number seed specfied; using 259.
 creating initial population(s):
-    7372 trees were generated to fill the population of 5000 (5000 trees).
+    1096 trees were generated to fill the population of 800 (800 trees).
     initial population(s) complete.
 
 
@@ -26,15 +26,55 @@ no checkpointing will be done.
     evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
 === generation 1.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 2.
     evaluation complete.  (1s wall)
+    breeding complete.    (1s wall)
+=== generation 2.
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 3.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 4.
     evaluation complete.  (1s wall)
     breeding complete.    (0s wall)
+=== generation 4.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
 === generation 5.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 6.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 7.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+=== generation 8.
+    evaluation complete.  (0s wall)
+    breeding complete.    (0s wall)
+=== generation 9.
+    evaluation complete.  (1s wall)
+    breeding complete.    (0s wall)
+
+SYSTEM STATISTICS
+
+------- memory -------
+           allocated:      3159446
+               freed:      3111446
+           not freed:      48000
+       max allocated:      464789
+    malloc'ed blocks:      37777
+   realloc'ed blocks:      7
+      free'ed blocks:      37771
+
+------- time -------
+             overall:      9s wall
+          evaluation:      6s wall
+            breeding:      1s wall
+
+------- generation spaces -------
+      space   0 size:      200
+      space   1 size:      100
+
+------- ephemeral random constants -------
+                used:      1422
+               freed:      1422
+           allocated:      1000
+              blocks:      1
