@@ -23,6 +23,7 @@
 #include <fstream>
 
 extern process_info_t total_time;
+extern blt::hashmap_t<blt::u32, blt::size_t> remaining_pops;
 
 stt_record stt_record::from_string_array(int generation, size_t& idx, blt::span<std::string> values)
 {
@@ -339,6 +340,11 @@ void process_files(const std::string& outfile, const std::string& writefile, int
     std::ofstream writer_best_fit(writefile + "_best_fitness.tsv");
     std::ofstream writer_best_hits(writefile + "_best_hits.tsv");
     std::ofstream writer_best_all(writefile + "_all.tsv");
+    
+    write_pop_info(writer_best_gens, remaining_pops);
+    write_pop_info(writer_best_fit, remaining_pops);
+    write_pop_info(writer_best_hits, remaining_pops);
+    write_pop_info(writer_best_all, remaining_pops);
     
     write_process_info(writer_best_gens, total(best_gens_vec));
     write_process_info(writer_best_fit, total(best_fit_vec));

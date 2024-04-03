@@ -1,17 +1,13 @@
-Hits: 2194, Total Size: 2810, Percent Hit: 78.078292
-CC: 1029
-CO: 72
-OO: 1165
-OC: 544
-Fitness: 0.998767
-Hits: 810
+Hits: 1918, Total Size: 2810, Percent Hit: 68.256228
+CC: 1095
+CO: 54
+OO: 823
+OC: 838
+Fitness: 0.998652
+Hits: 741
 
 
-y = ((((-0.49488 * (perimeter - minor)) - exp(log(area))) + (log(perimeter) / extent)) + ((major * ((log(major) - extent) * major)) * 0.08088))
+y = ((-0.87639 + eccentricity) / exp(perimeter))
 
- (+ (+ (- (* -0.49488
-             (- perimeter minor))
-          (exp (log area)))
-       (/ (log perimeter) extent))
-    (* (* major
-          (* (- (log major) extent) major)) 0.08088))
+ (/ (+ -0.87639 eccentricity)
+    (exp perimeter))

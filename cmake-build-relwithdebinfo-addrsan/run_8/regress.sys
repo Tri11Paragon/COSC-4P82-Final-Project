@@ -14,9 +14,9 @@ building function set(s):
     set 0: * / + - exp log area perimeter major minor eccentricity convex extent R
     tree 0 uses function set 0.
     function set complete.
-    no random number seed specfied; using 10.
+    no random number seed specfied; using 512.
 creating initial population(s):
-    1130 trees were generated to fill the population of 800 (800 trees).
+    1093 trees were generated to fill the population of 800 (800 trees).
     initial population(s) complete.
 
 
@@ -32,41 +32,26 @@ no checkpointing will be done.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 3.
-    evaluation complete.  (1s wall)
+    evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 === generation 4.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 5.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 6.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 7.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 8.
-    evaluation complete.  (0s wall)
-    breeding complete.    (0s wall)
-=== generation 9.
     evaluation complete.  (0s wall)
     breeding complete.    (0s wall)
 
 SYSTEM STATISTICS
 
 ------- memory -------
-           allocated:      3082665
-               freed:      3034665
+           allocated:      1789722
+               freed:      1741722
            not freed:      48000
-       max allocated:      456492
-    malloc'ed blocks:      37207
+       max allocated:      455013
+    malloc'ed blocks:      23617
    realloc'ed blocks:      7
-      free'ed blocks:      37201
+      free'ed blocks:      23611
 
 ------- time -------
              overall:      1s wall
-          evaluation:      1s wall
+          evaluation:      0s wall
             breeding:      0s wall
 
 ------- generation spaces -------
@@ -74,7 +59,7 @@ SYSTEM STATISTICS
       space   1 size:      100
 
 ------- ephemeral random constants -------
-                used:      1396
-               freed:      1396
+                used:      1104
+               freed:      1104
            allocated:      1000
               blocks:      1

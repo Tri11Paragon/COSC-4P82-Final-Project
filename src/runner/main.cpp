@@ -42,6 +42,8 @@
 
 // run id - > timer info
 blt::hashmap_t<blt::i32, process_info_t> run_processes;
+blt::hashmap_t<blt::u32, blt::size_t> remaining_pops;
+blt::i32 current_round = 0;
 process_info_t total_time;
 
 class child_t
@@ -353,6 +355,9 @@ outer_while:
                 fitness_cutoff = fitness_storage[cutoff];
             else
                 BLT_WARN("Running with no active populations?");
+            for (int i = current_round; i < current_round + 5; i++)
+                remaining_pops[i] = fitness_storage.size();
+            current_round += 5;
             BLT_INFO("Cutoff value %d, current size %d, fitness: %f", cutoff, fitness_storage.size(), fitness_cutoff);
             current_state = state_t::PRUNE;
             fitness_storage.clear();
