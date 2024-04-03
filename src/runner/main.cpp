@@ -70,7 +70,7 @@ class child_t
                 else if (v.id == packet_id::CPU_CYCLES)
                     run_processes[run].cpu_cycles = v.timer;
                 else if (v.id == packet_id::MEM_USAGE)
-                    run_processes[run].snapshots.push_back(v.snapshot);
+                    run_processes[run].snapshots.emplace_back(v.snapshot);
             }
             clearPackets(packet_id::EXEC_TIME);
             clearPackets(packet_id::CPU_TIME);

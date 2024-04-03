@@ -318,6 +318,11 @@ void process_files(const std::string& outfile, const std::string& writefile, int
     writer_best_hits << "Aggregation Count:\t" << best_hits.count << '\n';
     writer_best_all << "Aggregation Count:\t" << best_all.count << '\n';
     
+    write_process_info(writer_best_gens, best_gens.stats.process_info);
+    write_process_info(writer_best_fit, best_fit.stats.process_info);
+    write_process_info(writer_best_hits, best_hits.stats.process_info);
+    write_process_info(writer_best_all, best_all.stats.process_info);
+    
     write_fn_file(writer_best_gens, best_gens.stats.fn);
     write_fn_file(writer_best_fit, best_fit.stats.fn);
     write_fn_file(writer_best_hits, best_hits.stats.fn);

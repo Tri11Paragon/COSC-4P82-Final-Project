@@ -55,24 +55,31 @@ struct memory_snapshot
     blt::u64 timeSinceStart;
 };
 
+struct stored_snapshot
+{
+    blt::u64 memory;
+    blt::u64 timeSinceStart;
+    blt::u64 count = 0;
+    
+    explicit stored_snapshot(memory_snapshot snap): memory(snap.memory), timeSinceStart(snap.timeSinceStart)
+    {}
+};
+
 struct process_info_t
 {
     blt::u64 wall_time = 0;
     blt::u64 cpu_time = 0;
     blt::u64 cpu_cycles = 0;
-    std::vector<memory_snapshot> snapshots;
+    std::vector<stored_snapshot> snapshots;
     
     process_info_t& operator+=(const process_info_t& info)
     {
-        if (info.snapshots.size() == snapshots.size())
+        for (const auto& v : blt::enumerate(info.snapshots))
         {
-            for (const auto& v : blt::enumerate(info.snapshots))
-            {
-                snapshots[v.first].memory += v.second.memory;
-                snapshots[v.first].timeSinceStart += v.second.timeSinceStart;
-            }
-        } else
-            BLT_WARN("Hey maybe you should fix your stupid program!");
+            snapshots[v.first].memory += v.second.memory;
+            snapshots[v.first].timeSinceStart += v.second.timeSinceStart;
+            snapshots[v.first].count++;
+        }
         wall_time += info.wall_time;
         cpu_time += info.cpu_time;
         cpu_cycles += info.cpu_cycles;
@@ -81,16 +88,23 @@ struct process_info_t
     
     process_info_t& operator/=(int i)
     {
-        for (auto& v : snapshots)
-        {
-            v.memory /= i;
-            v.timeSinceStart /= i;
-        }
+        
         wall_time /= i;
         cpu_time /= i;
         cpu_cycles /= i;
         
         return *this;
+    }
+    
+    process_info_t& calc_mean(int i)
+    {
+        for (auto& v : snapshots)
+        {
+            v.memory /= v.count;
+            v.timeSinceStart /= v.count;
+        }
+        
+        return *this /= i;
     }
 };
 
