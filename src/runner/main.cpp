@@ -355,9 +355,6 @@ outer_while:
                 fitness_cutoff = fitness_storage[cutoff];
             else
                 BLT_WARN("Running with no active populations?");
-            for (int i = current_round; i < current_round + 5; i++)
-                remaining_pops[i] = fitness_storage.size();
-            current_round += 5;
             BLT_INFO("Cutoff value %d, current size %d, fitness: %f", cutoff, fitness_storage.size(), fitness_cutoff);
             current_state = state_t::PRUNE;
             fitness_storage.clear();
@@ -365,6 +362,9 @@ outer_while:
         }
         case state_t::PRUNE:
         {
+            for (int i = current_round; i < current_round + 5; i++)
+                remaining_pops[i] = children.size();
+            current_round += 5;
             if (children.size() == 1)
             {
                 // run to completion, we no longer need to sync with the server.
@@ -372,9 +372,10 @@ outer_while:
                 // keep the server in idle state, this way we can still handle incoming packets
                 // since we will need to get information about pop stats
                 current_state = state_t::IDLE;
+                BLT_DEBUG("Children left: %ld", children.size());
                 break;
             }
-            BLT_DEBUG("Pruning with fitness %f", fitness_cutoff);
+            BLT_DEBUG("Pruning with fitness %f, children %ld", fitness_cutoff, children.size());
             auto it = children.begin();
             while (it != children.end())
             {
@@ -423,8 +424,8 @@ int main(int argc, const char** argv)
 {
     blt::arg_parse parser;
     
-    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("10").setHelp("Number of populations to start").build());
-    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("5").setHelp("Number of generations between pruning").build());
+    parser.addArgument(blt::arg_builder("-n", "--num_pops").setDefault("100").setHelp("Number of populations to start").build());
+    parser.addArgument(blt::arg_builder("-g", "--num_gen").setDefault("1000").setHelp("Number of generations between pruning").build());
     parser.addArgument(blt::arg_builder("-p", "--prune_ratio").setDefault("0.2").setHelp("Number of generations to run before pruning").build());
     parser.addArgument(blt::arg_builder("--program").setDefault("./FinalProject").setHelp("GP Program to execute per run").build());
     parser.addArgument(blt::arg_builder("--out_file").setDefault("regress")

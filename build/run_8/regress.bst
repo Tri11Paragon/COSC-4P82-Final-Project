@@ -1,18 +1,19 @@
 === BEST-OF-RUN ===
-              generation: 6
-                   nodes: 3
-                   depth: 1
-                    hits: 787
+              generation: 0
+                   nodes: 4
+                   depth: 2
+                    hits: 790
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 787
-             raw fitness: 787.0000
-    standardized fitness: 787.0000
+                    hits: 790
+             raw fitness: 790.0000
+    standardized fitness: 790.0000
         adjusted fitness: 0.9987
 TREE:
- (- eccentricity 0.89384)
+ (- eccentricity
+    (exp -0.11423))
 TREE-equ:
-y = (eccentricity - 0.89384)
+y = (eccentricity - exp(-0.11423))

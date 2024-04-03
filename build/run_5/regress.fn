@@ -1,12 +1,12 @@
-Hits: 1791, Total Size: 2810, Percent Hit: 63.736655
-CC: 423
-CO: 732
-OO: 1368
-OC: 287
-Fitness: 0.998325
-Hits: 596
+Hits: 2178, Total Size: 2810, Percent Hit: 77.508897
+CC: 955
+CO: 168
+OO: 1223
+OC: 464
+Fitness: 0.998758
+Hits: 804
 
 
-y = (0.60007 - extent)
+y = log((0.11137 + eccentricity))
 
- (- 0.60007 extent)
+ (log (+ 0.11137 eccentricity))

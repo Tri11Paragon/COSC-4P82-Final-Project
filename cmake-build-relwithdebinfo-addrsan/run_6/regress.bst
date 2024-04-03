@@ -1,31 +1,23 @@
 === BEST-OF-RUN ===
-              generation: 14
-                   nodes: 59
+              generation: 37
+                   nodes: 27
                    depth: 9
-                    hits: 795
+                    hits: 806
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 795
-             raw fitness: 795.0000
-    standardized fitness: 795.0000
-        adjusted fitness: 0.9987
+                    hits: 806
+             raw fitness: 806.0000
+    standardized fitness: 806.0000
+        adjusted fitness: 0.9988
 TREE:
- (+ (- (* (+ (log (log area))
-             (/ (exp major)
-                (log major)))
-          (* (* (/ eccentricity
-                   (exp minor)) perimeter)
-             (exp (- (* (exp extent) eccentricity) minor))))
-       (* area perimeter))
-    (* (- area
-          (- (/ (/ (* major
-                      (* major
-                         (* major 0.32111)))
-                   (* extent minor)) perimeter) area))
-       (+ (- (- perimeter perimeter) area)
-          (exp (/ (/ minor eccentricity) perimeter)))))
+ (* (log (/ (- minor
+               (+ (* major eccentricity)
+                  (log (* (+ (/ eccentricity convex) perimeter) eccentricity))))
+            (+ (log extent)
+               (+ minor extent))))
+    (exp (log (log eccentricity))))
 TREE-equ:
-y = ((((log(log(area)) + (exp(major) / log(major))) * (((eccentricity / exp(minor)) * perimeter) * exp(((exp(extent) * eccentricity) - minor)))) - (area * perimeter)) + ((area - ((((major * (major * (major * 0.32111))) / (extent * minor)) / perimeter) - area)) * (((perimeter - perimeter) - area) + exp(((minor / eccentricity) / perimeter)))))
+y = (log(((minor - ((major * eccentricity) + log((((eccentricity / convex) + perimeter) * eccentricity)))) / (log(extent) + (minor + extent)))) * exp(log(log(eccentricity))))

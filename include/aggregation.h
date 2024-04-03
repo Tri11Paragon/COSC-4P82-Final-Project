@@ -204,7 +204,7 @@ inline void write_process_info(T& writer, const process_info_t& run_processes)
 }
 
 template<typename T>
-inline void write_pop_info(T& writer, const blt::hashmap_t<blt::u32, blt::size_t>& remaining_pops)
+inline void write_pop_info(T& writer, const std::vector<std::pair<blt::i32, blt::size_t>>& remaining_pops)
 {
     writer << "Run\tRemaining Subpopulations\n";
     for (const auto& v : remaining_pops)

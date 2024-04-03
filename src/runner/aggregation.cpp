@@ -341,10 +341,17 @@ void process_files(const std::string& outfile, const std::string& writefile, int
     std::ofstream writer_best_hits(writefile + "_best_hits.tsv");
     std::ofstream writer_best_all(writefile + "_all.tsv");
     
-    write_pop_info(writer_best_gens, remaining_pops);
-    write_pop_info(writer_best_fit, remaining_pops);
-    write_pop_info(writer_best_hits, remaining_pops);
-    write_pop_info(writer_best_all, remaining_pops);
+    std::vector<std::pair<blt::i32, blt::size_t>> remainder;
+    for (const auto& v : remaining_pops)
+        remainder.emplace_back(v.first, v.second);
+    std::sort(remainder.begin(), remainder.end(), [](const auto& a, const auto& b){
+        return a.first < b.first;
+    });
+    
+    write_pop_info(writer_best_gens, remainder);
+    write_pop_info(writer_best_fit, remainder);
+    write_pop_info(writer_best_hits, remainder);
+    write_pop_info(writer_best_all, remainder);
     
     write_process_info(writer_best_gens, total(best_gens_vec));
     write_process_info(writer_best_fit, total(best_fit_vec));

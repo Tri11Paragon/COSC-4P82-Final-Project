@@ -101,7 +101,7 @@ auto cxx_d(T* t)
 template<typename T>
 auto cxx_c(T* t)
 {
-    return reinterpret_cast<char* (*)()>(t);
+    return reinterpret_cast<char* (*) ()>(t);
 }
 
 template<typename T>
@@ -113,8 +113,7 @@ bool run_once()
 
 loaded_data rice_data;
 
-struct annoying
-{
+struct annoying {
     blt::size_t cc = 0;
     blt::size_t co = 0;
     blt::size_t oo = 0;
@@ -145,13 +144,12 @@ void handle_networking()
                         break;
                     case packet_id::CHILD_FIT:
                         break;
-                    case packet_id::PRUNE:
-                    {
+                    case packet_id::PRUNE: {
                         BLT_DEBUG("We are a child who is going to be killed!");
                         close_requested = true;
                         break;
                     }
-                        break;
+                    break;
                     case packet_id::AVG_FIT:
                     case packet_id::AVG_TREE:
                     case packet_id::BEST_FIT:
@@ -188,14 +186,13 @@ extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
         packet_t memory_packet{};
         memory_packet.id = packet_id::MEM_USAGE;
         memory_packet.snapshot = memory_snapshot{
-            blt::system::get_memory_process().resident,
-            blt::system::getCurrentTimeMilliseconds() - wall_time_start
-        };
-        
+                blt::system::get_memory_process().resident,
+                blt::system::getCurrentTimeMilliseconds() - wall_time_start};
+
         std::scoped_lock lock(send_mutex);
         send_packets.push(memory_packet);
     }
-    
+
     BLT_INFO("Running begin of eval, current state: are we paused? %s num of gens left %d", paused ? "true" : "false", generations_left.load());
     if (generations_left == 0)
     {
@@ -216,7 +213,7 @@ extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
     // i love busy looping
     while (paused)
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
-    
+
     return close_requested;
 }
 
@@ -225,23 +222,23 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
     generations_left--;
     set_current_individual(gen_stats[0].best[0]->ind);
     best_individual.store(gen_stats[0].best[0]->ind->a_fitness);
-    
+
     // {
     //     double fitness = 0;
     //     for (int i = 0; i < mpop[0].size; i++){
     //         fitness += mpop[0].pop[i]->ind->a_fitness;
     //     }
-    
+
     //     packet_t packet;
     //     packet.id = packet_id::AVG_FIT;
     //     std::scoped_lock lock(send_mutex);
     //     send_packets.push(packet);
     // }
-    
+
     if (newbest)
     {
         output_stream_open(OUT_USER);
-        
+
         auto ind = run_stats[0].best[0]->ind;
 
 #ifdef PART_B
@@ -253,11 +250,11 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
         }
         set_current_individual(ind);
         best_individual.store(gen_stats[0].best[0]->ind->a_fitness);
-        
+
         auto testing = rice_data.getTestingSet();
-        
+
         annoying results;
-        
+
         for (const auto& r : testing)
         {
             g->area = r.area;
@@ -269,7 +266,7 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
             g->extent = r.extent;
             auto dv = r.type[0] == 'C';
             auto v = evaluate_tree(ind->tr[0].data, 0);
-            
+
             // (real value) (predicted value)
             if (dv)
             {
@@ -285,7 +282,7 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
                     results.oc++;// osmancik cammeo
             }
         }
-        
+
         oprintf(OUT_USER, 50, "Hits: %ld, Total Size: %ld, Percent Hit: %lf\n", results.cc + results.oo, testing.size(),
                 static_cast<double>(results.cc + results.oo) / static_cast<double>(testing.size()) * 100);
         oprintf(OUT_USER, 50, "CC: %ld\nCO: %ld\nOO: %ld\nOC: %ld\n", results.cc, results.co, results.oo, results.oc);
@@ -295,13 +292,13 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
 #endif
         pretty_print_tree_equ(ind->tr[0].data, output_filehandle(OUT_USER));
         pretty_print_tree(ind->tr[0].data, output_filehandle(OUT_USER));
-        
+
         output_stream_close(OUT_USER);
-        
+
         if (run_stats[0].best[0]->ind->hits == fitness_cases)
             return 1;
     }
-    
+
     return 0;
 }
 
@@ -320,24 +317,24 @@ extern "C" int app_initialize(int startfromcheckpoint)
     BLT_ASSERT(loc_socket != nullptr && "You must provide a location to a unix socket!");
     BLT_ASSERT(loc_pid != nullptr && "You must provide a pid!");
     pid_t pid = std::stoi(std::string(loc_pid));
-    
+
     BLT_INFO("Begin socket init %s", loc_socket);
-    
+
     our_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);
-    
+
     BLT_INFO("Socket Created! %d", our_socket);
-    
+
     if (our_socket == -1)
     {
         BLT_FATAL("Failed to create sockets!");
         std::exit(4);
     }
-    
+
     sockaddr_un our_name{};
     std::memset(&our_name, 0, sizeof(our_name));
     our_name.sun_family = AF_UNIX;
     std::strncpy(our_name.sun_path, loc_socket, sizeof(our_name.sun_path) - 1);
-    
+
     BLT_INFO("Attempting to connect to socket %s", loc_socket);
     blt::logging::flush();
     int ret;
@@ -358,27 +355,27 @@ extern "C" int app_initialize(int startfromcheckpoint)
     BLT_ASSERT(ret == 0 && "Failed to connect to socket");
     BLT_INFO("Connected to socket %s", loc_socket);
     blt::logging::flush();
-    
+
     if (fcntl(our_socket, F_SETFD, fcntl(our_socket, F_GETFD) | O_NONBLOCK))
         BLT_WARN("Unable to change socket file descriptor flags; error '%d'", errno);
-    
+
     unsigned char pid_buffer[sizeof(pid_t)];
     std::memset(pid_buffer, 0, sizeof(pid_buffer));
     blt::mem::toBytes(pid, pid_buffer);
-    
+
     write(our_socket, pid_buffer, sizeof(pid_buffer));
-    
+
     load_rice_data(loc_param, rice_data, get_parameter("random_seed"));
 #endif
     int i;
     double x, y;
     char* param;
     globaldata* g = get_globaldata();
-    
+
     if (!startfromcheckpoint)
     {
         oprintf(OUT_PRG, 50, "not starting from checkpoint file.\n");
-        
+
         param = get_parameter("app.fitness_cases");
         if (param == NULL)
         {
@@ -409,7 +406,7 @@ extern "C" int app_initialize(int startfromcheckpoint)
         app_fitness_cases[0] = (double*) MALLOC(fitness_cases * sizeof(double));
         app_fitness_cases[1] = (double*) MALLOC(fitness_cases * sizeof(double));
 #endif
-        
+
         oprintf(OUT_PRG, 50, "%d fitness cases:\n", fitness_cases);
         for (i = 0; i < fitness_cases; ++i)
         {
@@ -445,13 +442,13 @@ extern "C" int app_initialize(int startfromcheckpoint)
     {
         oprintf(OUT_PRG, 50, "started from checkpoint file.\n");
     }
-    
+
     param = get_parameter("app.value_cutoff");
     if (param == NULL)
         value_cutoff = 1.e15;
     else
         value_cutoff = strtod(param, NULL);
-    
+
     wall_time_start = blt::system::getCurrentTimeMilliseconds();
     cpu_time_start = blt::system::getCPUTime();
     cpu_cycles_start = blt::system::rdtsc();
@@ -518,9 +515,9 @@ extern "C" int app_build_function_sets(void)
              {cxx_d(f_exp), nullptr, nullptr, 1, "exp", FUNC_DATA, -1, 0, 0, {0, 0}},
              {cxx_d(f_rlog), nullptr, nullptr, 1, "log", FUNC_DATA, -1, 0, 0, {0, 0}},
 #ifndef PART_B
-                    {cxx_d(f_sin), nullptr, nullptr, 1, "sin", FUNC_DATA, -1, 0, 0, {0, 0}},
-                    {cxx_d(f_cos), nullptr, nullptr, 1, "cos", FUNC_DATA, -1, 0, 0, {0, 0}},
-                    {cxx_d(f_var), nullptr, nullptr, 0, "x", TERM_NORM, -1, 0, 0, {0, 0}},
+             {cxx_d(f_sin), nullptr, nullptr, 1, "sin", FUNC_DATA, -1, 0, 0, {0, 0}},
+             {cxx_d(f_cos), nullptr, nullptr, 1, "cos", FUNC_DATA, -1, 0, 0, {0, 0}},
+             {cxx_d(f_var), nullptr, nullptr, 0, "x", TERM_NORM, -1, 0, 0, {0, 0}},
 #else
              {cxx_d(f_area), nullptr, nullptr, 0, "area", TERM_NORM, -1, 0, 0, {0, 0}},
              {cxx_d(f_perimeter), nullptr, nullptr, 0, "perimeter", TERM_NORM, -1, 0, 0, {0, 0}},
@@ -531,7 +528,7 @@ extern "C" int app_build_function_sets(void)
              {cxx_d(f_extent), nullptr, nullptr, 0, "extent", TERM_NORM, -1, 0, 0, {0, 0}},
 #endif
              {nullptr, f_erc_gen, cxx_c(f_erc_print), 0, "R", TERM_ERC, -1, 0, 0, {0, 0}}};
-    
+
     binary_parameter("app.use_ercs", 1);
 #ifndef PART_B
     if (atoi(get_parameter("app.use_ercs")))
@@ -544,13 +541,13 @@ extern "C" int app_build_function_sets(void)
     else
         fset.size = 13;
 #endif
-    
+
     fset.cset = sets;
-    
+
     tree_map.fset = 0;
     tree_map.return_type = 0;
     tree_map.name = "TREE";
-    
+
     return function_sets_init(&fset, 1, &tree_map, 1);
 }
 
@@ -566,12 +563,12 @@ extern "C" void app_eval_fitness(individual* ind)
     double disp;
 #endif
     globaldata* g = get_globaldata();
-    
+
     set_current_individual(ind);
-    
+
     ind->r_fitness = 0.0;
     ind->hits = 0;
-    
+
     for (i = 0; i < fitness_cases; ++i)
     {
 #ifdef PART_B
@@ -591,9 +588,6 @@ extern "C" void app_eval_fitness(individual* ind)
 #ifdef PART_B
         if ((v >= 0 && dv) || (v < 0 && !dv))
             ind->hits++;
-        ind->r_fitness = ind->hits;
-        ind->s_fitness = ind->r_fitness;
-        ind->a_fitness = 1 - (1 / (1 + ind->s_fitness));
 #else
         disp = fabs(dv - v);
 
@@ -610,7 +604,12 @@ extern "C" void app_eval_fitness(individual* ind)
         ind->a_fitness = 1 / (1 + ind->s_fitness);
 #endif
     }
-    
+#ifdef PART_B
+    ind->r_fitness = ind->hits;
+    ind->s_fitness = ind->r_fitness;
+    ind->a_fitness = 1 - (1 / (1 + ind->s_fitness));
+#endif
+
     ind->evald = EVAL_CACHE_VALID;
 }
 
@@ -631,14 +630,14 @@ extern "C" void app_write_checkpoint(FILE* f)
 extern "C" void app_read_checkpoint(FILE* f)
 {
     int i;
-    
+
     fscanf(f, "%*s %d\n", &fitness_cases);
-    
+
     app_fitness_cases[0] = (double*) MALLOC(fitness_cases *
                                             sizeof(double));
     app_fitness_cases[1] = (double*) MALLOC(fitness_cases *
                                             sizeof(double));
-    
+
     for (i = 0; i < fitness_cases; ++i)
     {
         read_hex_block(app_fitness_cases[0] + i, sizeof(double), f);

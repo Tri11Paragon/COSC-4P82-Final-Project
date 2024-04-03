@@ -1,12 +1,13 @@
-Hits: 2193, Total Size: 2810, Percent Hit: 78.042705
-CC: 843
-CO: 304
-OO: 1350
-OC: 313
-Fitness: 0.998731
-Hits: 787
+Hits: 2206, Total Size: 2810, Percent Hit: 78.505338
+CC: 868
+CO: 238
+OO: 1338
+OC: 366
+Fitness: 0.998736
+Hits: 790
 
 
-y = (eccentricity - 0.89384)
+y = (eccentricity - exp(-0.11423))
 
- (- eccentricity 0.89384)
+ (- eccentricity
+    (exp -0.11423))
