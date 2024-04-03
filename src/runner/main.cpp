@@ -231,7 +231,6 @@ void remove_pending_finished_child_process()
         auto pid = waitpid(pair.first, &status, WNOHANG);
         if (pid != 0 && (WIFEXITED(status) || WIFSIGNALED(status)))
         {
-            BLT_TRACE("Process %d exited? %b signaled? %b", pid, WIFEXITED(status), WIFSIGNALED(status));
             auto child = std::find_if(children.begin(), children.end(), [pid](const auto& item) {
                 return item.first == pid;
             });

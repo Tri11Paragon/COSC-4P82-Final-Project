@@ -1,16 +1,16 @@
-Hits: 2075, Total Size: 2810, Percent Hit: 73.843416
-CC: 558
-CO: 558
-OO: 1517
-OC: 177
-Fitness: 0.998599
-Hits: 713
+Hits: 1975, Total Size: 2810, Percent Hit: 70.284698
+CC: 913
+CO: 211
+OO: 1062
+OC: 624
+Fitness: 0.998643
+Hits: 736
 
 
-y = (perimeter + log((perimeter / exp((major / (minor / (perimeter * extent)))))))
+y = (((0.30089 + major) / ((convex * extent) + perimeter)) - ((((-0.94042 - perimeter) / log(major)) + minor) / log(convex)))
 
- (+ perimeter
-    (log (/ perimeter
-            (exp (/ major
-                    (/ minor
-                       (* perimeter extent)))))))
+ (- (/ (+ 0.30089 major)
+       (+ (* convex extent) perimeter))
+    (/ (+ (/ (- -0.94042 perimeter)
+             (log major)) minor)
+       (log convex)))

@@ -1,33 +1,29 @@
 === BEST-OF-RUN ===
-              generation: 1
-                   nodes: 68
-                   depth: 6
-                    hits: 648
+              generation: 6
+                   nodes: 44
+                   depth: 7
+                    hits: 789
 TOP INDIVIDUAL:
 
 
 
 -- #1 --
-                    hits: 648
-             raw fitness: 648.0000
-    standardized fitness: 648.0000
-        adjusted fitness: 0.9985
+                    hits: 789
+             raw fitness: 789.0000
+    standardized fitness: 789.0000
+        adjusted fitness: 0.9987
 TREE:
- (- (* (* (/ (exp (- 0.16610 area))
-             (log (* area minor)))
-          (* (/ (/ extent extent)
-                (- extent area))
-             (+ (exp 0.33696)
-                (+ convex major))))
-       (exp (* (+ (- extent area)
-                  (* -0.07066 minor))
-               (exp (exp area)))))
-    (/ (log (log (log (exp extent))))
-       (- (- (+ (exp eccentricity) 0.62824)
-             (* (/ -0.57147 convex)
-                (* minor extent)))
-          (+ (log (log area))
-             (+ (/ minor major)
-                (/ major perimeter))))))
+ (* (/ (/ (exp eccentricity) extent)
+       (/ (* (exp perimeter)
+             (* major -0.65856))
+          (- (- 0.89693 eccentricity)
+             (/ extent
+                (* minor
+                   (+ eccentricity eccentricity))))))
+    (+ (+ (- (+ convex minor)
+             (- area minor))
+          (- (+ -0.42594 extent)
+             (- minor -0.71593)))
+       (log (/ area 0.40218))))
 TREE-equ:
-y = ((((exp((0.16610 - area)) / log((area * minor))) * (((extent / extent) / (extent - area)) * (exp(0.33696) + (convex + major)))) * exp((((extent - area) + (-0.07066 * minor)) * exp(exp(area))))) - (log(log(log(exp(extent)))) / (((exp(eccentricity) + 0.62824) - ((-0.57147 / convex) * (minor * extent))) - (log(log(area)) + ((minor / major) + (major / perimeter))))))
+y = (((exp(eccentricity) / extent) / ((exp(perimeter) * (major * -0.65856)) / ((0.89693 - eccentricity) - (extent / (minor * (eccentricity + eccentricity)))))) * ((((convex + minor) - (area - minor)) + ((-0.42594 + extent) - (minor - -0.71593))) + log((area / 0.40218))))

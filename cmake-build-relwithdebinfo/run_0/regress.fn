@@ -1,13 +1,15 @@
-Hits: 1879, Total Size: 2810, Percent Hit: 66.868327
-CC: 1130
-CO: 34
-OO: 749
-OC: 897
-Fitness: 0.998594
-Hits: 710
+Hits: 2016, Total Size: 2810, Percent Hit: 71.743772
+CC: 1092
+CO: 66
+OO: 924
+OC: 728
+Fitness: 0.998661
+Hits: 746
 
 
-y = ((eccentricity * perimeter) - (minor / 0.22723))
+y = ((exp((perimeter / eccentricity)) / ((eccentricity - 0.87910) / (minor / area))) - exp((exp(extent) + 0.97088)))
 
- (- (* eccentricity perimeter)
-    (/ minor 0.22723))
+ (- (/ (exp (/ perimeter eccentricity))
+       (/ (- eccentricity 0.87910)
+          (/ minor area)))
+    (exp (+ (exp extent) 0.97088)))

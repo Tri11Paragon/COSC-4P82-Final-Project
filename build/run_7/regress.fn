@@ -1,16 +1,13 @@
-Hits: 1808, Total Size: 2810, Percent Hit: 64.341637
-CC: 148
-CO: 974
-OO: 1660
-OC: 28
-Fitness: 0.998162
-Hits: 543
+Hits: 2184, Total Size: 2810, Percent Hit: 77.722420
+CC: 943
+CO: 194
+OO: 1241
+OC: 432
+Fitness: 0.998742
+Hits: 794
 
 
-y = (log((exp(-0.42274) - (extent - eccentricity))) * ((log(major) * exp(major)) + log((eccentricity * major))))
+y = (eccentricity - exp(-0.11778))
 
- (* (log (- (exp -0.42274)
-            (- extent eccentricity)))
-    (+ (* (log major)
-          (exp major))
-       (log (* eccentricity major))))
+ (- eccentricity
+    (exp -0.11778))

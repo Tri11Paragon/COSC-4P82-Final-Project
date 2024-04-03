@@ -40,6 +40,7 @@ enum class packet_id : blt::u8
     EXEC_TIME,      //  Client -> Server    timer,      wall time in ms
     CPU_TIME,       //  Client -> Server    timer,      cpu time in ms
     CPU_CYCLES,     //  Client -> Server    timer,      number of cpu cycles used
+    MEM_USAGE,      //  Client -> Server    timer,      memory usage
     // avg fitness, best fitness, avg tree size
     // unused
     AVG_FIT,        //  Client -> Server    Average Fitness, gen #

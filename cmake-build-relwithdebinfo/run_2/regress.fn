@@ -1,12 +1,13 @@
-Hits: 2004, Total Size: 2810, Percent Hit: 71.316726
-CC: 415
-CO: 709
-OO: 1589
-OC: 97
-Fitness: 0.998415
-Hits: 630
+Hits: 2201, Total Size: 2810, Percent Hit: 78.327402
+CC: 879
+CO: 242
+OO: 1322
+OC: 367
+Fitness: 0.998748
+Hits: 798
 
 
-y = log((-0.09343 - eccentricity))
+y = (((0.18616 + area) * (-0.89142 + eccentricity)) - -0.48559)
 
- (log (- -0.09343 eccentricity))
+ (- (* (+ 0.18616 area)
+       (+ -0.89142 eccentricity)) -0.48559)

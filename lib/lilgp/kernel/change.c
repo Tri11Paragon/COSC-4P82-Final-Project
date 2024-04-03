@@ -32,6 +32,8 @@
  * the table.
  */
 
+extern int quietmode;
+
 gp_operator operator_table[] =
         {{"crossover",    operator_crossover_init},
          {"reproduction", operator_reproduce_init},
@@ -87,7 +89,8 @@ population* change_population(population* oldpop, breedphase* bp)
         duplicate_individual((newpop->ind) + newpop->next, (oldpop->ind) + j);
         newpop->ind[newpop->next].flags = FLAG_NONE;
         ++newpop->next;
-        printf("\tEliting a new pop!\n");
+        if (test_detail_level(50) && !quietmode)
+            printf("\tEliting a new pop!\n");
     }
     
     typedef struct

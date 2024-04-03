@@ -28,6 +28,10 @@
 #include <stdio.h>
 #include <math.h>
 
+#define BLT_DISABLE_TRACE
+#define BLT_DISABLE_DEBUG
+#define BLT_DISABLE_INFO
+
 #include <blt/fs/loader.h>
 #include <random>
 #include <cstring>
@@ -77,7 +81,7 @@ blt::u64 cpu_time_start = 0;
 blt::u64 cpu_time_end = 0;
 blt::u64 wall_time_start = 0;
 blt::u64 wall_time_end = 0;
-
+extern int quietmode;
 
 static int fitness_cases = -1;
 #ifdef PART_B
@@ -180,6 +184,15 @@ void handle_networking()
 
 extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
 {
+    {
+        packet_t memory_packet{};
+        memory_packet.id = packet_id::MEM_USAGE;
+        memory_packet.timer = blt::system::get_memory_process().resident;
+        
+        std::scoped_lock lock(send_mutex);
+        send_packets.push(memory_packet);
+    }
+    
     BLT_INFO("Running begin of eval, current state: are we paused? %s num of gens left %d", paused ? "true" : "false", generations_left.load());
     if (generations_left == 0)
     {
@@ -200,7 +213,7 @@ extern "C" int app_begin_of_evaluation(int gen, multipop* mpop)
     // i love busy looping
     while (paused)
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
-
+    
     return close_requested;
 }
 
@@ -209,13 +222,13 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
     generations_left--;
     set_current_individual(gen_stats[0].best[0]->ind);
     best_individual.store(gen_stats[0].best[0]->ind->a_fitness);
-
+    
     // {
     //     double fitness = 0;
     //     for (int i = 0; i < mpop[0].size; i++){
     //         fitness += mpop[0].pop[i]->ind->a_fitness;
     //     }
-
+    
     //     packet_t packet;
     //     packet.id = packet_id::AVG_FIT;
     //     std::scoped_lock lock(send_mutex);
@@ -291,6 +304,7 @@ extern "C" int app_end_of_evaluation(int gen, multipop* mpop, int newbest, popst
 
 extern "C" int app_initialize(int startfromcheckpoint)
 {
+    quietmode = true;
     network_thread = std::make_unique<std::thread>(handle_networking);
     BLT_INFO("Init app");
     // TODO: maybe make this dynamic
@@ -470,7 +484,7 @@ extern "C" void app_uninitialize(void)
                 break;
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
-    } while(true);
+    } while (true);
     running = false;
     if (network_thread->joinable())
         network_thread->join();
