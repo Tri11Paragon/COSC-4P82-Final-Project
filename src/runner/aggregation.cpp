@@ -258,6 +258,8 @@ averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
         stats.stt.records.push_back(v);
     // populate fn file
     stats.fn = it->fn;
+    // populate process info
+    stats.process_info = it->process_info;
     
     while (++it != runs.end())
     {
@@ -266,10 +268,13 @@ averaged_stats averaged_stats::from_vec(const std::vector<run_stats>& runs)
             stats.stt.records[v.first] += v.second;
         // combine fn records
         stats.fn += it->fn;
+        // combine process info records
+        stats.process_info += it->process_info;
     }
     
     // take the mean
     stats.fn /= static_cast<int>(runs.size());
+    stats.process_info /= static_cast<int>(runs.size());
     for (auto& v : stats.stt.records)
         v /= static_cast<int>(runs.size());
     

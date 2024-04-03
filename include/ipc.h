@@ -81,14 +81,16 @@ struct process_info_t
     
     process_info_t& operator/=(int i)
     {
-        for (const auto& v : blt::enumerate(info.snapshots))
+        for (auto& v : snapshots)
         {
-            snapshots[v.first].memory += v.second.memory;
-            snapshots[v.first].timeSinceStart += v.second.timeSinceStart;
+            v.memory /= i;
+            v.timeSinceStart /= i;
         }
         wall_time /= i;
         cpu_time /= i;
         cpu_cycles /= i;
+        
+        return *this;
     }
 };
 
