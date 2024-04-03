@@ -198,9 +198,9 @@ inline void write_process_info(T& writer, const process_info_t& run_processes)
     writer << "CPU Time (ns):\t" << run_processes.cpu_time << '\n';
     writer << "Wall Time (ms):\t" << run_processes.wall_time << '\n';
     writer << "CPU Cycles:\t" << run_processes.cpu_cycles << '\n';
-    writer << "Snapshot Time(ms)\tValue(Bytes)\n";
-    for (const auto& v : run_processes.snapshots)
-        writer << v.timeSinceStart << '\t' << v.memory << '\n';
+    writer << "Snapshot #\tSnapshot Time(ms)\tValue(Bytes)\n";
+    for (const auto& v : blt::enumerate(run_processes.snapshots))
+        writer << (v.first + 1) << v.second.timeSinceStart << '\t' << v.second.memory << '\n';
 }
 
 void process_files(const std::string& outfile, const std::string& writefile, int runs, blt::hashmap_t<blt::i32, process_info_t>& run_processes);
